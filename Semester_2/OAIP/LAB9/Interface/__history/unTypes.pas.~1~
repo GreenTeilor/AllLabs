@@ -1,0 +1,34 @@
+unit unTypes;
+
+interface
+type
+  //Group of appliance
+  TGroup = (TV, phone, computer, laptop);
+
+  //Brand of appliance
+  TBrand = (Samsung, Apple, Huawei, LG, HP);
+
+  //Date type
+  TDate = record
+    day, month, year: string;
+  end;
+
+  //Type with information about appliance
+  TAppliance = record
+    group: TGroup;
+    brand: TBrand;
+    receiveDate: TDate;
+    returnDate: TDate;
+    isReady: boolean;
+  end;
+
+  //List
+  elem = ^list;
+  list = record
+    appliance: TAppliance;
+    next: elem;
+  end;
+
+implementation
+
+end.

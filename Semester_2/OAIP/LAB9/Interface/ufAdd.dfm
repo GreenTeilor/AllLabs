@@ -1,0 +1,151 @@
+object FormAdd: TFormAdd
+  Left = 0
+  Top = 0
+  Caption = 'Add'
+  ClientHeight = 299
+  ClientWidth = 635
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lbReceiveDate: TLabel
+    Left = 16
+    Top = 78
+    Width = 83
+    Height = 13
+    Caption = #1044#1072#1090#1072' '#1087#1086#1083#1091#1095#1077#1085#1080#1103
+  end
+  object lbReturnDate: TLabel
+    Left = 16
+    Top = 124
+    Width = 76
+    Height = 13
+    Caption = #1044#1072#1090#1072' '#1074#1086#1079#1074#1088#1072#1090#1072
+  end
+  object lbWarningGroup: TLabel
+    Left = 172
+    Top = 27
+    Width = 85
+    Height = 13
+    Caption = #1042#1074#1077#1076#1080#1090#1077' '#1075#1088#1091#1087#1087#1091'!'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    Visible = False
+  end
+  object lbWarningBrand: TLabel
+    Left = 172
+    Top = 54
+    Width = 80
+    Height = 13
+    Caption = #1042#1074#1077#1076#1080#1090#1077' '#1084#1072#1088#1082#1091'!'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object lbWarningCondition: TLabel
+    Left = 176
+    Top = 186
+    Width = 108
+    Height = 13
+    Caption = #1042#1074#1077#1076#1080#1090#1077' '#1075#1086#1090#1086#1074#1085#1086#1089#1090#1100'!'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    Visible = False
+  end
+  object btClose: TButton
+    Left = 16
+    Top = 256
+    Width = 89
+    Height = 35
+    Caption = #1047#1072#1082#1088#1099#1090#1100
+    TabOrder = 0
+    OnClick = btCloseClick
+  end
+  object cbGroup: TComboBox
+    Left = 16
+    Top = 24
+    Width = 150
+    Height = 21
+    Style = csDropDownList
+    TabOrder = 1
+    TextHint = #1043#1088#1091#1087#1087#1072'...'
+    Items.Strings = (
+      #1058#1077#1083#1077#1074#1080#1079#1086#1088
+      #1058#1077#1083#1077#1092#1086#1085
+      #1050#1086#1084#1087#1100#1102#1090#1077#1088
+      #1053#1086#1091#1090#1073#1091#1082)
+  end
+  object cbBrand: TComboBox
+    Left = 16
+    Top = 51
+    Width = 150
+    Height = 21
+    Style = csDropDownList
+    TabOrder = 2
+    TextHint = #1052#1072#1088#1082#1072'...'
+    Items.Strings = (
+      'samsung'
+      'apple'
+      'huawei'
+      'LG'
+      'HP')
+  end
+  object cbCondition: TComboBox
+    Left = 16
+    Top = 183
+    Width = 145
+    Height = 21
+    Style = csDropDownList
+    TabOrder = 3
+    TextHint = #1043#1086#1090#1086#1074#1085#1086#1089#1090#1100'...'
+    Items.Strings = (
+      #1053#1077' '#1075#1086#1090#1086#1074
+      #1043#1086#1090#1086#1074)
+  end
+  object dtpReceiveDate: TDateTimePicker
+    Left = 16
+    Top = 97
+    Width = 186
+    Height = 21
+    Date = 44686.000000000000000000
+    Time = 0.755134120372531500
+    TabOrder = 4
+  end
+  object dtpReturnDate: TDateTimePicker
+    Left = 16
+    Top = 143
+    Width = 186
+    Height = 21
+    Date = 44686.000000000000000000
+    Time = 0.757362384261796300
+    TabOrder = 5
+  end
+  object btAdd: TButton
+    Left = 16
+    Top = 215
+    Width = 89
+    Height = 35
+    Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+    TabOrder = 6
+    OnClick = btAddClick
+  end
+end

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.317,=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.165,=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.218,=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.680,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\ufAdd.pas=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\ufAddpas.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.929,=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.946,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\unListFunc.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.574,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\unExpired.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.752,=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.072,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\unTypes.pas=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.680,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\ufAdd.dfm=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\ufAddpas.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.423,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.dfm=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\ufEdit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.170,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.dfm=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\ufExpired.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.566,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\unEditFunc.pas=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.187,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\ufSearch.pas=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.282,C:\Users\baran\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Lab9.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.148,=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.459,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\GetOutputApplianceFunc.pas=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.170,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\ufExpired.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.998,C:\Users\baran\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\ufMain.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.487,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\unSearchFunc.pas=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.298,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\ufAddpas.dfm=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.298,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\ufAddpas.pas=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.153,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\unByGroup.pas=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.187,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\ufSearch.dfm=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.998,C:\Users\baran\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\ufMain.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.929,=C:\Users\baran\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.809,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\unDeleteFunc.pas=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.937,=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.926,=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.736,=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.423,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\ufEdit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.213,C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\unGetOutputApplianceFunc.pas=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\GetOutputApplianceFunc.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.583,=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.165,=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.592,=C:\InWorkSave\ROMA\LABS\OAIP\LAB9\Interface\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

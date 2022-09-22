@@ -1,0 +1,111 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  Caption = 'Catalog'
+  ClientHeight = 461
+  ClientWidth = 784
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lvList: TListView
+    Left = 8
+    Top = 63
+    Width = 768
+    Height = 390
+    Cursor = crArrow
+    Columns = <
+      item
+        Caption = #1043#1088#1091#1087#1087#1072
+        Width = 70
+      end
+      item
+        Caption = #1052#1072#1088#1082#1072
+        Width = 70
+      end
+      item
+        Caption = #1044#1072#1090#1072' '#1087#1086#1083#1091#1095#1077#1085#1080#1103
+        Width = 100
+      end
+      item
+        Caption = #1044#1072#1090#1072' '#1080#1089#1087#1086#1083#1085#1077#1085#1080#1103
+        Width = 100
+      end
+      item
+        Caption = #1043#1086#1090#1086#1074#1085#1086#1089#1090#1100
+        Width = 80
+      end>
+    GridLines = True
+    ReadOnly = True
+    RowSelect = True
+    TabOrder = 0
+    ViewStyle = vsReport
+  end
+  object btAdd: TButton
+    Left = 8
+    Top = 24
+    Width = 89
+    Height = 33
+    Cursor = crHandPoint
+    Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+    TabOrder = 1
+    OnClick = btAddClick
+  end
+  object btDelete: TButton
+    Left = 112
+    Top = 24
+    Width = 89
+    Height = 33
+    Cursor = crHandPoint
+    Caption = #1059#1076#1072#1083#1080#1090#1100
+    TabOrder = 2
+    OnClick = btDeleteClick
+  end
+  object btEdit: TButton
+    Left = 216
+    Top = 24
+    Width = 89
+    Height = 33
+    Cursor = crHandPoint
+    Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100
+    TabOrder = 3
+    OnClick = btEditClick
+  end
+  object btSearch: TButton
+    Left = 528
+    Top = 24
+    Width = 89
+    Height = 33
+    Cursor = crHandPoint
+    Caption = #1055#1086#1080#1089#1082
+    TabOrder = 4
+    OnClick = btSearchClick
+  end
+  object btExpired: TButton
+    Left = 320
+    Top = 24
+    Width = 89
+    Height = 33
+    Cursor = crHandPoint
+    Caption = #1055#1088#1086#1089#1088#1086#1095#1077#1085#1085#1099#1077
+    TabOrder = 5
+    OnClick = btExpiredClick
+  end
+  object btSort: TButton
+    Left = 424
+    Top = 24
+    Width = 89
+    Height = 33
+    Cursor = crHandPoint
+    Caption = #1055#1086' '#1075#1088#1091#1087#1087#1072#1084
+    TabOrder = 6
+    OnClick = btSortClick
+  end
+end

@@ -1,0 +1,81 @@
+unit unDeleteFunc;
+
+interface
+uses
+  unTypes, Vcl.ComCtrls;
+  function GetGroupByText(group: string): TGroup;
+  function GetBrandByText(brand: string): TBrand;
+  function GetConditionByText(isReady: string): boolean;
+implementation
+
+//Get group of appliance by text
+function GetGroupByText(group: string): TGroup;
+begin
+  if group = 'телевизор' then
+    GetGroupByText := TGroup(0)
+  else
+    if group = 'телефон' then
+      GetGroupByText := TGroup(1)
+    else
+      if group = 'компьютер' then
+        GetGroupByText := TGroup(2)
+      else
+        GetGroupBytext := TGroup(3);
+end;
+
+//Get group of appliance by text
+function GetBrandByText(brand: string): TBrand;
+begin
+  if brand = 'samsung' then
+    GetBrandByText := TBrand(0)
+  else
+    if brand = 'apple' then
+      GetBrandByText := TBrand(1)
+    else
+      if brand = 'huawei' then
+        GetBrandByText := TBrand(2)
+      else
+        if brand = 'LG' then
+          GetBrandBytext := TBrand(3)
+        else
+          GetBrandByText := TBrand(4);
+end;
+
+//Get condition of appliance by text
+function GetConditionByText(isReady: string): boolean;
+begin
+  if isReady = 'Готов' then
+    GetConditionByText := true
+  else
+    GetConditionByText := false;
+end;
+
+//Get date of appliance by text
+function GetDateByText(Date: string): TDate;
+var
+  temp: TDate;
+begin
+  temp.day := copy(Date, 1, pos('.', Date) - 1);
+  delete(Date, 1, pos('.', Date));
+  temp.month := copy(Date, 1, pos('.', Date) - 1);
+  delete(Date, 1, pos('.', Date));
+  temp.year := Date;
+  GetDateByText := temp;
+end;
+
+//Get selected appliance info from listView by txt
+function GetApplianceInfoByTxt(lv: TListView): TAppliance;
+var
+  Itm: TListItem;
+  appliance: TAppliance;
+begin
+  Itm := lv.Selected;
+  appliance.group := GetGroupByText(Itm.Caption);
+  appliance.brand := GetBrandByText(Itm.SubItems[0]);
+  appliance.receiveDate := GetDateByText(Itm.SubItems[1]);
+  appliance.returnDate := GetDateByText(Itm.SubItems[2]);
+  appliance.isReady := GetConditionByText(Itm.SubItems[3]);
+  GetApplianceInfoByTxt := appliance;
+end;
+
+end.

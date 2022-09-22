@@ -1,0 +1,121 @@
+program Exp1;
+//Program pluses two numbers
+
+//Console app
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+//Modules declaration
+uses
+  System.SysUtils;
+
+//Connstants declaration
+Const
+  N = 50;
+
+//Arrays
+Type
+  Mas1 = array[1..N] of integer;
+  Mas2 = array[1..N] of integer;
+  MasSum = array[1..N+1] of integer;
+
+//Variables declaration
+Var
+  Number1: Mas1;
+  Number2: Mas2;
+  SumNumbers: MasSum;
+  i, NewSize,Temp,k :integer;
+  {Number1 - array with the first number
+   Number2 - array with the second number
+   SumNumbers - array with the Sum of numbers
+   i - counter for input, output, calculations
+   NewSize - number of outputted array elements after removing 0
+   Temp - auxiliary variable, which is 1, if we move 1 to the next rank, and 0 if not
+   k - counter, which moves to the left arrays, which contain 0 before the number
+  }
+
+//Start the program
+begin
+  //Generate two random numbers
+  Randomize;
+  for i := 1 to N do
+  Number1[i] := Random(10);
+  for i := 1 to N do
+  Number2[i] := Random(10);
+
+  //Number1 + Number2
+  for i := N downto 1 do
+  begin
+
+    //Pluses two columns
+    SumNumbers[i+1] := (SumNumbers[i+1] + (Number1[i] + Number2[i]) mod 10) mod 10 ;
+
+    //To stay within arrays border
+    if i < N then
+
+    //Find value of Temp
+    Temp := Temp + Number1[i+1] + Number2[i+1];
+
+    //If we need to move 1 to the next rank then Temp = 1
+    if Temp >= 10 then
+    Temp := 1
+
+    //If we dont need to move 1 to the next rank then Temp = 0
+    else
+    Temp := 0;
+
+    //If we need to move 1 to the next rank
+    if Number1[i] + Number2[i] + Temp>= 10 then
+    SumNumbers[i] := 1;
+  end;
+
+  //Remove 0 before Number1
+  i:=1;
+  NewSize := N;
+  while Number1[i] = 0 do
+  begin
+    for k := 1 to N - 1 do
+    Number1[k] := Number1[k+1];
+    NewSize := NewSize - 1;
+  end;
+
+  //Output Number1
+  for i := 1 to NewSize do
+  write(Number1[i]);
+  writeln;
+  writeln('+');
+
+  //Remove 0 before Number2
+  i:=1;
+  NewSize := N;
+  while Number2[i] = 0 do
+  begin
+    for k := 1 to N - 1 do
+    Number2[k] := Number2[k+1];
+    NewSize := NewSize - 1;
+  end;
+
+  //Output Number2
+  for i := 1 to NewSize do
+  write(Number2[i]);
+  writeln;
+  writeln('=');
+
+  //Remove 0 before SumNumbers
+  i:=1;
+  NewSize := N + 1;
+  while SumNumbers[i] = 0 do
+  begin
+    for k := 1 to N  do
+    SumNumbers[k] := Sumnumbers[k+1];
+    NewSize := NewSize - 1;
+  end;
+
+  //Output SumNumbers
+  for i := 1 to NewSize do
+  write(SumNumbers[i]);
+
+  //Final operations
+  readln;
+end.

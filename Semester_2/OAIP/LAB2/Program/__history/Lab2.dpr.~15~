@@ -1,0 +1,276 @@
+program Lab2;
+//Program compare sorts
+
+//Consnole app
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+//Modules declaration
+uses
+  System.SysUtils;
+
+//Array type
+type
+  mas =  array of integer;
+
+//Fills array with random integer numbers in range [1..100]
+procedure RandomArr(var arr1: mas);
+var
+  i: integer;
+{ arr1 - array
+  i - counter }
+begin
+  for i := 0 to length(arr1) - 1 do
+    arr1[i] := random(100)  + 1;
+end;
+
+//Fills array with integer numbers from 1 to N
+//where N - number of array elements
+procedure StraightArr(var arr2: mas);
+var
+  i: integer;
+{ arr2 - array
+  i - counter }
+begin
+  for i := 0 to length(arr2) - 1 do
+    arr2[i] := i + 1;
+end;
+
+//Fills array with integer numbers from N to 1
+//where N - number of array elements
+procedure RevArr(var arr3: mas);
+var
+  i: integer;
+begin
+  for i := 0 to length(arr3) - 1 do
+    arr3[i] := length(arr3) - i;
+end;
+
+//Swap elements
+procedure Swap(var a,b: integer);
+var
+  temp: integer;
+{ a - 1-st number
+  b - 2-nd number
+  temp - auxiliary variable}
+begin
+  temp := a;
+  a := b;
+  b := temp;
+end;
+
+//Calculate number of swaps in shaker sort
+function ShakerSortSwapsExp(arr4: mas): integer;
+var
+  i, count, temp: integer;
+  leftBorder, rightBorder: integer;
+  arr: mas;
+{ arr4 - array
+  i - counter
+  count - number of swaps
+  leftBorder - left border in sort
+  rightBorder - rightBorder in sort }
+begin
+  setLength(arr, length(arr4));
+  for i := 0 to length(arr4) - 1 do
+    arr[i] := arr4[i];
+
+  //Set borders
+  leftBorder := 0;
+  rightBorder := length(arr) - 1;
+
+  //Initialize count
+  count := 0;
+
+  //Shaker Sort
+  while rightBorder > leftBorder do
+  begin
+
+    //From left to right
+    for i := leftBorder to rightBorder - 1 do
+      if arr[i] > arr[i+1] then
+      begin
+        swap(arr[i], arr[i+1]);
+        inc(count);
+      end;
+
+    //From right to left
+    for i := rightBorder downto leftBorder + 1 do
+      if arr[i] < arr[i-1] then
+      begin
+        swap(arr[i], arr[i-1]);
+        inc(count);
+      end;
+
+    //Move borders
+    inc(leftBorder);
+    dec(rightBorder);
+  end;
+
+  //Return number of swaps
+  ShakerSortSwapsExp := count;
+end;
+
+//Calculate theoretical number of swaps in shaker sort
+function ShakerSortSwapsTheory(N: integer): integer;
+begin
+  ShakerSortSwapsTheory := N*2;
+end;
+
+//Calculate number of swaps in insert barrier sort
+function InsertBarSortSwapsExp(arr5: mas): integer;
+var
+  i, j, count: integer;
+  arr: mas;
+{ arr5 - array
+  i - counter 1
+  j - counter 2
+  count - number of swaps}
+begin
+   setLength(arr, length(arr5));
+   for i := 0 to length(arr5) - 1 do
+     arr[i] := arr5[i];
+   //Free space for barrier
+   setLength(arr, length(arr) + 1);
+   for i := length(arr) - 2 downto 0 do
+     arr[i+1]:= arr[i];
+
+   //Initialize count
+   count := 0;
+
+   //Barrier sort
+   for  i:= 2  to  length(arr) - 1  do
+       if  arr[i-1] > arr[i]  then
+       begin
+          arr[0]:= arr[i];
+          j:= i-1;
+          while arr[j]>arr[0]  do
+          begin
+             arr[j+1]:= arr[j];
+             inc(count);
+             j:= j-1;
+          end;
+          arr[j+1]:= arr[0];
+          inc(count);
+       end;
+
+   //Return number of swaps
+   InsertBarSortSwapsExp := count;
+end;
+
+//Calculate theoretical number of swaps in insert barrier sort
+function InsertBarSortSwapsTheory(N: integer): integer;
+begin
+  InsertBarSortSwapsTheory := N*3;
+end;
+
+//Prints result of theoretical and practical swaps in both sorts
+procedure Experiment(N: integer);
+var
+  i, j: integer;
+  arr6: mas;
+  arrResults: array[1..3, 1..4] of integer;
+  count: integer;
+{ i - counter 1
+  j - counter 2
+  arr6 - experimental array to calculate swaps
+  arrResults -  array which contains results
+  count - auxiliary variable to output table }
+begin
+  //Set i, j to the original value
+  i := 1;
+  j := 1;
+
+  //Calculate swaps in random array
+  setLength(arr6, N);
+  RandomArr(arr6);
+  arrResults[i,j] := ShakerSortSwapsExp(arr6);
+  inc(j);
+  arrResults[i,j] := InsertBarSortSwapsExp(arr6);
+  inc(j);
+  arrResults[i,j] := ShakerSortSwapsTheory(N);
+  inc(j);
+  arrResults[i,j] := InsertBarSortSwapsTheory(N);
+
+  //Calculate swaps in straight array
+  j := 1;
+  inc(i);
+  StraightArr(arr6);
+  arrResults[i,j] := ShakerSortSwapsExp(arr6);
+  inc(j);
+  arrResults[i,j] := InsertBarSortSwapsExp(arr6);
+  inc(j);
+  arrResults[i,j] := ShakerSortSwapsTheory(N);
+  inc(j);
+  arrResults[i,j] := InsertBarSortSwapsTheory(N);
+
+  //Calculate swaps in reverse array
+  j := 1;
+  inc(i);
+  RevArr(arr6);
+  arrResults[i,j] := ShakerSortSwapsExp(arr6);
+  inc(j);
+  arrResults[i,j] := InsertBarSortSwapsExp(arr6);
+  inc(j);
+  arrResults[i,j] := ShakerSortSwapsTheory(N);
+  inc(j);
+  arrResults[i,j] := InsertBarSortSwapsTheory(N);
+
+  //Print results
+  for i := 1 to 3 do
+  begin
+    if i = 1 then
+      write('|',N:11, '            |       случайный  |');
+    if i = 2 then
+      write('|',N:11, '            |   сортированный  |');
+    if i = 3 then
+      write('|',N:11, '            |    перевернутый  |');
+
+    //Set count to the original value
+    count := 0;
+
+    //Print values of arrResults
+    for j := 1 to 4 do
+    begin
+      if count = 0 then
+        write(arrResults[i,j]:12,'       |');
+      if count = 1 then
+        write(arrResults[i,j]:17,'           |');
+      if count = 2 then
+        write(arrResults[i,j]:11,'       |');
+      if count = 3 then
+        write(arrResults[i,j]:17,'           |');
+      
+      count := (count + 1) mod 4;
+    end;
+    writeln;
+    writeln('|_______________________|__________________|___________________|____________________________|__________________|____________________________|');
+  end;
+
+end;
+
+//Print results for all sizes of arrays
+procedure PrintResults;
+begin
+  writeln(' _______________________ __________________ ___________________ ____________________________ __________________ ____________________________');
+  writeln('| Размерность массива   |    Тип массива   |   Шейкер(эксп.)   |  Вставка с барьером(эксп.) |   Шейкер(теор.)  |  Вставка с барьером(теор.) |');
+  writeln('|_______________________|__________________|___________________|____________________________|__________________|____________________________|');
+  Experiment(5);
+  Experiment(250);
+  Experiment(500);
+  Experiment(1000);
+  Experiment(2000);
+  Experiment(3000);
+end;
+
+//Start the program
+begin
+  randomize;
+
+  //Print table
+  printResults;
+
+  //Final operations
+  readln;
+end.

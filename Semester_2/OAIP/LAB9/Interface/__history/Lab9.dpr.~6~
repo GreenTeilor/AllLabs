@@ -1,0 +1,18 @@
+program Lab9;
+
+uses
+  Vcl.Forms,
+  ufMain in 'ufMain.pas' {FormMain},
+  ufAdd in 'ufAdd.pas' {FormAdd},
+  unTypes in 'unTypes.pas',
+  unListFunc in 'unListFunc.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormMain, FormMain);
+  Application.CreateForm(TFormAdd, FormAdd);
+  Application.Run;
+end.

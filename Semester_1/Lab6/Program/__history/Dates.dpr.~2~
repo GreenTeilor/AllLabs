@@ -1,0 +1,44 @@
+program Dates;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+Type
+  Date = 1..31;
+  Month = (Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь);
+  Week_Day = (Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье);
+  Leap_Year = (Leap, NotLeap);
+  MonthDaysUsually = array[1..12] of integer;
+  MonthDaysLeap =  array[1..12] of integer;
+
+Const
+  MDU: MonthDaysUsually = (31,28,31,30,31,30,31,31,30,31,30,31);
+  MDL: MonthDaysLeap  = (31,29,31,30,31,30,31,31,30,31,30,31);
+
+Var
+  d: Date;
+  m: Month;
+  wd: Week_Day;
+  ly: Leap_Year;
+  start, finish: String;
+  i: integer;
+  checker: boolean;
+Begin
+  Checker := true;
+  repeat
+    readln(start);
+    for i := 1 to length(start) do
+      if ((ord(start[i]) < 49) or (ord(start[i]) > 57)) and (ord(Start[i]) <> 46) and (ord(Start[i]) <> 45) then
+        Checker := false;
+      if Checker = false then
+        writeln('Ошибка ввода!');
+  until Checker = true;
+  readln(finish);
+  writeln(ord('.'));
+  readln;
+End.
+

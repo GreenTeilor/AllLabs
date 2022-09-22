@@ -1,0 +1,110 @@
+Program Lab3Exp1;
+//Program exclude repeating elements
+
+//Console app
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+//Modules declaration
+Uses
+  System.SysUtils;
+
+//Constants declaration
+Const
+  N = 10;
+Type
+  Mas = array[1..N] of real;
+  MasStr = array [1..N] of String;
+
+//Variables declaration
+Var B:Mas;
+    BStr:MasStr;
+    i, j, k, Size, Error: integer;
+  { Mas - array
+    MasStr - Mistakes checker
+    i - counter 1
+    j - counter 2
+    k - counter 3
+    Size - current size of array
+    Error - variable which is 1 if user made a mistake and 0 if not }
+
+//Start the program
+Begin
+  //Set Error to the original value
+  Error := 1;
+
+  //Inputting array elements
+  for i:=1 to N do
+  begin
+
+    //Protection from mistakes
+    repeat
+      write('B[',i,'] = ');
+      readln(BStr[i]);
+      val(BStr[i], B[i], Error);
+
+      //If mistake happened warn about it
+      if Error <> 0 then
+      writeln('Пожалуйста, введите вещественное число');
+
+    //If Error = 1 repeat the cycle
+    until Error = 0;
+
+  end;
+
+  //Output original array
+  writeln('Исходный массив');
+  for i:=1 to N do
+  write(B[i]:6:2);
+
+  //Remember the original size of array
+  Size:=N;
+
+  //Set i to the original value
+  i:=Size+1;
+
+  //Entering the cycle
+  while i>=N-Size+1 do
+  begin
+
+    //Decrement i
+    dec(i);
+
+    //Make j equals to i
+    j:=i;
+
+    //Entering the cycle
+    while j>=N-Size+2 do
+    begin
+
+      //Increment of j
+      dec(j);
+
+      //If repeated element was found
+      if B[i]=B[j] then
+      begin
+        for k:=j downto 2 do
+
+        //Move elements to the left
+        B[k]:=B[k-1];
+
+        //Decrease size of array
+        dec(Size);
+
+        //If number repeated more than once
+        j := i;
+
+      end;
+    end;
+  end;
+  writeln;
+
+  //Output new array
+  writeln('Преобразованный массив');
+  for i:=N-Size+1 to N do
+  write(B[i]:6:2);
+
+  //Final operations
+  readln;
+End.

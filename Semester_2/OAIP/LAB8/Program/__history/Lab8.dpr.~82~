@@ -1,0 +1,41 @@
+program Lab8;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+var
+  pscTr: array[1..15] of integer;
+  n, error, i, j, k: integer;
+  nStr: string;
+  F: textFile;
+
+begin
+  AssignFile(F, 'pscTrg.txt');
+  Rewrite(F);
+  repeat
+    write('Введите количество строк треугольника Паскаля:');
+    readln(nstr);
+    Val(nStr,n,error);
+    if (error <> 0) or not ((n >= 1) and (n <= 15)) then
+      writeln('Ошибка ввода!');
+  until (error = 0) and ((n >= 1) and (n <= 15));
+  pscTr[1] := 1;
+  for i := 1 to n do
+  begin
+    for j := 2 to i do
+    begin
+      pscTr[j] := 0;
+      for k := j downto 2 do
+        pscTr[k] := pscTr[k-1] + pscTr[k];
+    end;
+   for k := 1 to i do
+     write(F, pscTr[k]:6);
+   writeln(F);
+  end;
+  CloseFile(F);
+  readln;
+end.

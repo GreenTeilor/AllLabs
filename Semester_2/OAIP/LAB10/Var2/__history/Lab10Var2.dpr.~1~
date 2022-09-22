@@ -1,0 +1,123 @@
+program Lab10Var1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+type
+  TIntegral = function(const x: real): real;
+
+const
+  Min1: real = 0.8;
+  Max1: real = 1.8;
+  Min2: real = 0.4;
+  Max2: real = 1.0;
+  Eps1: real = 1E-4;
+  Eps2: real = 1E-5;
+
+//Return value of under-integral function in x point (integral 1)
+function Integral1(const x: real): real;
+begin
+  Integral1 := sqrt(0.8*sqr(x) + 1)/(x + sqrt(1.5*sqr(x) + 2));
+end;
+
+//Return value of under-integral function in x point (integral 2)
+function Integral2(const x: real): real;
+begin
+  Integral2 := sin(x + 1.4)/(0.8 + cos(2*sqr(x) + 0.5));
+end;
+
+//Right rectangle method
+procedure GetRight(Integral: TIntegral; const Min, Max, Eps: real);
+var
+  i, n: integer;
+  h, sum, last, dif: real;
+begin
+  sum := 0;
+  n := 1;
+
+  dif := eps + 1;
+  while (abs(dif) > Eps) and (n <= 1000) do
+  begin
+    last := sum;
+    sum := 0;
+    h := (max - min) / n;
+    for i := 1 to n do
+      sum := sum  + Integral(min + i*h);
+    sum := sum*h;
+    dif := sum - last;
+    n := n + 5;
+  end;
+  if n <= 1000 then
+    writeln('I = ', sum:8:6)
+  else
+    writeln('Неопределенный!');
+end;
+
+//Trapeze method
+procedure GetTrapeze(Integral: TIntegral; const Min, Max, Eps: real);
+var
+  i, n: integer;
+  h, sum, last, dif: real;
+begin
+  sum := 0;
+  n := 1;
+
+  dif := eps + 1;
+  while (abs(dif) > Eps) and (n <= 1000) do
+  begin
+    last := sum;
+    sum := 0;
+    h := (max - min)/n;
+    for i := 1 to n - 1 do
+      sum := sum  + Integral(min + i*h);
+    sum := sum + Integral(min)/2;
+    sum := sum + Integral(min + n*h)/2;
+    sum := sum*h;
+    dif := sum - last;
+    n := n + 5;
+  end;
+
+  if n <= 1000 then
+    writeln('I = ', sum:8:6)
+  else
+    writeln('Неопределенный!');
+end;
+
+begin
+  //Calculate value of first integral with 1E-4, 1E-5
+  writeln('Первый интеграл');
+  writeln('Метод правых прямоугольников');
+  write('С точностью 1Е-4: ');
+  GetRight(Integral1, Min1, Max1, Eps1);
+  write('C точностью 1Е-5: ');
+  GetRight(Integral1, Min1, Max1, Eps2);
+  writeln('Метод трапеций');
+  write('С точностью 1Е-4: ');
+  GetTrapeze(Integral1, Min1, Max1, Eps1);
+  write('С точностью 1Е-5: ');
+  GetTrapeze(Integral1, Min1, Max1, Eps2);
+
+  //Spaces
+  writeln;
+  writeln;
+
+  //Calculate value of second integral with 1E-4, 1E-5
+  writeln('Второй интеграл');
+  writeln('Метод правых прямоугольников');
+  write('С точностью 1Е-4: ');
+  GetRight(Integral2, Min2, Max2, Eps1);
+  write('C точностью 1Е-5: ');
+  GetRight(Integral2, Min2, Max2, Eps2);
+  writeln('Метод трапеций');
+  write('С точностью 1Е-4: ');
+  GetTrapeze(Integral2, Min2, Max2, Eps1);
+  write('С точностью 1Е-5: ');
+  GetTrapeze(Integral2, Min2, Max2, Eps2);
+
+  //Final operations
+  readln;
+end.

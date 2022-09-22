@@ -1,0 +1,81 @@
+program Exp1;
+//program calculates number of Head, Usual monks and pupils
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+var
+   Heads: integer;
+   Monks, Pies, Usuals, Pupils, Heads_Consuming, Usuals_Consuming, Pupils_Consuming: real;
+   Solution_Existance: boolean;
+   {Monks - number of monks
+   Heads - number of head monks
+   Usuals - number of usual monks
+   Pupils - number of pupils
+   Heads_Consuming - consuming of head monks
+   Usuals_Consuming - consuming of usual monks
+   Pupils_Consuming - consuming of pupils
+   Solution_Existance - check if solution exists}
+
+begin
+  Try
+  //Set Solution_Existance to the original value
+  Solution_Existance := false;
+
+  //Input Pies, Monks, Heads_Consuming, Usuals_Consuming, Pupils_Consuming
+  writeln('Введите число пирогов');
+  readln(Pies);
+  writeln('Введите число монахов');
+  readln(Monks);
+  writeln('Введите, сколько пирогов употребляют ведущие монахи');
+  readln(Heads_Consuming);
+  writeln('Введите, сколько пирогов употребляют обычные монахи');
+  readln(Usuals_Consuming);
+  writeln('Введите, сколько пирогов употребляют ученики');
+  readln(Pupils_Consuming);
+
+  //Cycle entry condition
+  if (Monks = trunc(Monks)) and (Pies = trunc(Pies)) and (Pupils_Consuming > 0) and (Heads_Consuming > Usuals_Consuming) and (Usuals_Consuming > Pupils_Consuming) then
+  begin
+    //Calculating number of monks of each type
+    for Heads := 0 to trunc(Pies/Heads_Consuming) do
+    begin
+      Usuals := (Pies + Heads*(Pupils_Consuming - Heads_Consuming) - Monks* Pupils_Consuming)/(Usuals_Consuming - Pupils_Consuming);
+      if (Usuals = trunc(Usuals)) and (Usuals >= 0) then
+      begin
+        Pupils := Monks - Heads - Usuals;
+        if Pupils >= 0 then
+        begin
+        Solution_Existance := true;
+        writeln('Число ведущих монахов:', Heads,' Число обычных монахов:', Usuals:0:0,' Число учеников:', Pupils:0:0);
+        end;
+      end;
+
+    end;
+
+  //Check if solution exists
+  if Solution_Existance = false  then
+  writeln('Решения не существует');
+  end
+  else
+  //If inputted values are incorrect
+  begin
+    writeln('Произошел сбой, случившийся по одной или нескольким из следующих причин:');
+    writeln('1)Число монахов или пирогов было не целым или отрицательным');
+    writeln('2)Все монахи должны есть! Потребление не может быть меньше нуля или равно нулю ни у одного из типов монахов');
+    writeln('3)Ведущие монахи должны есть больше обычных монахов и учеников, обычные монахи должны есть больше учеников');
+  end;
+
+  //If user inputted letters instead of numbers
+  Except
+    writeln('Произошел сбой, причина:');
+    writeln('Необходимо ввести число');
+  End;
+
+  //Final operations
+  readln;
+
+end.

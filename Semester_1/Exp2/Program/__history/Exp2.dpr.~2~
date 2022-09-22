@@ -1,0 +1,82 @@
+program Exp2;
+//The program calculates number of green and red bacteries after certain amount of tacts
+
+//Console app
+{$APPTYPE CONSOLE}
+
+//Modules declaration
+uses
+  System.SysUtils;
+
+var
+  Red_Bacteries, Red_Bacteries_Before, Green_Bacteries, k, k1: integer;
+  Red_BacteriesStr, k1Str: string;
+  { Red_Bacteries -  current number of red bacteries
+   Green_Bacteries -  current number of green bacteries
+   Red_Bacteries_Before - number of red bacteries before the current division
+   k - counter
+   k1 - number of tacts
+   Red_BacteriesStr - users mistakes checker for bacteries
+   k1Str - users mistakes checker for tacts }
+
+begin
+//Entering the enclosed cycle
+  while (true) do
+  begin
+
+//Input number of bacteries and tacts
+    writeln('Введите количество красных бактерий: ');
+    readln(Red_BacteriesStr);
+    writeln('Введите количество тактов');
+    readln(k1Str);
+
+//Condition to start the calculations
+    if (TryStrToInt(Red_BacteriesStr, Red_Bacteries) = true) and (TryStrToInt(k1Str, k1) = true)   then
+    begin
+      Green_Bacteries := 0;
+      k := 1;
+//Check if something happens or not
+      if (k1 = 0) or (Red_Bacteries = 0) then
+      writeln('Ничего не происходит!')
+      else
+
+//Entering the cycle
+        while (Red_Bacteries >= 0) and (Green_Bacteries >= 0) and  (Red_Bacteries + Green_Bacteries >= 0) and (k <= k1) do
+          begin
+
+//Assignment number of red bacteries before the current division to the original value
+            Red_Bacteries_Before := Red_Bacteries;
+
+//Number of red bacteries after division
+            Red_Bacteries := Green_Bacteries;
+
+//Number of green bacteries after division
+            Green_Bacteries := Green_Bacteries + Red_Bacteries_Before;
+
+//Output number of red, green bacteries and number of tacts
+            if (Red_Bacteries >= 0) and (Green_Bacteries >= 0) and  (Red_Bacteries + Green_Bacteries >= 0) then
+            begin
+              writeln('Количество красных бактерий:',Red_Bacteries:10,' Количество зеленых бактерий:',Green_Bacteries:10,' Всего бактерий:',Red_Bacteries + Green_Bacteries:10,' Количество тактов:',k);
+//Increment k
+              k := k + 1;
+
+            end
+//If further calculations are impossible
+            else
+            writeln('Произошло переполнение');
+          end;
+    end
+
+//If user inputted letters instead of numbers of numbers are too big
+    else
+    begin
+      writeln('Произошла ошибка по одной из следующих причин:');
+      writeln('1)Введенные вами числа слишком большие');
+      writeln('2)Вы ввели не положительные целые числа');
+    end;
+
+//Final operations
+    writeln;
+
+  end;
+end.

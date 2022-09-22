@@ -1,0 +1,36 @@
+unit unSearchFunc;
+
+interface
+uses
+  unTypes, Vcl.ComCtrls;
+
+implementation
+
+//Print in listView appliance, if expired
+procedure PrintExpired(head, tail: TElem; lv: TlistView);
+var
+  item: TListItem;
+  date1: TDate;
+  date2: TDate;
+begin
+  lv.Clear;
+  date1 := GetDate(FormatDateTime('dd.mm.yyyy', FormExpired.dtpExpireDate.Date));
+  tail := tail^.prev;
+  while not (tail^.prev = nil) do
+  begin
+    date2 := tail^.appliance.returnDate;
+    if (isLater(date1, date2)) and (not tail^.appliance.isReady) then
+    begin
+      item := lv.Items.Add;
+      item.caption := OutputGroup(tail^.appliance.group);
+      item.SubItems.Add(OutputBrand(tail^.appliance.brand));
+      item.SubItems.Add(tail^.appliance.receiveDate.day + '.' + tail^.appliance.receiveDate.month + '.' + tail^.appliance.receiveDate.year);
+      item.SubItems.Add(tail^.appliance.returnDate.day + '.' + tail^.appliance.returnDate.month + '.' + tail^.appliance.returnDate.year);
+      item.SubItems.Add(OutputCondition(tail^.appliance.isReady));
+    end;
+    tail := tail^.prev;
+  end;
+
+end;
+
+end.

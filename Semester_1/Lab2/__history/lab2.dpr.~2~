@@ -1,0 +1,50 @@
+program lab2;
+//Program calculates Smyth number with N number
+
+//Console app
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+//Modules declaration
+uses
+  System.SysUtils;
+
+var a, n, k, Sum, x: Longint;
+    b:boolean;
+begin
+  write('a=');readln(a);{наше число}
+  n:=2; {первый простой делитель}
+  k:=0;
+  x:=a;
+  while a>0 do {пока число не ноль}
+  begin
+    b:=true;  {истина}
+    while n <= round(sqrt(a)) do {пока очередной делитель меньше корня из числа}
+       begin
+         if a mod n=0 then {если это делитель}
+           begin
+             k:=k + n;
+             a:=a div n;  {сокращаем число на этот делитель и снова проверяем делится или нет, если делится, выводим}
+             b:=false; {если нет, прекращаем с этим делителем}
+             break;
+           end;
+         n:=n + 1; {увеличиваем делитель на 1 и все повторяем}
+      end;
+   if b = true then {если больше нет делителей,}
+     begin
+       k:=k + a;
+       writeln(k);{выводим остаток от деления числа - последний делитель}
+       break;
+     end;
+  end;
+  readln;
+  Sum:=0;
+  while (x<>0) do
+  begin
+    Sum:=Sum + (x mod 10);
+    x:=x - (x mod 10);
+  end;
+  writeln(Sum);
+  readln;
+end.

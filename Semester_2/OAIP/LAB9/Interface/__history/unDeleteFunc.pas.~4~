@@ -1,0 +1,29 @@
+unit unDeleteFunc;
+
+interface
+uses
+  unTypes;
+  function GetGroupByText(group: string): TGroup;
+  function GetBrandByText(brand: string): TBrand;
+  function GetCondition(isReady: string): boolean;
+implementation
+
+//Get group of appliance by text
+function GetGroupByText(group: string): TGroup;
+begin
+
+end;
+
+//Get group of appliance by text
+function GetBrandByText(brand: string): TBrand;
+begin
+
+end;
+
+//Get condition of appliance by text
+function GetCondition(isReady: string): boolean;
+begin
+
+end;
+
+end.

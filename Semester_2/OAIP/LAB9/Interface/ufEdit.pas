@@ -1,0 +1,84 @@
+unit ufEdit;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls, unTypes;
+
+type
+  TFormEdit = class(TForm)
+    btCloseEdit: TButton;
+    cbGroupEdit: TComboBox;
+    cbBrandEdit: TComboBox;
+    dtpReceiveDateEdit: TDateTimePicker;
+    dtpReturnDateEdit: TDateTimePicker;
+    lbReceiveDate: TLabel;
+    lbReturnDate: TLabel;
+    cbConditionEdit: TComboBox;
+    btEdit: TButton;
+    procedure FormShow(Sender: TObject);
+    procedure btCloseEditClick(Sender: TObject);
+    procedure btEditClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormEdit: TFormEdit;
+
+implementation
+uses
+  unEditFunc, unDeleteFunc, unListFunc, ufMain, ufAdd;
+{$R *.dfm}
+
+var
+  applianceToChange: TAppliance;
+
+//Get info about appliance
+procedure GetApplianceInfoEdit(var appliance: TAppliance);
+begin
+  appliance.group := GetGroup(FormEdit.cbGroupEdit.ItemIndex);
+  appliance.brand := GetBrand(FormEdit.cbBrandEdit.ItemIndex);
+  appliance.receiveDate := GetDate(FormatDateTime('dd.mm.yyyy', FormEdit.dtpReceiveDateEdit.Date));
+  appliance.returnDate := GetDate(FormatDateTime('dd.mm.yyyy', FormEdit.dtpReturnDateEdit.Date));
+  appliance.isReady := GetCondition(FormEdit.cbConditionEdit.ItemIndex);
+end;
+
+//Fill fields of form with selected applince characteristics
+procedure TFormEdit.FormShow(Sender: TObject);
+var
+  Itm: TListItem;
+begin
+  Itm := FormMain.lvList.Selected;
+  cbGroupEdit.ItemIndex := GetGroupIndexByText(Itm.caption);
+  cbBrandEdit.ItemIndex := GetBrandIndexByText(Itm.subItems[0]);
+  dtpReceiveDateEdit.date := StrToDate(Itm.subItems[1]);
+  dtpReturnDateEdit.date := StrToDate(Itm.subItems[2]);
+  cbConditionEdit.ItemIndex := GetConditionIndexByText(Itm.subItems[3]);
+  GetApplianceInfoEdit(applianceToChange);
+end;
+
+//Edit element
+procedure TFormEdit.btEditClick(Sender: TObject);
+var
+  appliance: TAppliance;
+  elem: TElem;
+begin
+  GetApplianceInfoEdit(appliance);
+  elem := FindListElem(head, tail, applianceToChange);
+  elem^.appliance := appliance;
+  PrintList(head, tail, FormMain.lvList);
+  GetApplianceInfoEdit(applianceToChange);
+end;
+
+//Close form
+procedure TFormEdit.btCloseEditClick(Sender: TObject);
+begin
+  FormEdit.Close;
+end;
+
+
+end.

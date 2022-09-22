@@ -1,0 +1,101 @@
+unit unByGroup;
+
+interface
+uses
+  Vcl.ComCtrls, unTypes;
+
+implementation
+uses unExpired;
+//Sort group of appliances by return date
+procedure SortAppliancesInGroup(var group: array of TAppliance);
+var
+  i, j: integer;
+  temp: TAppliance;
+begin
+  for i := 0 to length(group) - 2 do
+    for j := 0 to length(group) - i - 2 do
+      if isLater(group[j].returnDate, group[j+1].returnDate) then
+      begin
+        temp := group[j];
+        group[j] := group[j+1];
+        group[j+1] := temp;
+      end;
+end;
+
+//Print information about all appliances un groups
+procedure PrintConditions(lv: TListView);
+var
+  dataBase: file of TAppliance;
+  TVGroup, phoneGroup, computerGroup, laptopGroup: array of TAppliance;
+  appliance: TAppliance;
+  i: integer;
+begin
+  SetLength(TVGroup, 0);
+  SetLength(phoneGroup, 0);
+  SetLength(computerGroup, 0);
+  SetLength(laptopGroup, 0);
+  while not Eof(dataBase) do
+  begin
+    read(dataBase, appliance);
+    case appliance.group of
+    TV:
+      begin
+        Setlength(TVGroup, length(TVGroup) + 1);
+        TVGroup[length(TVGroup) - 1] := appliance;
+      end;
+    phone:
+      begin
+        Setlength(phoneGroup, length(phoneGroup) + 1);
+        phoneGroup[length(phoneGroup) - 1] := appliance;
+      end;
+    computer:
+      begin
+        Setlength(computerGroup, length(computerGroup) + 1);
+        computerGroup[length(computerGroup) - 1] := appliance;
+      end;
+    laptop:
+      begin
+        Setlength(laptopGroup, length(laptopGroup) + 1);
+        laptopGroup[length(laptopGroup) - 1] := appliance;
+      end;
+    end;
+  end;
+  SortAppliancesInGroup(TVGroup);
+  SortAppliancesInGroup(phoneGroup);
+  SortAppliancesInGroup(computerGroup);
+  SortAppliancesInGroup(laptopGroup);
+  writeln('Телевизоры:');
+  for i := 0 to length(TVGroup) - 1 do
+  begin
+    writeln(i + 1, ')');
+    PrintApplianceInfo(TVGroup[i]);
+  end;
+  writeln;
+  writeln;
+  writeln('Телефоны:');
+  for i := 0 to length(phoneGroup) - 1 do
+  begin
+    writeln(i + 1, ')');
+    PrintApplianceInfo(phoneGroup[i]);
+  end;
+  writeln;
+  writeln;
+  writeln('Компьютеры:');
+  for i := 0 to length(computerGroup) - 1 do
+  begin
+    writeln(i + 1, ')');
+    PrintApplianceInfo(computerGroup[i]);
+  end;
+  writeln;
+  writeln;
+  writeln('Ноутбуки:');
+  for i := 0 to length(laptopGroup) - 1 do
+  begin
+    writeln(i + 1, ')');
+    PrintApplianceInfo(laptopGroup[i]);
+  end;
+  writeln;
+  writeln;
+  CloseFile(dataBase);
+end;
+end.

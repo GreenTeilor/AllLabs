@@ -1,0 +1,241 @@
+Program Dates;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+Uses
+  System.SysUtils;
+
+Type
+  Month = (Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь);
+  Week_Day = (Суббота, Воскресенье, Понедельник, Вторник, Среда, Четверг, Пятница);
+  Day = 1..31;
+Const
+  NotLeapDays:array[Month] of Byte = (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+  LeapDays:array[Month] of Byte = (31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+  MonthArr: array[Month] of String = ('Январь', 'Февраль', 'Март', 'Апрель',' Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь');
+Var
+  currentWeekDay: Week_Day;
+  error, j, k: integer;
+  currentMonth: Month;
+  currentDay: Day;
+  startDay, startMonth, startYear, finishDay, finishMonth, finishYear, currentYear, Friday13, wd, startMonthTransformed, startYearTransformed: integer;
+  startDayStr, startMonthStr, startYearStr, finishDayStr, finishMonthStr, finishYearStr: String;
+  checker, leapYear: boolean;
+Begin
+  //Dates input with checkers
+  repeat
+    write('Пожалуйста, введите начальный день: ');
+    readln(startDayStr);
+    val(startDayStr, startDay, error);
+    if (error <> 0) or ((startDay < 1) or (startDay > 31)) then
+      writeln('Ошибка ввода');
+  until (error = 0) and (startDay >= 1) and (startDay <= 31);
+  repeat
+    write('Пожалуйста, введите начальный месяц: ');
+    readln(startMonthStr);
+    val(startMonthStr, startMonth, error);
+    if (startDay > 29) and (startMonth = 2) then
+      checker := false
+    else
+      checker := true;
+    if (error <> 0) or ((startMonth < 1) or (startMonth > 12)) or (checker = false) then
+      writeln('Ошибка ввода');
+  until (error = 0) and (startMonth >= 1) and (startMonth <= 12) and (checker = true);
+  repeat
+    write('Пожалуйста, введите начальный год: ');
+    readln(startYearStr);
+    val(startYearStr, startYear, error);
+    if (startYear mod 4 = 0) and not((startYear mod 100 = 0) and (startYear mod 400 <> 0)) then
+      leapYear := true
+    else
+      leapYear := false;
+    if (leapYear = false) and (startMonth = 2) and (startDay > 28) then
+      checker := false
+    else
+      checker := true;
+    if (error <> 0) or (startYear < 1) or (checker = false) then
+      writeln('Ошибка ввода');
+  until (error = 0) and (startYear >= 1) and (checker = true);
+  repeat
+    write('Пожалуйста, введите конечный день: ');
+    readln(finishDayStr);
+    val(finishDayStr, finishDay, error);
+    if (error <> 0) or ((finishDay < 1) or (finishDay > 31)) then
+      writeln('Ошибка ввода');
+  until (error = 0) and (finishDay >= 1) and (finishDay <= 31);
+  repeat
+    write('Пожалуйста, введите конечный месяц: ');
+    readln(finishMonthStr);
+    val(finishMonthStr, finishMonth, error);
+    if (finishDay > 29) and (finishMonth = 2) then
+      checker := false
+    else
+      checker := true;
+    if (error <> 0) or ((finishMonth < 1) or (finishMonth > 12)) or (checker = false) then
+      writeln('Ошибка ввода');
+  until (error = 0) and (finishMonth >= 1) and (finishMonth <= 12) and (checker = true);
+  repeat
+    write('Пожалуйста, введите конечный год: ');
+    readln(finishYearStr);
+    val(finishYearStr, finishYear, error);
+    if (finishYear mod 4 = 0) and not((startYear mod 100 = 0) and (startYear mod 400 <> 0)) then
+      leapYear := true
+    else
+      leapYear := false;
+    if (leapYear = false) and (finishMonth = 2) and (finishDay > 28) then
+      checker := false
+    else
+      checker := true;
+    if (error <> 0) or (finishYear < 1) or (checker = false) or ((finishYear < startYear) or ((finishMonth < startMonth) and (finishYear <= startYear)) or ((finishDay < startDay) and (finishMonth <= startMonth) and (finishYear <= startYear))) then
+      writeln('Ошибка ввода');
+  until (error = 0) and (finishYear >= 1) and (checker = true) and ((finishYear > startYear) or ((finishMonth > startMonth) and (finishYear >= startYear)) or ((finishDay > startDay) and (finishMonth >= startMonth) and (finishYear >= startYear)));
+
+  writeln;
+  //Zellers equation
+  if startMonth < 3 then
+  begin
+    startMonthTransformed := startMonth + 12;
+    startYearTransformed := startYear - 1;
+  end
+  else
+  begin
+    startMonthTransformed := startMonth;
+    startYearTransformed := startYear;
+  end;
+  j := startYearTransformed div 100;
+  k := startYearTransformed mod 100;
+  wd := (startDay + (13*(startMonthTransformed + 1) div 5) + k + (k div 4) + (j div 4) - 2*j) mod 7;
+
+  //Initialization
+  currentWeekDay := Week_Day(wd);
+  currentMonth :=  Month(startMonth - 1);
+  currentDay := Day(startDay);
+  currentYear := startYear;
+
+  //Calculations
+  while (currentYear <= finishYear) do
+  begin
+    //Leap year check
+    if (currentYear mod 4 = 0) and not((currentYear mod 100 = 0) and (currentYear mod 400 <> 0)) then
+      leapYear := true
+    else
+      leapYear := false;
+
+    if currentYear = finishYear then
+    begin
+      while currentMonth <= Month(finishMonth - 1) do
+      begin
+        if currentMonth = Month(finishMonth - 1) then
+        begin
+          while currentDay <= Day(finishDay) do
+          begin
+            if (currentDay = 13) and (currentWeekDay = Пятница) then
+            begin
+              inc(Friday13);
+              writeln(MonthArr[currentMonth],' ', currentYear, ' года');
+            end;
+            currentDay := succ(currentDay);
+            if currentWeekDay = пятница then
+              currentWeekDay := Week_Day(0)
+            else
+              currentWeekDay := succ(currentWeekDay);
+          end;
+          currentDay := Day(1);
+        end
+        else
+        begin
+          if leapYear = false then
+          begin
+            while currentDay <= Day(NotLeapDays[currentMonth]) do
+            begin
+              if (currentDay = 13) and (currentWeekDay = Пятница) then
+              begin
+                inc(Friday13);
+                writeln(MonthArr[currentMonth],' ', currentYear, ' года');
+              end;
+              currentDay := succ(currentDay);
+              if currentWeekDay = пятница then
+                currentWeekDay := Week_Day(0)
+              else
+                currentWeekDay := succ(currentWeekDay);
+            end;
+          end
+          else
+          begin
+            while currentDay <= Day(LeapDays[currentMonth]) do
+            begin
+              if (currentDay = 13) and (currentWeekDay = Пятница) then
+              begin
+                inc(Friday13);
+                writeln(MonthArr[currentMonth],' ', currentYear, ' года');
+              end;
+              currentDay := succ(currentDay);
+              if currentWeekDay = пятница then
+                currentWeekDay := Week_Day(0)
+              else
+                currentWeekDay := succ(currentWeekDay);
+            end;
+          end;
+          currentDay := Day(1);
+
+        end;
+        currentMonth := succ(currentMonth);
+      end;
+      currentMonth := Month(0);
+
+    end
+    else
+    begin
+      while currentMonth <= Month(11) do
+      begin
+        if leapYear = false then
+        begin
+          while currentDay <= Day(NotLeapDays[currentMonth]) do
+          begin
+            if (currentDay = 13) and (currentWeekDay = Пятница) then
+            begin
+              inc(Friday13);
+              writeln(MonthArr[currentMonth],' ', currentYear, ' года');
+            end;
+            currentDay := succ(currentDay);
+            if currentWeekDay = пятница then
+              currentWeekDay := Week_Day(0)
+            else
+              currentWeekDay := succ(currentWeekDay);
+          end;
+          currentDay := Day(1);
+        end
+        else
+        begin
+          while currentDay <= Day(LeapDays[currentMonth]) do
+          begin
+            if (currentDay = 13) and (currentWeekDay = Пятница) then
+            begin
+              inc(Friday13);
+              writeln(MonthArr[currentMonth],' ', currentYear, ' года');
+            end;
+            currentDay := succ(currentDay);
+            if currentWeekDay = пятница then
+              currentWeekDay := Week_Day(0)
+            else
+              currentWeekDay := succ(currentWeekDay);
+          end;
+          currentDay := Day(1);
+        end;
+        currentMonth := succ(currentMonth);
+      end;
+      currentMonth := Month(0);
+    end;
+    inc(currentYear);
+  end;
+
+
+
+  write('Число пятниц 13: ');
+  writeln(Friday13);
+  readln;
+
+End.
+

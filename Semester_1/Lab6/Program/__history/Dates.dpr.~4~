@@ -1,0 +1,65 @@
+program Dates;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+Type
+  Date = 1..31;
+  Month = (Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь);
+  Week_Day = (Воскресенье, Понедельник, Вторник, Среда, Четверг, Пятница, Суббота);
+  MonthDaysUsually = array[1..12] of integer;
+  MonthDaysLeap =  array[1..12] of integer;
+  Per = array[1..6] of integer;
+
+Const
+  MDU: MonthDaysUsually = (31,28,31,30,31,30,31,31,30,31,30,31);
+  MDL: MonthDaysLeap  = (31,29,31,30,31,30,31,31,30,31,30,31);
+
+Var
+  d: Date;
+  m: Month;
+  wd: Week_Day;
+  LeapYear: boolean;
+  Period, Temp: String;
+  i, j: integer;
+  Checker: boolean;
+  p: Per;
+Begin
+  Checker := true;
+  repeat
+    readln(period);
+    for i := 1 to length(period) do
+      if ((ord(Period[i]) < 48) or (ord(Period[i]) > 57)) and (ord(Period[i]) <> 46) and (ord(Period[i]) <> 45) and (ord(Period[i]) <> 32) then
+        Checker := false;
+      if Checker = false then
+        writeln('Ошибка ввода!');
+  until Checker = true;
+  j := 1;
+  i := 1;
+  while i <= length(Period) do
+  begin
+    if (Period[i] <> ' ') and (Period[i] <> '.') and (Period[i] <> '-') then
+    begin
+      Temp := '';
+      while (Period[i] <> ' ') and (Period[i] <> '.') and (Period[i] <> '-') do
+        begin
+          Temp := Temp + Period[i];
+          inc(i);
+        end;
+      p[j] := StrToInt(Temp);
+      inc(j);
+    end
+    else
+      inc(i);
+  end;
+  for i := 1 to 6 do
+    writeln(p[i]);
+
+
+  readln;
+End.
+

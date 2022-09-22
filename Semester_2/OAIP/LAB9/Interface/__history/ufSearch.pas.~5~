@@ -1,0 +1,53 @@
+unit ufSearch;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls;
+
+type
+  TFormSearch = class(TForm)
+    dtpReceiveDateSearch: TDateTimePicker;
+    dtpReturnDateSearch: TDateTimePicker;
+    ComboBox1: TComboBox;
+    lbByGroup: TLabel;
+    lbByReceiveDate: TLabel;
+    lbByReturnDate: TLabel;
+    btClose: TButton;
+    btByReturnDate: TButton;
+    btByReceiveDate: TButton;
+    btByGroup: TButton;
+    procedure btCloseClick(Sender: TObject);
+    procedure btByGroupClick(Sender: TObject);
+    procedure btByReturnDateClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormSearch: TFormSearch;
+
+implementation
+uses
+  unSearchFunc, ufMain;
+{$R *.dfm}
+
+procedure TFormSearch.btByGroupClick(Sender: TObject);
+begin
+  PrintSearchedTime(head, tail, FormMain.lvList, dtpReceiveDateSearch);
+end;
+
+procedure TFormSearch.btByReturnDateClick(Sender: TObject);
+begin
+  PrintSearchedTime(head, tail, FormMain.lvList, dtpReturnDateSearch);
+end;
+
+procedure TFormSearch.btCloseClick(Sender: TObject);
+begin
+  FormSearch.Close;
+end;
+
+end.

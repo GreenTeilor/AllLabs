@@ -1,0 +1,112 @@
+program lab2edit;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+var N, N1, N56, I, Sum1, Sum2, Sum3, x, Sum_Common, Sum_Common2, Sum_Common3: Integer;
+    N3: real;
+
+begin
+//This part of code finds sum of all numbers of simple  multipliers
+  Write ('N = ');
+  ReadLn (N); {ввод числа N}
+  Write (N,'=');
+  N56 := N;
+  N1 := N;
+  I := 2; {первый делитель 2}
+  while N > 1 do
+  begin {пока число не 1}
+    if N mod I = 0 then
+    begin {если число делится на очередной делитель}
+      x := I;
+      Writeln (I);
+      Sum1 := 0;
+      while x<>0 do
+      begin
+        Sum1 := Sum1 + (x mod 10);
+        x := x div 10;
+      end;
+      Sum_Common := Sum_Common + Sum1;
+      N := N div I; {делим число}
+    end
+    else
+    I := I + 1; {увеличиваем делитель}
+  end; {while}
+  writeln(Sum_Common);
+
+
+
+
+//This part of code finds sum of all numbers of number
+  Sum2 := 0;
+  while N1<>0 do
+  begin
+    Sum2 := Sum2 + (N1 mod 10);
+    N1 := N1 div 10;
+  end;
+  writeln(Sum2);
+
+
+
+
+//This part of code compares value of Sum_Common and Sum2
+if (Sum2 = Sum_Common) and (I <> N56) then
+writeln('Ваше число - число смита!!!')
+else
+writeln('Увы, ваше число - не число Смита');
+
+
+
+//This part of code checks if sum of all numbers of original number is Smyth number too
+  N1 := Sum2;
+  N56 := Sum2;
+  I := 2; {первый делитель 2}
+  while Sum2 > 1 do
+  begin {пока число не 1}
+    if Sum2 mod I = 0 then
+    begin {если число делится на очередной делитель}
+      x := I;
+      Writeln (I);
+      Sum1 := 0;
+      while x<>0 do
+      begin
+        Sum1 := Sum1 + (x mod 10);
+        x := x div 10;
+      end;
+      Sum_Common2 := Sum_Common2 + Sum1;
+      Sum2 := Sum2 div I; {делим число}
+    end
+    else
+    I := I + 1; {увеличиваем делитель}
+  end; {while}
+//This part of code finds sum of all digits of sum of all digits of original number
+  while N1<>0 do
+  begin
+    Sum3 := Sum3 + (N1 mod 10);
+    N1 := N1 div 10;
+  end;
+  writeln(Sum3);
+
+
+
+
+//This part of code checks if sum of all digits of original number is Smyth number
+  if (Sum3 = Sum_Common2) and (I <> N56) then
+  writeln('Ваше число - супер число Смита!!!')
+  else
+  writeln('Увы, ваше число - не супер число Смита');
+
+
+
+
+
+
+
+
+
+//Final operations
+ReadLn;
+end.

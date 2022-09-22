@@ -1,0 +1,116 @@
+program Lab4Exp1;
+//Program supplement the array
+
+//Console app
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+//Modules declaration
+uses
+  System.SysUtils;
+
+//Constants declaration
+Const
+  N = 10;
+
+//Arrays
+Type
+  Mas = array[1..N,1..N] of real;
+  MasStr = array[1..N,1..N] of String;
+
+//Variables declaration
+Var
+  i, j, Error: integer;
+  Y: Mas;
+  YStr: MasStr;
+{ Mas - array
+  MasStr - mistakes checker
+  i - counter for raws
+  j - counter for columns
+  Error - variable which is 1 if
+  user made a mistake and 0 if not }
+
+//Start the program
+begin
+
+  //Set Error to the original value
+  Error := 1;
+
+  //Set i to the original value
+  i := 1;
+
+  //Inputting array elements
+  for j := 1 to N do
+  begin
+
+    //Protection from mistakes
+    repeat
+        write('Y[',i,',',j,'] = ');
+        readln(YStr[i,j]);
+        val(YStr[i,j], Y[i,j], Error);
+
+        //If mistake happened warn about it
+        if Error <> 0 then
+        writeln('Пожалуйста, введите вещественное число');
+
+    //If error happened repeat the cycle
+    until
+    Error = 0;
+
+  end;
+
+  //Set j to the original value
+  j := 1;
+
+  //Inputting array elements
+  for  i := 2 to N do
+  begin
+
+    //Protection from mistakes
+    repeat
+      begin
+        write('Y[',i,',',j,'] = ');
+        readln(YStr[i,j]);
+        val(YStr[i,j], Y[i,j], Error);
+
+        //If mistake happened warn about it
+        if Error <> 0 then
+        writeln('Пожалуйста, введите вещественное число');
+      end;
+
+    //If error happened repeat the cycle
+    until
+    Error = 0;
+
+  end;
+
+  //Output original array
+  writeln('Исходный массив');
+  for i := 1 to N do
+  begin
+    for j := 1 to N do
+    write(Y[i,j]:6:2);
+    writeln;
+    writeln;
+  end;
+
+  //Supplement the array
+  for i:=2 to n do
+  for j:=2 to n do
+  Y[i,j]:=Y[i-1,j-1];
+
+  //Output supplemented array
+  writeln('Преобразованный массив');
+  for i := 1 to N do
+  begin
+    for j := 1 to N do
+    write(Y[i,j]:6:2);
+    writeln;
+    writeln;
+  end;
+
+  //Final operations
+  readln;
+
+end.

@@ -1,0 +1,62 @@
+program Exp2;
+//The program calculates number of green and red bacteries after certain amount of tacts
+
+//Console app
+{$APPTYPE CONSOLE}
+
+//Modules declaration
+uses
+  System.SysUtils;
+
+var
+  Red_Bacteries, Red_Bacteries_Before, Green_Bacteries, k, k1: integer;
+  {Red_Bacteries -  current number of red bacteries
+  Green_Bacteries -  current number of green bacteries
+  Red_Bacteries_Before - number of red bacteries before the current division
+  k - counter
+  k1 - number of tacts}
+
+begin
+  //Protection from users mistake while inputting values
+  Try
+  //input number of red and green bacteries
+  writeln('Введите количество красных бактерий');
+  readln(Red_Bacteries);
+  writeln('Введите количество зеленых бактерий');
+  readln(Green_Bacteries);
+
+  //input number of tacts
+  writeln('Введите количество тактов');
+  readln(k1);
+
+  //Check if something happens or not
+  if (k1 = 0) or ((Red_Bacteries = 0) and (Green_Bacteries = 0)) then
+  writeln('Ничего не происходит!')
+
+  else
+  //entering the cycle
+  for k := 1 to k1 do
+  begin
+    //Assignment number of red bacteries before the current division to the original value
+    Red_Bacteries_Before := Red_Bacteries;
+
+    //Number of red bacteries after division
+    Red_Bacteries := Green_Bacteries;
+
+    //Number of green bacteries after division
+    Green_Bacteries := Green_Bacteries + Red_Bacteries_Before;
+
+    //Output number of red, green bacteries and number of tacts
+    writeln('Количество красных бактерий:',Red_Bacteries,' Количество зеленых бактерий:',Green_Bacteries,' Количество тактов:',k);
+
+    writeln;
+  end;
+  //If user made a mistake while inputting values
+  Except
+  writeln('Произошел сбой, причина: все введенные значения должны быть целыми');
+
+  end;
+  //Final operations
+  readln;
+
+end.

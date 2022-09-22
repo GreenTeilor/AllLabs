@@ -1,0 +1,47 @@
+program Lab8;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+procedure BuildTriangle(const n: integer);
+var
+  pscTrg: array[1..15] of integer;
+  i, j, k: integer;
+  F: textFile;
+begin
+  AssignFile(F, 'pscTrg.txt');
+  Rewrite(F);
+  pscTrg[1] := 1;
+  for i := 1 to n do
+  begin
+    for j := 2 to i do
+    begin
+      pscTrg[j] := 0;
+      for k := j downto 2 do
+        pscTrg[k] := pscTrg[k-1] + pscTrg[k];
+    end;
+   for k := 1 to i do
+     write(F, pscTrg[k]:6);
+   writeln(F);
+  end;
+  CloseFile(F);
+end;
+
+var
+  n, error: integer;
+  nStr: string;
+begin
+  repeat
+    write('Введите количество строк треугольника Паскаля: ');
+    readln(nstr);
+    Val(nStr,n,error);
+    if (error <> 0) or not ((n >= 1) and (n <= 15)) then
+      writeln('Ошибка ввода!');
+  until (error = 0) and ((n >= 1) and (n <= 15));
+  BuildTriangle(n);
+  readln;
+end.

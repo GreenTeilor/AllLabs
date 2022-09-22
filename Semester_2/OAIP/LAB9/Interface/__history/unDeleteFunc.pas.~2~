@@ -1,0 +1,31 @@
+unit unDeleteFunc;
+
+interface
+uses
+  unTypes;
+  function GetGroupByText(group: integer): TGroup;
+  function GetBrandByText(brand: integer): TBrand;
+implementation
+
+//Get group of appliance
+function GetGroupByText(group: integer): TGroup;
+begin
+  GetGroupByText := TGroup(group);
+end;
+
+//Get group of appliance
+function GetBrandByText(brand: integer): TBrand;
+begin
+  GetBrandByText := TBrand(brand);
+end;
+
+//Return condition by index
+function GetCondition(isReadyIndex: integer): boolean;
+begin
+  if isReadyIndex = 1 then
+    GetCondition := true
+  else
+    GetCondition := false;
+end;
+
+end.

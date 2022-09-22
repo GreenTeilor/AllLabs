@@ -1,0 +1,42 @@
+unit unExpired;
+
+interface
+uses
+  unTypes, SysUtils, Vcl.ComCtrls, ufExpired;
+
+implementation
+uses ufAdd, unListFunc;
+
+//Return true if date1 later than date2
+function isLater(date1, date2: TDate): boolean;
+begin
+  if (StrToInt(date1.year) > StrToInt(date2.year)) or ((StrToInt(date1.year) >= StrToInt(date2.year)) and (StrToInt(date1.month) > StrToInt(date2.month))) or ((StrToInt(date1.year) >= StrToInt(date2.year)) and (StrToInt(date1.month) >= StrToInt(date2.month)) and (StrToInt(date1.day) > StrToInt(date2.day))) then
+    isLater := true
+  else
+    isLater := false;
+end;
+
+//Print in list appliance, if expired
+procedure PrintExpired(head, tail: TElem; lv: TlistView);
+var
+  item: TListItem;
+  date1: TDate;
+  date2: TDate;
+begin
+  lv.Clear;
+  date1 := GetDate(FormatDateTime('dd.mm.yyyy', FormExpired.dtpExpireDate.Date));
+  tail := tail^.prev;
+  while not (tail^.prev = nil) do
+  begin
+    date2 := tail^.appliance.returnDate;
+    if isLater(date1, date2) then
+    begin
+      item := lv.Items.Add;
+      Itm.caption := OutputGroup(tail^.appliance.group);
+    end;
+    tail := tail^.prev;
+  end;
+
+end;
+
+end.

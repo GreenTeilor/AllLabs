@@ -1,0 +1,58 @@
+program Exp1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+var
+  S, tmp, buf, firstW: string;
+  i, j, k, p, ii: integer;
+  ch: char;
+
+begin
+  S := 'privit  ,  kak,dela,putin,znanija,test,proverka,privit,teste.';
+  pos(' ', S);
+  pos(',', S);
+  if pos(' ', S) < pos(',', S) then
+    firstW := copy(S, 1, pos(' ', S) - 1)
+  else
+    firstW := copy(S, 1, pos(',', S) - 1);
+  writeln('Исходная строка: ', S);
+  writeln('Первое слово = ', firstW);
+  i := 0;
+  while (S[i] <> '.') do
+  begin
+    i := i + 1;
+    if (S[i] <> ' ') then
+    begin
+      while ((S[i] <> ' ') and (i < Length(S))) do
+      begin
+        tmp := tmp + S[i];
+        i := i + 1;
+      end;
+      buf := tmp;
+      p := 0;
+      ii := 1;
+      while ii <= Length(buf) do
+      begin
+        k := 0;
+        ch := buf[ii];
+        for j := Length(buf) downto ii do
+          if buf[j] = ch then
+          begin
+            k := k + 1;
+            delete(buf, j, 1);
+          end;
+        if k > 1 then
+          p := 1;
+      end;
+      if ((p <> 0) and (tmp <> firstW)) then
+        writeln(tmp);
+      tmp := '';
+    end;
+  end;
+  readln;
+end.

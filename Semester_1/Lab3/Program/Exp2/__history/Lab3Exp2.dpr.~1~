@@ -1,0 +1,44 @@
+program Lab3Exp2;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+const
+  N = 10;
+Var Mas:array[1..N] of real;
+    MasStr: array [1..N] of String;
+    i, j, t, m, error: integer;
+Begin
+  error := 1;
+  Mas[i]:=Random(1000)/100 - 5;
+  writeln('Исходный массив');
+  for i:=1 to N do
+  write(Mas[i]:6:2);
+  m:=N;//запоминили исходный размер массива
+  i:=0;
+  while i<m do
+  begin
+    inc(i);
+    j:=i;
+    While j<m do
+    begin
+      inc(j);
+      if Mas[i]=Mas[j] then //если нашли повторяющийся то
+      begin
+        For t:=j to m-1 do
+        Mas[t]:=Mas[t+1];//сдвигаем элементы
+        dec(m);//уменьшаем размер массива
+        j := i;
+      end;
+    end;
+  end;
+  writeln;
+  writeln('Преобразованный массив');
+  for i:=1 to m do
+  write(Mas[i]:6:2);
+  readln;
+End.

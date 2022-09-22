@@ -1,0 +1,71 @@
+program Exp3;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+Const
+  Disket_Price = 11.5;
+  Box_Price = 114.5;
+  BigBox_Price = 1255;
+  Disket = 1;
+  Box = Disket*12;
+  BigBox = Box*12;
+var
+  N, Error, a, b, Profit1, Profit2, Bonus: integer;
+  NStr: String;
+  Price: real;
+begin
+  while (True) do
+  begin
+    Profit1 := trunc(Box/Disket);
+    Profit2 := trunc(BigBox/Box);
+    repeat
+      write('Пожалуйста, введите число дискет ');
+      readln(NStr);
+      val(NStr, N, Error);
+      if (Error <> 0) or (N <= 0) then
+      writeln('Введенное количество дискет должно быть натуральным числом');
+    until
+      (Error = 0) and (N > 0);
+    while BigBox_Price < Profit1*Box_Price do
+    Profit1 := Profit1 - 1;
+    Profit1 := Profit1 * trunc(Box/Disket);
+    while Box_Price < Profit2*Disket_Price do
+    Profit2 := Profit2 - 1;
+    if N mod BigBox > Profit1 then
+    a := N div BigBox + 1
+    else
+    a := N div BigBox;
+    N := N - a*BigBox;
+    if N > 0 then
+    begin
+      if N mod Box > Profit2 then
+      b := N div Box + 1
+      else
+      b := N div Box;
+      N := N - b*Box;
+    end;
+    if N > 0 then
+    begin
+      Price := a*BigBox_Price + b*Box_Price + N*Disket_Price;
+      Bonus := 0;
+    end
+    else
+    begin
+      Price := a*BigBox_Price + b*Box_Price;
+      Bonus := abs(N);
+      N := 0;
+    end;
+    writeln('Советуем вам купить:');
+    writeln(a,' ящиков');
+    writeln(b,' коробок');
+    writeln(N,' дискет');
+    writeln('Лучшая цена: ', Price:0:1);
+    writeln('Количество бонусных дискет:', Bonus);
+    writeln;
+  end;
+end.

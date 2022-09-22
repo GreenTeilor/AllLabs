@@ -1,0 +1,66 @@
+program Exp1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+var
+  S, LastWord, Word, Letter, WordCopy, Temp: string;
+  i, k: integer;
+  Checker: boolean;
+begin
+  //S := '    privit  ,  kak,  dela, dygesy  putin,  znanija,    tet,proverka, pr,    dyges.';
+  Checker := true;
+  repeat
+    readln(S);
+    for i := 1 to length(S) do
+    begin
+      if (ord(S[i]) < 97) or (ord(S[i]) > 125) or (S[i] <> '') or (S[i] <> ',') then
+        Checker := false;
+    end;
+  until Checker = true;
+  Temp := '';
+  i := length(S) - 1;
+  while (S[i] <> ',') and (S[i] <> ' ') do
+  begin
+    Temp := Temp + copy(S,i,1);
+    dec(i);
+  end;
+  LastWord := '';
+  for i := 1 to length(Temp) do
+    LastWord := Temp[i] + LastWord;
+
+
+  writeln('Исходная строка: ', S);
+  writeln('Последнее слово = ', LastWord);
+  i := 1;
+  while S[i] <> '.' do
+  begin
+    if (S[i] <> ' ') and (S[i] <> ',') then
+    begin
+      Checker := true;
+      Word := '';
+      while (S[i] <> ' ') and (S[i] <> ',') and (i < Length(S)) do
+      begin
+        Word := Word + S[i];
+        inc(i);
+      end;
+      WordCopy := Word;
+      for k := 1 to length(Word) do
+      begin
+        Letter := Copy(Word,k,1);
+        delete(WordCopy,1,1);
+        if pos(Letter,WordCopy) <> 0 then
+          Checker := false;
+      end;
+      if (Word <> LastWord) and (Checker = true) then
+        write(Word,' ');
+    end
+    else
+      inc(i);
+  end;
+  readln;
+end.

@@ -1,0 +1,112 @@
+unit unByGroup;
+
+interface
+uses
+  Vcl.ComCtrls, unTypes, ufMain;
+
+procedure PrintConditions(head, tail: TElem; lv: TListView);
+procedure SortAppliancesInGroup(var group: array of TAppliance);
+
+implementation
+uses
+  unExpired, unListFunc;
+
+//Sort group of appliances by return date
+procedure SortAppliancesInGroup(var group: array of TAppliance);
+var
+  i, j: integer;
+  temp: TAppliance;
+begin
+  for i := 0 to length(group) - 2 do
+    for j := 0 to length(group) - i - 2 do
+      if isLater(group[j+1].returnDate, group[j].returnDate) then
+      begin
+        temp := group[j];
+        group[j] := group[j+1];
+        group[j+1] := temp;
+      end;
+end;
+
+//Print information about all appliances un groups
+procedure PrintConditions(head, tail: TElem; lv: TListView);
+var
+  TVGroup, phoneGroup, computerGroup, laptopGroup: array of TAppliance;
+  appliance: TAppliance;
+  i: integer;
+  item: TListItem;
+begin
+  lv.Clear;
+  SetLength(TVGroup, 0);
+  SetLength(phoneGroup, 0);
+  SetLength(computerGroup, 0);
+  SetLength(laptopGroup, 0);
+  tail := tail^.prev;
+  while not (tail^.prev = nil) do
+  begin
+    appliance := tail^.appliance;
+    case appliance.group of
+    TV:
+      begin
+        Setlength(TVGroup, length(TVGroup) + 1);
+        TVGroup[length(TVGroup) - 1] := appliance;
+      end;
+    phone:
+      begin
+        Setlength(phoneGroup, length(phoneGroup) + 1);
+        phoneGroup[length(phoneGroup) - 1] := appliance;
+      end;
+    computer:
+      begin
+        Setlength(computerGroup, length(computerGroup) + 1);
+        computerGroup[length(computerGroup) - 1] := appliance;
+      end;
+    laptop:
+      begin
+        Setlength(laptopGroup, length(laptopGroup) + 1);
+        laptopGroup[length(laptopGroup) - 1] := appliance;
+      end;
+    end;
+    tail := tail^.prev;
+  end;
+
+  for i := 0 to length(TVGroup) - 1 do
+  begin
+    item := lv.Items.Add;
+    item.caption := OutputGroup(TVGroup[i].group);
+    item.SubItems.Add(OutputBrand(TVGroup[i].brand));
+    item.SubItems.Add(TVGroup[i].receiveDate.day + '.' + TVGroup[i].receiveDate.month + '.' + TVGroup[i].receiveDate.year);
+    item.SubItems.Add(TVGroup[i].returnDate.day + '.' + TVGroup[i].returnDate.month + '.' + TVGroup[i].returnDate.year);
+    item.SubItems.Add(OutputCondition(TVGroup[i].isReady));
+  end;
+
+  for i := 0 to length(TVGroup) - 1 do
+  begin
+    item := lv.Items.Add;
+    item.caption := OutputGroup(phoneGroup[i].group);
+    item.SubItems.Add(OutputBrand(phoneGroup[i].brand));
+    item.SubItems.Add(phoneGroup[i].receiveDate.day + '.' + phoneGroup[i].receiveDate.month + '.' + phoneGroup[i].receiveDate.year);
+    item.SubItems.Add(phoneGroup[i].returnDate.day + '.' + phoneGroup[i].returnDate.month + '.' + phoneGroup[i].returnDate.year);
+    item.SubItems.Add(OutputCondition(phoneGroup[i].isReady));
+  end;
+
+  for i := 0 to length(TVGroup) - 1 do
+  begin
+    item := lv.Items.Add;
+    item.caption := OutputGroup(computerGroup[i].group);
+    item.SubItems.Add(OutputBrand(computerGroup[i].brand));
+    item.SubItems.Add(computerGroup[i].receiveDate.day + '.' + computerGroup[i].receiveDate.month + '.' + computerGroup[i].receiveDate.year);
+    item.SubItems.Add(computerGroup[i].returnDate.day + '.' + computerGroup[i].returnDate.month + '.' + computerGroup[i].returnDate.year);
+    item.SubItems.Add(OutputCondition(computerGroup[i].isReady));
+  end;
+
+  for i := 0 to length(TVGroup) - 1 do
+  begin
+    item := lv.Items.Add;
+    item.caption := OutputGroup(laptopGroup[i].group);
+    item.SubItems.Add(OutputBrand(laptopGroup[i].brand));
+    item.SubItems.Add(laptopGroup[i].receiveDate.day + '.' + laptopGroup[i].receiveDate.month + '.' + laptopGroup[i].receiveDate.year);
+    item.SubItems.Add(laptopGroup[i].returnDate.day + '.' + laptopGroup[i].returnDate.month + '.' + laptopGroup[i].returnDate.year);
+    item.SubItems.Add(OutputCondition(laptopGroup[i].isReady));
+  end;
+end;
+end.

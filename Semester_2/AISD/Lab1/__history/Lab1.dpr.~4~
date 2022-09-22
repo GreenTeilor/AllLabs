@@ -1,0 +1,126 @@
+﻿program Lab1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+const
+    N = 3;
+
+type elem = ^list;
+list = record
+         lastName: string;
+         number: string;
+         next: elem;
+end;
+
+function isValidNumber(number: string): boolean;
+var
+  numberInt: integer;
+begin
+  if (tryStrToInt(trim(number), numberInt)) and (length(trim(number)) = 7) then
+    isValidNumber := true
+  else
+    isValidNumber := false;
+end;
+
+procedure makeList(var x: elem);
+var
+  i: integer;
+  xRef: pointer;
+begin
+  new(x);
+  xRef := x;
+  for i := 1 to N do
+  begin
+    new(x^.next);
+    x := x^.next;
+    write('Введите фамилию ', i, ' пользователя: ');
+    readln(x^.lastName);
+    repeat
+      write('Введите номер телефона ', i, ' пользователя: ');
+      readln(x^.number);
+      if not(isValidNumber(x^.number)) then
+        writeln('Ошибка ввода!');
+    until isValidNumber(x^.number);
+  end;
+  x^.next := nil;
+  x := xRef;
+end;
+
+procedure searchNumber(x: elem; phoneNumber: string);
+var
+  i: integer;
+  flag: boolean;
+begin
+  x := x^.next;
+  flag := false;
+  while x <> nil do
+  begin
+    if trim(x^.number) = trim(phoneNumber) then
+    begin
+      writeln(trim(x^.lastName),' ', trim(x^.number));
+      if not(flag) then
+        flag := true;
+    end;
+    x := x^.next;
+  end;
+  if not(flag) then
+    writeln('Пользователей с таким номером нет!');
+end;
+
+procedure searchLastName(x: elem; lastName: string);
+var
+  i: integer;
+  flag1, flag2: boolean;
+begin
+  x := x^.next;
+  flag1 := false;
+  flag2 := false;
+  while (x <> nil) and not(flag2) do
+  begin
+    if trim(x^.lastName) = trim(lastName) then
+    begin
+      flag1 := true;
+      while (x <> nil) and (trim(x^.lastName) = trim(lastName)) do
+      begin
+        writeln(trim(x^.lastName),' ', trim(x^.number));
+        x := x^.next;
+      end;
+      flag2 := true;
+    end;
+    if not(flag2) then
+      x := x^.next;
+  end;
+  if not(flag1) then
+    writeln('Пользователей с такой фамилией нет!');
+end;
+
+procedure printList(x: elem);
+begin
+  x := x^.next;
+  while x <> nil do
+  begin
+    writeln(trim(x^.lastName),' ', trim(x^.number));
+    x := x^.next;
+  end;
+end;
+
+
+var
+  first: elem;
+  num, name: string;
+begin
+  makeList(first);
+  printList(first);
+  write('Введите искомый номер: ');
+  readln(num);
+  searchNumber(first, num);
+  write('Введите искомую фамилию: ');
+  readln(name);
+  searchLastName(first, name);
+  readln;
+end.

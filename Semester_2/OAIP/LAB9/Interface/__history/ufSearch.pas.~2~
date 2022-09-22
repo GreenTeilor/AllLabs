@@ -1,0 +1,34 @@
+unit ufSearch;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls;
+
+type
+  TFormSearch = class(TForm)
+    DateTimePicker1: TDateTimePicker;
+    DateTimePicker2: TDateTimePicker;
+    ComboBox1: TComboBox;
+    lbByGroup: TLabel;
+    lbByReceiveDate: TLabel;
+    lbByReturnDate: TLabel;
+    btClose: TButton;
+    btByReturnDate: TButton;
+    btByReceiveDate: TButton;
+    btByGroup: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormSearch: TFormSearch;
+
+implementation
+
+{$R *.dfm}
+
+end.

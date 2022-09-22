@@ -1,0 +1,49 @@
+program Exp1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+Const
+  N = 50;
+Type
+  Mas1 = array[1..N] of integer;
+  Mas2 = array[1..N] of integer;
+  MasSum = array[1..N+1] of integer;
+Var
+  Number1: Mas1;
+  Number2: Mas2;
+  SumNumbers: MasSum;
+  i, NewSize,temp,k :integer;
+begin
+  Randomize;
+  for i := 1 to N do
+  Number1[i] := Random(10);
+  for i := 1 to N do
+  Number2[i] := Random(10);
+  for i := N downto 1 do
+  begin
+    SumNumbers[i+1] := ((SumNumbers[i+1] + (Number1[i] + Number2[i]) mod 10)) mod 10 ;
+    temp := temp + Number1[i+1] + Number2[i+1];
+    if temp >= 10 then
+    temp := 1
+    else
+    temp := 0;
+    if Number1[i] + Number2[i] + temp>= 10 then
+    SumNumbers[i] := 1
+  end;
+  for i := 1 to N do
+  write(Number1[i]);
+  writeln;
+  writeln('+');
+  for i := 1 to N do
+  write(Number2[i]);
+  writeln;
+  writeln('=');
+  for i := 1 to N + 1 do
+  write(SumNumbers[i]);
+  readln;
+end.

@@ -1,0 +1,88 @@
+unit unGetOutputApplianceFunc;
+
+interface
+  uses unTypes, ufAdd;
+
+implementation
+
+//Get group of appliance
+function GetGroup(group: integer): TGroup;
+begin
+  GetGroup := TGroup(group);
+end;
+
+//Get group of appliance
+function GetBrand(brand: integer): TBrand;
+begin
+  GetBrand := TBrand(brand);
+end;
+
+//Get date
+function GetDate(Date: string): TDate;
+var
+  temp: TDate;
+begin
+  temp.day := copy(Date, 1, pos('.', Date) - 1);
+  delete(Date, 1, pos('.', Date));
+  temp.month := copy(Date, 1, pos('.', Date) - 1);
+  delete(Date, 1, pos('.', Date));
+  temp.year := Date;
+  GetDate := temp;
+end;
+
+//Return condition by index
+function GetCondition(isReadyIndex: integer): boolean;
+begin
+  if isReadyIndex = 1 then
+    GetCondition := true
+  else
+    GetCondition := false;
+end;
+
+//Ouput group of appliance
+function OutputGroup(group: TGroup): string;
+begin
+  case group of
+    TV: OutputGroup := 'телевизор';
+    phone: OutputGroup := 'телефон';
+    computer: OutputGroup := 'компьютер';
+    laptop: OutputGroup := 'ноутбук';
+    else
+      OutputGroup := 'новый тип';
+  end;
+end;
+
+//Output brand of appliance
+function OutputBrand(brand: TBrand): string;
+begin
+  case brand of
+    Samsung: OutputBrand := 'samsung';
+    Apple: OutputBrand := 'apple';
+    Huawei: OutputBrand := 'huawei';
+    LG: OutputBrand := 'LG';
+    HP: OutputBrand := 'HP'
+    else
+      OutputBrand := 'новая марка';
+  end;
+end;
+
+//Output condition depending on value of isReady
+function OutputCondition(isReady: boolean): string;
+begin
+  if isReady then
+    OutputCondition := 'Готов'
+  else
+    OutputCondition := 'Не готов';
+end;
+
+//Get info about appliance
+procedure GetApplianceInfo(var appliance: TAppliance);
+begin
+  appliance.group := GetGroup(FormAdd.cbGroup.ItemIndex);
+  appliance.brand := GetBrand(FormAdd.cbBrand.ItemIndex);
+  appliance.receiveDate := GetDate(FormatDateTime('dd.mm.yyyy', FormAdd.dtpReceiveDate.Date));
+  appliance.returnDate := GetDate(FormatDateTime('dd.mm.yyyy', FormAdd.dtpReturnDate.Date));
+  appliance.isReady := GetCondition(FormAdd.cbCondition.ItemIndex);
+end;
+
+end.

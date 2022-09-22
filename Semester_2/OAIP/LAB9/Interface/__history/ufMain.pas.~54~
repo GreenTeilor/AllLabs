@@ -1,0 +1,150 @@
+unit ufMain;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls, unTypes, ufAdd, ufEdit, ufExpired;
+
+type
+  TFormMain = class(TForm)
+    lvList: TListView;
+    btAdd: TButton;
+    btDelete: TButton;
+    btEdit: TButton;
+    btSearch: TButton;
+    btExpired: TButton;
+    btSort: TButton;
+    procedure btAddClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btDeleteClick(Sender: TObject);
+    procedure btEditClick(Sender: TObject);
+    procedure btExpiredClick(Sender: TObject);
+    procedure btSortClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormMain: TFormMain;
+  head, tail: TElem;
+
+implementation
+{$R *.dfm}
+uses unListFunc, unDeleteFunc, unByGroup;
+
+//Create file if it doesn't exist
+procedure CreateFile;
+var
+  dataBase: file of TAppliance;
+begin
+  if not FileExists('dataBase.dt') then
+  begin
+    AssignFile(dataBase, 'dataBase.dt');
+    Rewrite(dataBase);
+    CloseFile(dataBase);
+  end;
+end;
+
+//Get group of appliance
+function GetGroup(group: integer): TGroup;
+begin
+  GetGroup := TGroup(group);
+end;
+
+//Get group of appliance
+function GetBrand(brand: integer): TBrand;
+begin
+  GetBrand := TBrand(brand);
+end;
+
+//Get date
+function GetDate(Date: string): TDate;
+var
+  temp: TDate;
+begin
+  temp.day := copy(Date, 1, pos('.', Date) - 1);
+  delete(Date, 1, pos('.', Date));
+  temp.month := copy(Date, 1, pos('.', Date) - 1);
+  delete(Date, 1, pos('.', Date));
+  temp.year := Date;
+  GetDate := temp;
+end;
+
+//Return condition by index
+function GetCondition(isReadyIndex: integer): boolean;
+begin
+  if isReadyIndex = 1 then
+    GetCondition := true
+  else
+    GetCondition := false;
+end;
+
+//Get info about appliance
+procedure GetApplianceInfo(var appliance: TAppliance);
+begin
+  appliance.group := GetGroup(FormAdd.cbGroup.ItemIndex);
+  appliance.brand := GetBrand(FormAdd.cbBrand.ItemIndex);
+  appliance.receiveDate := GetDate(FormatDateTime('dd.mm.yyyy', FormAdd.dtpReceiveDate.Date));
+  appliance.returnDate := GetDate(FormatDateTime('dd.mm.yyyy', FormAdd.dtpReturnDate.Date));
+  appliance.isReady := GetCondition(FormAdd.cbCondition.ItemIndex);
+end;
+
+//Open add form
+procedure TFormMain.btAddClick(Sender: TObject);
+begin
+  FormAdd.ShowModal;
+end;
+
+//Delete appliance
+procedure TFormMain.btDeleteClick(Sender: TObject);
+var
+  appliance: TAppliance;
+  elem: TElem;
+begin
+  if lvList.Selected <> nil then
+  begin
+    appliance := GetApplianceInfoByTxt(lvList);
+    elem := FindListElem(head, tail, appliance);
+    DelListElem(head, tail, elem);
+    lvList.DeleteSelected;
+  end;
+end;
+
+//Open edit form
+procedure TFormMain.btEditClick(Sender: TObject);
+begin
+  if lvList.Selected <> nil then
+    FormEdit.ShowModal;
+end;
+
+procedure TFormMain.btExpiredClick(Sender: TObject);
+begin
+  FormExpired.ShowModal;
+end;
+
+//Print appliances in groups sorted by return date
+procedure TFormMain.btSortClick(Sender: TObject);
+begin
+  PrintConditions(head, tail, lvList);
+end;
+
+//Move data to file on main form close
+procedure TFormMain.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  ListToFile(head, tail);
+end;
+
+//Once form was shown, create and output list
+procedure TFormMain.FormShow(Sender: TObject);
+begin
+  CreateFile;
+  CreateList(head, tail);
+  FileToList(head, tail);
+  PrintList(head, tail, lvList);
+end;
+
+end.

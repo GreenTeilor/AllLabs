@@ -1,0 +1,177 @@
+unit unListFunc;
+
+interface
+uses
+  unTypes, Vcl.ComCtrls;
+  procedure CreateList(var head, tail: TElem);
+  procedure PrintList(head, tail: TElem; var lv: TListView);
+  procedure FileToList(var head, tail: TElem);
+  procedure AddListElem(var head, tail: TElem; appliance: TAppliance);
+  procedure ListToFile(head, tail: TElem);
+  function FindListElem(head, tail: TElem; appliance: TAppliance): TElem;
+  procedure DelListElem(var head, tail: TElem; elem: TElem);
+
+implementation
+
+//Create list
+procedure CreateList(var head, tail: TElem);
+var
+  ref: TElem;
+begin
+  new(head);
+  ref := head;
+  new(head^.next);
+  head^.prev := nil;
+  head^.next^.prev := head;
+  head := head^.next;
+  head^.next := nil;
+  tail := head;
+  head := ref;
+end;
+
+//Add element to the end of list
+procedure AddListElem(var head, tail: TElem; appliance: TAppliance);
+var
+  temp: TElem;
+begin
+  new(temp);
+  tail^.prev^.next := temp;
+  temp^.prev := tail^.prev;
+  temp^.next := tail;
+  tail^.prev := temp;
+  temp^.appliance := appliance;
+end;
+
+//Compare dates
+function CmpDates(date1, date2: TDate): boolean;
+begin
+  if (date1.day = date2.day) and (date1.month = date2.month) and (date1.year = date2.year) then
+    CmpDates := true
+  else
+    CmpDates := false;
+end;
+
+//Compare appliances
+function CmpAppliances(appliance1, appliance2: TAppliance): boolean;
+begin
+  if (appliance1.group = appliance2.group) and (appliance1.brand = appliance2.brand) and (CmpDates(appliance1.receiveDate, appliance2.receiveDate)) and (CmpDates(appliance1.returnDate, appliance2.returnDate)) and (appliance1.isReady = appliance2.isReady) then
+    CmpAppliances := true
+  else
+    CmpAppliances := false;
+end;
+
+//Return addres of searched appliance
+function FindListElem(head, tail: TElem; appliance: TAppliance): TElem;
+begin
+  head := head^.next;
+  while not CmpAppliances(head^.appliance, appliance) do
+    head := head^.next;
+  FindListElem := head;
+end;
+
+//Delete element with characteristics of appliance from list
+procedure DelListElem(var head, tail: TElem; elem: TElem);
+var
+  ref: TElem;
+begin
+  ref := elem;
+  ref^.prev^.next := ref^.next;
+  ref^.next^.prev := ref^.prev;
+  dispose(ref);
+end;
+
+//Move data from file to list
+procedure FileToList(var head, tail: TElem);
+var
+  dataBase: file of TAppliance;
+  appliance: TAppliance;
+  temp: TElem;
+begin
+  AssignFile(dataBase, 'dataBase.dt');
+  Reset(dataBase);
+  while not Eof(dataBase) do
+  begin
+    read(dataBase, appliance);
+    new(temp);
+    head^.next^.prev := temp;
+    temp^.next := head^.next;
+    temp^.prev := head;
+    head^.next := temp;
+    temp^.appliance := appliance;
+  end;
+  CloseFile(dataBase);
+end;
+
+//Move data from list to file
+procedure ListToFile(head, tail: TElem);
+var
+  dataBase: file of TAppliance;
+  appliance: TAppliance;
+begin
+  AssignFile(dataBase, 'dataBase.dt');
+  Rewrite(dataBase);
+  tail := tail^.prev;
+  while tail^.prev <> nil do
+  begin
+    write(dataBase,tail^.appliance);
+    tail := tail^.prev;
+  end;
+  CloseFile(dataBase);
+end;
+
+//Ouput group of appliance
+function OutputGroup(group: TGroup): string;
+begin
+  case group of
+    TV: OutputGroup := 'телевизор';
+    phone: OutputGroup := 'телефон';
+    computer: OutputGroup := 'компьютер';
+    laptop: OutputGroup := 'ноутбук';
+    else
+      OutputGroup := 'новый тип';
+  end;
+end;
+
+//Output brand of appliance
+function OutputBrand(brand: TBrand): string;
+begin
+  case brand of
+    Samsung: OutputBrand := 'samsung';
+    Apple: OutputBrand := 'apple';
+    Huawei: OutputBrand := 'huawei';
+    LG: OutputBrand := 'LG';
+    HP: OutputBrand := 'HP'
+    else
+      OutputBrand := 'новая марка';
+  end;
+end;
+
+//Output condition depending on value of isReady
+function OutputCondition(isReady: boolean): string;
+begin
+  if isReady then
+    OutputCondition := 'Готов'
+  else
+    OutputCondition := 'Не готов';
+end;
+
+//Print list in listView
+procedure PrintList(head, tail: TElem; var lv: TListView);
+var
+  Itm: TListItem;
+begin
+  lv.Items.Clear;
+  tail := tail^.prev;
+  while tail^.prev <> nil do
+  begin
+    Itm := lv.Items.Add;
+    Itm.caption := OutputGroup(tail^.appliance.group);
+    Itm.SubItems.Add(OutputBrand(tail^.appliance.brand));
+    Itm.SubItems.Add(tail^.appliance.receiveDate.day + '.' + tail^.appliance.receiveDate.month + '.' + tail^.appliance.receiveDate.year);
+    Itm.SubItems.Add(tail^.appliance.returnDate.day + '.' + tail^.appliance.returnDate.month + '.' + tail^.appliance.returnDate.year);
+    Itm.SubItems.Add(OutputCondition(tail^.appliance.isReady));
+    tail := tail^.prev;
+  end;
+end;
+
+end.

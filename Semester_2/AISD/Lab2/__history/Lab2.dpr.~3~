@@ -1,0 +1,92 @@
+program Lab2;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+type
+  pt = ^elem;
+  elem = record
+           koef: integer;
+           power: integer;
+           next: pt;
+         end;
+
+procedure makeList(var x: pt);
+var
+  i, N: integer;
+  ref: pt;
+begin
+  write('Введите количество одночленов в многочлене: ');
+  readln(N);
+  new(x);
+  ref := x;
+  for i := 1 to N do
+  begin
+    new(x^.next);
+    x := x^.next;
+    write('Введите коэффициент ', i, ' одночлена: ');
+    readln(x^.koef);
+    write('Введите степень ', i, ' одночлена: ');
+    readln(x^.power);
+  end;
+  x^.next := nil;
+  x := ref;
+end;
+
+procedure printMn(x: pt);
+begin
+  x := x^.next;
+  case x^.koef of
+    0: write('0');
+    1: if x^.power <> 0 then write(' + x^', x^.power)
+       else write(' + ', x^.koef)
+    else
+       if x^.power <> 0 then write(' + ',x^.koef, 'x^', x^.power)
+       else write(' + ', x^.koef)
+    end;
+  while x^.next <> nil do
+  begin
+    case x^.next^.koef of
+    0: write(' + 0');
+    1: if x^.next^.power <> 0 then write(' + x^', x^.next^.power)
+       else write(' + ', x^.next^.koef)
+    else
+       if x^.next^.power <> 0 then write(' + ',x^.next^.koef, 'x^', x^.next^.power)
+       else write(' + ', x^.next^.koef)
+    end;
+    x := x^.next;
+  end;
+end;
+
+procedure sortMn(var x: pt);
+var
+  arr: array of array of integer;
+  ref: pt;
+  i: integer;
+begin
+  ref := x;
+  x := x^.next;
+  i := 0;
+  while x<>nil do
+  begin
+    inc(i);
+    setLength(arr, i, 2);
+    arr[i-1,0] := x^.koef;
+    arr[i-1,1] := x^.power;
+    x := x^.next;
+  end;
+
+
+end;
+
+var
+  header: pt;
+begin
+  makeList(header);
+  printMn(header);
+  readln;
+end.

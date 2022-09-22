@@ -1,0 +1,53 @@
+unit unDeleteFunc;
+
+interface
+uses
+  unTypes;
+  function GetGroupByText(group: string): TGroup;
+  function GetBrandByText(brand: string): TBrand;
+  function GetConditionByText(isReady: string): boolean;
+implementation
+
+//Get group of appliance by text
+function GetGroupByText(group: string): TGroup;
+begin
+  if group = 'телевизор' then
+    GetGroupByText := TGroup(0)
+  else
+    if group = 'телефон' then
+      GetGroupByText := TGroup(1)
+    else
+      if group = 'компьютер' then
+        GetGroupByText := TGroup(2)
+      else
+        GetGroupBytext := TGroup(3);
+end;
+
+//Get group of appliance by text
+function GetBrandByText(brand: string): TBrand;
+begin
+  if brand = 'samsung' then
+    GetBrandByText := TBrand(0)
+  else
+    if brand = 'apple' then
+      GetBrandByText := TBrand(1)
+    else
+      if brand = 'huawei' then
+        GetBrandByText := TBrand(2)
+      else
+        if brand = 'LG' then
+          GetBrandBytext := TBrand(3)
+        else
+          GetBrandByText := TBrand(4);
+end;
+
+//Get condition of appliance by text
+function GetConditionByText(isReady: string): boolean;
+begin
+  if isReady = 'Готов' then
+    GetConditionByText := true
+  else
+    GetConditionByText := false;
+end;
+
+end.

@@ -1,0 +1,69 @@
+program Lab1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+type
+  pt = ^elem;
+    elem = Record
+           lastName: string;
+           number: integer;
+           next: pt;
+           end;
+
+procedure make(x: pt);
+var
+  i: integer;
+begin
+  new(x);
+  for i := 1 to 3 do
+  begin
+    new(x^.next);
+    x := x^.next;
+    write('¬ведите фамилию ', i, ' абонента: ');
+    readln(x^.lastName);
+    write('¬ведите номер ', i, ' абонента: ');
+    readln(x^.number);
+  end;
+  x.next := nil;
+end;
+
+procedure print(x: pt);
+begin
+  while x <> nil do
+  begin
+    write(x^.lastName,' ');
+    write(x^.number, ' ');
+    x := x^.next;
+  end;
+end;
+
+procedure insert(x: string; y: integer; p: pt);
+var
+  temp: pt;
+begin
+  temp := p^.next;
+  new(p^.next);
+  p^.next^.lastName := x;
+  p^.next^.number := y;
+  p^.next^.next := temp;
+end;
+
+procedure delete(x: string; y: integer; p: pt);
+begin
+  if (p^.next.lastName = x) and (p^.next.number = y) then
+    p^.next := p^.next^.next;
+end;
+
+var
+  first: pt;
+
+begin
+  make(first);
+  print(first);
+  readln;
+end.

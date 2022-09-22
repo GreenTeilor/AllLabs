@@ -1,0 +1,171 @@
+unit ufAdd;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls, unTypes;
+
+type
+  TFormAdd = class(TForm)
+    btClose: TButton;
+    cbGroup: TComboBox;
+    cbBrand: TComboBox;
+    cbCondition: TComboBox;
+    dtpReceiveDate: TDateTimePicker;
+    lbReceiveDate: TLabel;
+    lbReturnDate: TLabel;
+    dtpReturnDate: TDateTimePicker;
+    btAdd: TButton;
+    lbWarningGroup: TLabel;
+    lbWarningBrand: TLabel;
+    lbWarningCondition: TLabel;
+    procedure btAddClick(Sender: TObject);
+    procedure btCloseClick(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormAdd: TFormAdd;
+
+implementation
+uses ufMain, unListFunc;
+{$R *.dfm}
+
+//Get group of appliance
+function GetGroup(group: integer): TGroup;
+begin
+  GetGroup := TGroup(group);
+end;
+
+//Get group of appliance
+function GetBrand(brand: integer): TBrand;
+begin
+  GetBrand := TBrand(brand);
+end;
+
+//Get date
+function GetDate(Date: string): TDate;
+var
+  temp: TDate;
+begin
+  temp.day := copy(Date, 1, pos('.', Date) - 1);
+  delete(Date, 1, pos('.', Date));
+  temp.month := copy(Date, 1, pos('.', Date) - 1);
+  delete(Date, 1, pos('.', Date));
+  temp.year := Date;
+  GetDate := temp;
+end;
+
+//Return condition by index
+function GetCondition(isReadyIndex: integer): boolean;
+begin
+  if isReadyIndex = 1 then
+    GetCondition := true
+  else
+    GetCondition := false;
+end;
+
+//Ouput group of appliance
+function OutputGroup(group: TGroup): string;
+begin
+  case group of
+    TV: OutputGroup := 'телевизор';
+    phone: OutputGroup := 'телефон';
+    computer: OutputGroup := 'компьютер';
+    laptop: OutputGroup := 'ноутбук';
+    else
+      OutputGroup := 'новый тип';
+  end;
+end;
+
+//Output brand of appliance
+function OutputBrand(brand: TBrand): string;
+begin
+  case brand of
+    Samsung: OutputBrand := 'samsung';
+    Apple: OutputBrand := 'apple';
+    Huawei: OutputBrand := 'huawei';
+    LG: OutputBrand := 'LG';
+    HP: OutputBrand := 'HP'
+    else
+      OutputBrand := 'новая марка';
+  end;
+end;
+
+//Output condition depending on value of isReady
+function OutputCondition(isReady: boolean): string;
+begin
+  if isReady then
+    OutputCondition := 'Готов'
+  else
+    OutputCondition := 'Не готов';
+end;
+
+//Get info about appliance
+procedure GetApplianceInfo(var appliance: TAppliance);
+begin
+  appliance.group := GetGroup(FormAdd.cbGroup.ItemIndex);
+  appliance.brand := GetBrand(FormAdd.cbBrand.ItemIndex);
+  appliance.receiveDate := GetDate(FormatDateTime('dd.mm.yyyy', FormAdd.dtpReceiveDate.Date));
+  appliance.returnDate := GetDate(FormatDateTime('dd.mm.yyyy', FormAdd.dtpReturnDate.Date));
+  appliance.isReady := GetCondition(FormAdd.cbCondition.ItemIndex);
+end;
+
+procedure AddListElem(var head, tail: TElem; appliance: TAppliance);
+var
+  temp: TElem;
+  Itm: TListItem;
+begin
+  new(temp);
+  temp^.next := nil;
+  temp^.prev := tail;
+  tail^.next := temp;
+  tail := temp;
+  tail^.appliance := appliance;
+end;
+
+//Add new appliance
+procedure TFormAdd.btAddClick(Sender: TObject);
+var
+  Itm: TListItem;
+  appliance: TAppliance;
+begin
+  lbWarningGroup.visible := false;
+  lbWarningBrand.visible := false;
+  lbWarningCondition.visible := false;
+  if (cbGroup.ItemIndex <> -1) and (cbBrand.ItemIndex <> -1) and (cbCondition.ItemIndex <> -1) then
+  begin
+    {GetApplianceInfo(appliance);
+    Itm := FormMain.lvList.Items.Add;
+    Itm.caption := OutputGroup(appliance.group);
+    Itm.SubItems.Add(OutputBrand(appliance.brand));
+    Itm.SubItems.Add(appliance.receiveDate.day + '.' + appliance.receiveDate.month + '.' + appliance.receiveDate.year);
+    Itm.SubItems.Add(appliance.returnDate.day + '.' + appliance.returnDate.month + '.' + appliance.returnDate.year);
+    Itm.SubItems.Add(OutputCondition(appliance.isReady));}
+    GetApplianceInfo(appliance);
+    AddListElem(head, tail, appliance);
+    PrintList(head, tail, FormMain.lvList);
+  end
+  else
+  begin
+    if cbGroup.ItemIndex = -1 then
+      lbWarningGroup.visible := true;
+    if cbBrand.ItemIndex = -1 then
+      lbWarningBrand.visible := true;
+    if cbCondition.ItemIndex = -1 then
+      lbWarningCondition.visible := true;
+  end;
+end;
+
+//Close form
+procedure TFormAdd.btCloseClick(Sender: TObject);
+begin
+  FormAdd.Close;
+end;
+
+end.
