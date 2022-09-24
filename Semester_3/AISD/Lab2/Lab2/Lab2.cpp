@@ -269,7 +269,7 @@ int main()
                 cout << "Такой термин/подтермин не найден!\n";
             else
             {
-                cout << "================================================\n";
+                cout << "=====================================================\n";
                 cout << "По вашему запросу найдены следующие результаты:\n";
                 for (int i = 0; i < termins.size(); ++i)
                 {
@@ -277,16 +277,14 @@ int main()
                     objectPointer.printTerminAndSubTermins(termins[i]);
                     cout << '\n';
                 }
-                cout << "================================================\n";
+                cout << "=====================================================\n";
             }
             break;
         case 8:
             objectPointer.sortByAlphabet();
-            objectPointer.printSubjectPointer();
             break;
         case 9:
             objectPointer.sortByPages();
-            objectPointer.printSubjectPointer();;
             break;
         default:
             isExit = true;

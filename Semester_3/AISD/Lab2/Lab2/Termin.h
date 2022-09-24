@@ -2,14 +2,13 @@
 #include <vector>
 #include <string>
 
-class Termin;
-
 class Termin
 {
 	Termin* m_parentTermin;
 	std::vector<int> m_pagesNums;
 	std::vector<Termin> m_subTermins;
 	std::string m_name;
+	std::string m_id;
 
 	void printPages();
 	//-1 not present, otherwise return position
@@ -20,6 +19,7 @@ class Termin
 	void sortByAlphabet_private(Termin& termin);
 	void sortByPages_private(Termin& termin);
 	void sortInts(std::vector<int>& pagesNums);
+	std::string makeHash(const Termin& termin);
 
 public:
 	Termin(const std::string& name = "", std::vector<int> pagesNums = {});
