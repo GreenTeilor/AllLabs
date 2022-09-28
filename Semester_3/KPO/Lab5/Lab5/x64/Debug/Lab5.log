@@ -1,0 +1,4 @@
+﻿  Lab5.cpp
+D:\Labs\semester_3\KPO\Lab5\Lab5\Lab5.cpp(72,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\Labs\semester_3\KPO\Lab5\Lab5\Lab5.cpp(78,9): warning C4101: chosenWords: неиспользованная локальная переменная
+  Lab5.vcxproj -> D:\Labs\semester_3\KPO\Lab5\x64\Debug\Lab5.exe
