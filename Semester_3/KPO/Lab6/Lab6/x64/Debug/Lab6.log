@@ -1,0 +1,8 @@
+﻿  Lab6.cpp
+D:\Labs\semester_3\KPO\Lab6\Lab6\Lab6.cpp(15,23): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Labs\semester_3\KPO\Lab6\Lab6\Lab6.cpp(16,27): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Labs\semester_3\KPO\Lab6\Lab6\Lab6.cpp(26,14): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Labs\semester_3\KPO\Lab6\Lab6\Lab6.cpp(30,66): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Labs\semester_3\KPO\Lab6\Lab6\Lab6.cpp(33,35): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Labs\semester_3\KPO\Lab6\Lab6\Lab6.cpp(63,23): warning C4018: <: несоответствие типов со знаком и без знака
+  Lab6.vcxproj -> D:\Labs\semester_3\KPO\Lab6\x64\Debug\Lab6.exe
