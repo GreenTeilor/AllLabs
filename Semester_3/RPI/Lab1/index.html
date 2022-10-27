@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ghost Host</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/30439cbc82.js" crossorigin="anonymous"></script>
+  <script src="script/navbar.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+<!--Header-->
+<header class="header">
+  <div class="main-menu">
+    <!--Navbar-->
+    <div class="container-nav">
+      <nav class="nav-bar">
+        <a href="#"><img src="./images/logo.png" alt="logo"></a>
+        <ul class="nav">
+          <li><a href="#home" class="nav-bar__link">Home</a></li>
+          <li><a href="#domain" class="nav-bar__link">Domain</a></li>
+          <li><a href="#hosting" class="nav-bar__link">Hosting</a></li>
+          <li><a href="#clients" class="nav-bar__link">Clients</a></li>
+          <li><a href="#blog" class="nav-bar__link">Blog</a></li>
+          <li><a href="#support" class="nav-bar__link">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!--Section "Home"-->
+    <section class="home" id="home">
+      <div class="container">
+        <h2>HELLO!</h2>
+        <p>We love our work...</p>
+        <p>And We're taking it seriously...</p>
+      </div>
+    </section>
+  </div>
+
+  <!--Login/Register-->
+  <section class="registration">
+    <div class="login"><a href="#">Login</a></div>
+    <div class="register"><a href="#">Register</a></div>
+  </section>
+</header>
+
+<main>
+  <!--Prices-->
+  <section class="prices" id="domain">
+    <h3>Would you like to buy a new domain ?</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor mauris ac nulla interdum, id
+      molestier.</p>
+    <div class="domain-choose">
+      <span class="world-wide">www.</span>
+      <input class="domain" type="text" placeholder="What do you want?">
+      <select name="domain-name" id="domain-name">
+        <option value="com">.com</option>
+        <option value="net">.net</option>
+        <option value="ru">.ru</option>
+        <option value="org">.org</option>
+      </select>
+    </div>
+
+    <div class="domain-price">
+      <table class="domain-table">
+        <tr class="table-row">
+          <td class="top">.COM</td>
+          <td class="top one">1 Year</td>
+          <td class="top price">$9.00 USD</td>
+          <td class="top">Transfer Price No</td>
+        </tr>
+        <tr class="table-row">
+          <td class="bottom">.NET</td>
+          <td class="bottom one">1 Year</td>
+          <td class="bottom price">$9.00 USD</td>
+          <td class="bottom"><span>Transfer Price No</span></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!--Package-->
+  <section class="package" id="hosting">
+    <img src="images/package.jpg" alt="package">
+    <article class="package-blocks">
+      <div class="package-block">
+        <!--Yellow Package-->
+        <svg viewBox="0 0 40 40" class="circular-chart icons anchor">
+          <path class="circle" stroke-dasharray="25, 100"
+                d="M 18 2.0845
+                m 0, 0
+                a 15.9155, 15.9155 0 0 1, 0 31.831
+                a 15.9155, 15.9155 0 0 1, 0 -31.831"/>
+        </svg>
+        <h4 class="block-title">Basic Package</h4>
+        <ul class="block-list">
+          <li class="block-item">
+            <span class="item">Disk Space (GB)</span>
+            <span class="item-value">50</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Subdomains</span>
+            <span class="item-value">50</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Transfer (GB)</span>
+            <span class="item-value">50</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Data bases</span>
+            <span class="item-value">1</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Dashboards</span>
+            <span class="item-value">1</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Control Panel &amp; FTP</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Free Support</span>
+          </li>
+        </ul>
+
+        <footer class="block">
+          <div class="block-price">
+            <span class="price"><sup>$</sup>15<sub>/Mo</sub></span>
+          </div>
+          <a href="#" class="block-plan">Select Plan</a>
+        </footer>
+      </div>
+      <!--Grey Package-->
+      <div class="package-block package-grey">
+        <svg viewBox="0 0 40 40" class="circular-chart icons halfstar">
+          <path class="circle" stroke-dasharray="50, 100"
+                d="M 18 2.0845
+                m 0, 0
+                a 15.9155, 15.9155 0 0 1, 0 31.831
+                a 15.9155, 15.9155 0 0 1, 0 -31.831"/>
+        </svg>
+        <h4 class="block-title">Normal Package</h4>
+        <ul class="block-list">
+          <li class="block-item">
+            <span class="item">Disk Space (GB)</span>
+            <span class="item-value item-grey">100</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Subdomains</span>
+            <span class="item-value item-grey">100</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Transfer (GB)</span>
+            <span class="item-value item-grey">100</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Data bases</span>
+            <span class="item-value item-grey">2</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Dashboards</span>
+            <span class="item-value item-grey">2</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Control Panel &amp; FTP</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Free Support</span>
+          </li>
+        </ul>
+
+        <footer class="block">
+          <div class="block-price">
+            <span class="price"><sup>$</sup>30 <sub>/Mo</sub></span>
+          </div>
+          <a href="#" class="block-plan block-grey">Select Plan</a>
+        </footer>
+      </div>
+      <div class="package-block package-red">
+        <!--Red Package-->
+        <svg viewBox="0 0 40 40" class="circular-chart icons star">
+          <path class="circle" stroke-dasharray="75, 100"
+                d="M 18 2.0845
+                m 0, 0
+                a 15.9155, 15.9155 0 0 1, 0 31.831
+                a 15.9155, 15.9155 0 0 1, 0 -31.831"/>
+        </svg>
+        <h4 class="block-title">Big Package</h4>
+        <ul class="block-list">
+          <li class="block-item">
+            <span class="item">Disk Space (GB)</span>
+            <span class="item-value item-red">150</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Subdomains</span>
+            <span class="item-value item-red">150</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Transfer (GB)</span>
+            <span class="item-value item-red">150</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Data bases</span>
+            <span class="item-value item-red">4</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Dashboards</span>
+            <span class="item-value item-red">4</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Control Panel &amp; FTP</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Free Support</span>
+          </li>
+        </ul>
+
+        <footer class="block">
+          <div class="block-price">
+            <span class="price"><sup>$</sup>40 <sub>/Mo</sub></span>
+          </div>
+          <a href="#" class="block-plan block-red">Select Plan</a>
+        </footer>
+      </div>
+      <div class="package-block package-green">
+        <!--Green Package-->
+        <svg viewBox="0 0 40 40" class="circular-chart icons diamond">
+          <path class="circle" stroke-dasharray="100, 100"
+                d="M 18 2.0845
+                m 0, 0
+                a 15.9155, 15.9155 0 0 1, 0 31.831
+                a 15.9155, 15.9155 0 0 1, 0 -31.831"/>
+        </svg>
+        <h4 class="block-title">Biggest Package</h4>
+        <ul class="block-list">
+          <li class="block-item">
+            <span class="item">Disk Space (GB)</span>
+            <span class="item-value item-green">250</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Subdomains</span>
+            <span class="item-value item-green">250</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Transfer (GB)</span>
+            <span class="item-value item-green">250</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Data bases</span>
+            <span class="item-value item-green">6</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Dashboards</span>
+            <span class="item-value item-green">6</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Control Panel &amp; FTP</span>
+          </li>
+
+          <li class="block-item">
+            <span class="item">Free Support</span>
+          </li>
+        </ul>
+
+        <footer class="block">
+          <div class="block-price">
+            <span class="price"><sup>$</sup>70 <sub>/Mo</sub></span>
+          </div>
+          <a href="#" class="block-plan block-green">Select Plan</a>
+        </footer>
+      </div>
+    </article>
+    <div class="package-dotted"></div>
+  </section>
+
+  <!--About Us-->
+  <section class="about-us" id="clients">
+    <div class="content">
+      <article class="about-text">
+        <h3><span class="about">About </span><span class="us">Us</span></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat eget diam sit amet molestie.
+          Curabitur. ut ipsum bibendum tortor lacinia fermentum nec joeıa. Mauris at augue libero. Fusce posuere, sapien
+          nec poır. Uaee augsuada sed mauris in tincidunt...</p>
+      </article>
+
+      <div class="profiles">
+        <ul class="profile jonny">
+          <li><img src="images/Jonny.png" alt="Jonny"></li>
+          <li class="name">Jonny Doe</li>
+          <li class="prof">Designer</li>
+          <li class="horizontally"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="horizontally"><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li class="horizontally"><a href="#"><i class="fa fa-link"></i></a></li>
+        </ul>
+
+        <ul class="profile john">
+          <li><img src="images/John.png" alt="John"></li>
+          <li class="name">John Doe</li>
+          <li class="prof">Designer</li>
+          <li class="horizontally"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="horizontally"><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li class="horizontally"><a href="#"><i class="fa fa-link"></i></a></li>
+        </ul>
+
+        <ul class="profile johnathan">
+          <li><img src="images/Johnathan.png" alt="Johnathan"></li>
+          <li class="name">Johnathan Doe</li>
+          <li class="prof">Designer</li>
+          <li class="horizontally"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="horizontally"><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li class="horizontally"><a href="#"><i class="fa fa-link"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!--Slider-->
+  <div class="quotes">
+    <div class="slider__panel">
+        <img src="images/slider-bg.png" class="slider__img">
+        <article id="slider">
+            <input type="radio" name="slider" class="slider" id="switch1" checked>
+            <input type="radio" name="slider" class="slider" id="switch2">
+            <input type="radio" name="slider" class="slider" id="switch3">
+            <div id="quote__slides">
+                <div id="overflow">
+                    <div class="quote">
+                        <div class="quote__slide">
+                            <p class="quoter">"Suspendisse tempor turpis odio, sit amet cursus leo consequat non.
+                                Maecenas lacinia faucibus enimqui </br>
+                                interdum dolor pulvinar vitae."</p>
+                        </div>
+                        <div class="quote__slide">
+                            <p class="quoter">"Suspendisse tempor turpis odio, sit amet cursus leo consequat non.
+                                Maecenas lacinia faucibus enimqui </br>
+                                interdum dolor pulvinar vitae."</p>
+                        </div>
+                        <div class="quote__slide">
+                            <p class="quoter">"Suspendisse tempor turpis odio, sit amet cursus leo consequat non.
+                                Maecenas lacinia faucibus enimqui </br>
+                                interdum dolor pulvinar vitae."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="names__slides">
+                <div id="overflow2">
+                    <div class="owner">
+                        <div class="owner__slide">
+                            <p class="quote__owner">John Doe</p>
+                        </div>
+                        <div class="owner__slide">
+                            <p class="quote__owner">Johnathan Doe</p>
+                        </div>
+                        <div class="owner__slide">
+                            <p class="quote__owner">Jonny Doe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="active" class="bars">
+                <label for="switch1" class="bar first__bar"></label>
+                <label for="switch2" class="bar"></label>
+                <label for="switch3" class="bar"></label>
+            </div>
+        </article>>
+    </div>
+</div>
+
+
+  <!--Feature-->
+  <section class="features" id="blog">
+    <div class="feature-blocks">
+      <ul class="feature-block">
+        <li class="feature-item">
+          <div class="icon-flash icon-yellow">
+            <i class="fa-solid fa-bolt-lightning"></i>
+          </div>
+          <h4>Fast Servers</h4>
+          <p>Nulla dapibus neque augue, quis tincidunt tortor aliquam vitae.</p>
+        </li>
+      </ul>
+
+      <ul class="feature-block">
+        <li class="feature-item">
+          <div class="icon-flash icon-blue">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <h4>Cloud Servers</h4>
+          <p>Nulla dapibus neque augue, quis tincidunt tortor aliquam vitae.</p>
+        </li>
+      </ul>
+
+      <ul class="feature-block">
+        <li class="feature-item">
+          <div class="icon-flash icon-grey">
+            <i class="fas fa-arrows-alt"></i>
+          </div>
+          <h4>Domain Transfer</h4>
+          <p>Nulla dapibus neque augue, quis tincidunt tortor aliquam vitae.</p>
+        </li>
+      </ul>
+
+      <ul class="feature-block">
+        <li class="feature-item">
+          <div class="icon-flash icon-red">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h4>Live Support</h4>
+          <p>Nulla dapibus neque augue, quis tincidunt tortor aliquam vitae.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<!--Footer-->
+<footer class="footer" id="support">
+  <header class="footer-header">
+    <div class="footer-logo"></div>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Policy</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="footer-content">
+    <div class="footer-block">
+      <p>Lorem ipsum dolor sit amet, consecteteeseurı adipiscing elit. Donec mollis commodoeesene que, non commodo risus
+        volutpat vel.</p>
+      <p>Design by <b>Mert Can Eyriyer.</b></p>
+    </div>
+
+    <div class="footer-map footer-block">
+      <nav class="footer-list">
+        <ul>
+          <li>
+            <i class="fas fa-angle-right"></i><a href="#">Support</a>
+          </li>
+          <li>
+            <i class="fas fa-angle-right"></i><a href="#">Account</a>
+          </li>
+          <li>
+            <i class="fas fa-angle-right"></i><a href="#">Product Catalog</a>
+          </li>
+          <li>
+            <i class="fas fa-angle-right"></i><a href="#">Shortcodes</a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <i class="fas fa-angle-right"></i><a href="#">Site Map</a>
+          </li>
+          <li>
+            <i class="fas fa-angle-right"></i><a href="#">Whois Search</a>
+          </li>
+          <li>
+            <i class="fas fa-angle-right"></i><a href="#">Web Mail</a>
+          </li>
+          <li>
+            <i class="fas fa-angle-right"></i><a href="#">Find Domain</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-contact footer-block">
+      <ul>
+        <li><i class="fas fa-phone contact-icon"></i><a href="#">0000-0000-0000</a></li>
+        <li><i class="fas fa-envelope contact-icon"></i><a href="#">informationteam@ghosthost.com</a></li>
+        <li>Lorem Ipsum Street, Lorem Avenue,</li>
+        <li>Lorem Ipsum</li>
+      </ul>
+    </div>
+  </section>
+</footer>
+
+<script src="script/slider.js"></script>
+</body>
+
+</html>
