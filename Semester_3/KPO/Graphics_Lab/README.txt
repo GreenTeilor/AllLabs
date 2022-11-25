@@ -1,0 +1,1 @@
+To run this application you need SFML library
