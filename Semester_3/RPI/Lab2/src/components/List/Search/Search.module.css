@@ -1,0 +1,9 @@
+.search {
+    text-align: center;
+}
+
+.search input {
+    font-size: 14px;
+    height: 25px;
+    margin-bottom: 20px;
+}

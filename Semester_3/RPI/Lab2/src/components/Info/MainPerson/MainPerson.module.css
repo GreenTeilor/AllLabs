@@ -1,0 +1,42 @@
+.wrapper {
+    background-color: #1c1c1c;
+    color: #bdbdbd;
+    text-align: center;
+    width: 900px;
+    font-size: 24px;
+    margin: 10px auto;
+    border-left: 6px solid #8c6700;
+}
+
+.wrapper img {
+    height: 200px;
+    border: 2px dashed #8c6700;
+}
+
+.wrapper a {
+    margin: 20px 0;
+    position: relative;
+    display: inline-block;
+    padding: 8px 30px;
+    color: #8c6700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.wrapper a:hover {
+    color: #000000;
+    background: #8c6700;
+    box-shadow: 0 0 10px #8c6700, 0 0 40px #8c6700, 0 0 80px #8c6700;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .wrapper {
+        height: auto;
+        width: 100%;
+    }
+}

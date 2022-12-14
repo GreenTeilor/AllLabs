@@ -1,0 +1,17 @@
+.wrapper {
+
+}
+
+.videos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+    .videos {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+}

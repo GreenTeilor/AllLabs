@@ -1,0 +1,17 @@
+.wrapper {
+
+}
+
+.container {
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+    .container {
+        height: 300px;
+        width: 300px;
+        margin: 0 auto;
+    }
+}

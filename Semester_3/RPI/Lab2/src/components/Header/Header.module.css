@@ -1,0 +1,23 @@
+.nav {
+    display: flex;
+    background-color: #1c1c1c;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px;
+    width: 100%;
+}
+
+.item {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.item a {
+    color: white;
+    text-decoration: none;
+}
+
+.item a.active {
+    color: #8c6700;
+}

@@ -1,0 +1,8 @@
+.writer {
+    margin: 0 auto;
+}
+
+.writer img {
+    height: 200px;
+    border: 2px solid black;
+}

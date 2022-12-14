@@ -1,0 +1,14 @@
+.writers {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1300px) {
+    .writers {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+}
