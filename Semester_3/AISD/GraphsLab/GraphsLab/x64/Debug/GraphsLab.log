@@ -1,0 +1,3 @@
+﻿  Graph.cpp
+D:\Labs\semester_3\AISD\GraphsLab\GraphsLab\Graph.cpp(65,122): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  GraphsLab.vcxproj -> D:\Labs\semester_3\AISD\GraphsLab\x64\Debug\GraphsLab.exe
