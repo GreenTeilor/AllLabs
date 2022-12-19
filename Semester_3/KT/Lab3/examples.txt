@@ -1,0 +1,88 @@
+===РАБОЧИЕ ПРОГРАММЫ===
+
+'Initialise variable
+A = 5
+RAM if statement
+if A>=5 then
+  PRINT "A greater or equal to 5"
+else
+  PRINT "A less than 5"
+RAM end of the program
+END
+
+
+
+
+fhdhf = 5
+if fhdhf == 6 then
+  PRINT "ECHO!!!"
+else fhdhf = 8
+END
+
+
+
+
+END
+
+
+
+
+RAM this is my Program!
+' Прекрасная программа
+a = 4
+if a >= 4 then
+  a = 8
+END
+
+
+
+
+RAM this is my Program!
+a=6
+if a == 6 then RAM сравниваем а с 6
+	PRINT "That's good!" 'Печатаем, что это круто!
+else
+	a=4 RAM иначе просто присваиваем 4!
+END
+''''Программа закончилась
+'Программа, это парсер не видит
+'И это тоже
+'и это
+'Вообще комментарии не видит!
+
+
+===ОШИБОЧНЫЕ ПРОГРАММЫ===
+
+if a = 6 then
+	a = 7
+ОШИБКА: неверный оператор сравнения
+
+
+
+
+
+PRINT 'Hello world'
+ОШИБКА: кавычки для строкового литерала должны быть двойными
+
+
+
+
+
+
+P!NT "Hello world!"
+ОШИБКА: лексическая ошибка в строке 1, вместо R написано !
+
+
+
+
+//hahaha
+'hahahah
+ОШИБКА: лексическая ошибка в строке 1, спецификацией языка не предусмотрен комментарий вида //... !
+
+
+
+
+if a != b then
+	a = b	else
+	PRINT "Equal!"
+ОШИБКА: else не может находиться на той же строке, что и оператор после if

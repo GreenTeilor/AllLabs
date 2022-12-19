@@ -1,0 +1,105 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <time.h>
+#include <string.h>
+#include <dirent.h>
+
+
+FILE *file;
+
+char* concat(char *s1, char *s2) {
+
+    size_t len1 = strlen(s1);
+    size_t len2 = strlen(s2);
+    char *result = (char*)malloc(len1 + len2 + 1);
+
+    memcpy(result, s1, len1);
+    memcpy(result + len1, s2, len2 + 1);
+
+    return result;
+}
+
+void find_in_directory(char *directory, int min_size, int max_size, time_t min_time, time_t max_time)
+{
+    DIR *currentDirectory;
+    struct dirent *entity;
+    struct stat buffer = { 0 };
+    time_t time;
+    bool isClearMemory = false;
+
+    struct tm * timeinfo;
+    if (directory[strlen(directory) - 1] != '/') {
+        directory = concat(directory, "/");
+        isClearMemory = true;
+    }
+    currentDirectory = opendir(directory);
+    if (currentDirectory) {
+        entity = readdir(currentDirectory);
+        while (entity) {
+            if (entity->d_name[0] != '.' && entity->d_name[1] != '.') {
+                char* temp = concat(directory, entity->d_name);
+                if (opendir(temp)) {
+                    find_in_directory(temp, min_size, max_size, min_time, max_time);
+                } else {
+                    stat(temp, &buffer);
+                    time = mktime(localtime(&buffer.st_mtime));
+                    if ((buffer.st_size >= min_size) && (buffer.st_size <= max_size) && (time >= min_time) &&
+                        (time <= max_time)) {
+                        printf("Path: %s%s\n", directory, entity->d_name);
+                        fprintf(file, "Path: %s%s\n", directory, entity->d_name);
+
+                        printf("Size: %d bytes\n", buffer.st_size);
+                        fprintf(file, "Size: %d bytes\n", buffer.st_size);
+
+                        timeinfo = localtime(&buffer.st_mtime);
+                        printf("Last modification: %s\n", asctime(timeinfo));
+                        fprintf(file, "Last modification: %s\n", asctime(timeinfo));
+                    }
+                }
+                free(temp);
+            }
+            entity = readdir(currentDirectory);
+        }
+    }
+    closedir(currentDirectory);
+    if (isClearMemory)
+        free(directory);
+}
+
+int main(int argc, char *argv[])
+{
+
+    struct tm timeBuffer;
+    time_t minTime;
+    time_t maxTime;
+
+    char* minTimeArg;
+    char* maxTimeArg;
+    int minSize, maxSize;
+
+    file = fopen("output.txt", "w");
+
+    if (argc == 8) {
+        minTimeArg = concat(concat(argv[4], " "), argv[5]);
+        maxTimeArg = concat(concat(argv[6], " "), argv[7]);
+        strptime(minTimeArg, "%d.%m.%Y %R", &timeBuffer);
+        minTime = mktime(&timeBuffer);
+        strptime(maxTimeArg, "%d.%m.%Y %R", &timeBuffer);
+        maxTime = mktime(&timeBuffer);
+
+        minSize = std::atoi(argv[2]);
+        maxSize = std::atoi(argv[3]);
+
+        find_in_directory(argv[1], minSize, maxSize, minTime, maxTime);
+        free(minTimeArg);
+        free(maxTimeArg);
+    }
+    else {
+        printf("Wrong arguments count!");
+        fprintf(file, "Wrong arguments count!");
+    }
+
+    fclose(file);
+    return 0;
+}

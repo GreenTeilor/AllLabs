@@ -1,0 +1,18 @@
+#!/bin/bash
+#My first script!
+searchString=$1
+catalogPath=$2
+IFS=$'\n'
+for file in $(find $catalogPath -type f -name "*")
+do
+   #if [[ "$file" == *"$searchString"* ]] 
+   #then
+   #	stat $file
+   #	echo -e "\n\n"
+   #fi
+   if grep -q $searchString $file
+   then 
+   	stat $file	
+   	echo -e "\n\n"
+   fi
+done 
