@@ -1,0 +1,76 @@
+#include<sys/types.h>
+#include<sys/stat.h>
+#include<sys/wait.h>
+#include<fcntl.h>
+#include<alloca.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<libgen.h>
+#include<limits.h>
+#include<unistd.h>
+#include<dirent.h>
+#include <time.h>
+
+#define STR_SIZE 512
+
+
+int maxProc;
+int countProc = 0;
+void ProcessFolder(char *curPath, char *findPath){
+    DIR *dp;
+    dp = opendir(curPath);
+
+    struct dirent *d;
+    struct stat buf;
+    char *file = (char*)alloca(strlen(curPath) + NAME_MAX + 2);
+
+    int count = 0;
+    char *maxFile = (char*)alloca(NAME_MAX);
+
+    while(d = readdir(dp)){
+        if(strcmp(".", d->d_name) && strcmp("..", d->d_name)){
+            strcpy(file, curPath);
+            strcat(file, "/");
+            strcat(file, d->d_name);
+            if(d->d_type != DT_DIR){
+                if(strcmp(d->d_name,findPath) == 0){
+                    stat(file,&buf);
+                    printf("%s\n","{RES");
+                    printf("Path = %s, Size = %ld, Date = %d,Access Rights = %d, id = %d\n", file, buf.st_size,buf.st_ctime,buf.st_mode,buf.st_ino);
+                    printf("%s\n","RES}");
+                }
+                count++;
+            }
+            if(d->d_type == DT_DIR){
+                int wstatus;
+                if (countProc == maxProc){
+                    countProc--;
+                    wait(&wstatus);
+                }
+                pid_t pid = fork() ;
+                if (pid == 0)
+                    ProcessFolder(file,findPath);
+                else{
+                    wait(NULL);
+                    countProc++;
+                }
+            }
+        }
+    }
+    stat(curPath,&buf);
+    printf("Path = %s, Size = %ld, FileCount = %d, ProcNumb = %d, PID = %d\n", curPath, buf.st_size,count, countProc,getpid());
+    exit(0);
+}
+
+int main( int argc , char *argv[] ) {
+
+    maxProc = atol(argv[3]);
+
+    ProcessFolder(realpath(argv[1],NULL), argv[2]);
+
+    while (wait(NULL)) {}
+
+
+    return 0;
+}

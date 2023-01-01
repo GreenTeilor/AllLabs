@@ -1,0 +1,77 @@
+#include<sys/types.h>
+#include<sys/stat.h>
+#include<sys/wait.h>
+#include<fcntl.h>
+#include<alloca.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<libgen.h>
+#include<limits.h>
+#include<unistd.h>
+#include<dirent.h>
+#include<pthread.h>
+
+int maxProc;
+int countProc = 0;
+pthread_t tid[500];
+char *findPath;
+
+
+void * Process(void *curPath){
+    DIR *dp;
+    dp = opendir((char *)curPath);
+    struct dirent *d;
+    struct stat buf;
+    char *file = (char*)alloca(strlen((char*)curPath) + NAME_MAX + 2);
+    int count = 0;
+
+    while(d = readdir(dp)){
+        if(strcmp(".", d->d_name) && strcmp("..", d->d_name)){
+            strcpy(file, (char*)curPath);
+            strcat(file, "/");
+            strcat(file, d->d_name);
+            if(d->d_type != DT_DIR){
+
+                if(strcmp(d->d_name,findPath) == 0){
+                    stat(file,&buf);
+                    printf("%s\n","{FIND RES");
+                    printf("Path = %s, Size = %ld, Date = %d,Access Rights = %d, id = %d\n", file, buf.st_size,buf.st_ctime,buf.st_mode,buf.st_ino);
+                    printf("%s\n","}");
+                }
+                count++;
+            }
+            if(d->d_type == DT_DIR){
+                if(countProc<maxProc){
+                    pthread_create(&tid[countProc],NULL,Process,file);
+                    countProc++;
+                    pthread_join(tid[countProc-1],NULL);
+                }else{
+
+                    pthread_join(tid[countProc-1],NULL);
+                    countProc--;
+                    pthread_create(&tid[countProc],NULL,Process,file);
+                    countProc++;
+                    pthread_join(tid[countProc-1],NULL);
+                }
+            }
+        }
+    }
+
+    stat((char*)curPath,&buf);
+    printf("Path = %s, Size = %ld, FileCount = %d, ProcNumb = %d, PID = %d\n", curPath, buf.st_size,count, countProc,getpid());
+    countProc--;
+
+}
+
+int main( int argc , char *argv[] ){
+
+    maxProc = atol(argv[3]);
+    pthread_t tid;
+    findPath = argv[2];
+    pthread_create(&tid,NULL,Process,realpath(argv[1], NULL));
+    countProc++;
+    pthread_join(tid,NULL);
+
+    return 0;
+}
