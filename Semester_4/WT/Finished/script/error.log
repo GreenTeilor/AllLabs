@@ -1,0 +1,201 @@
+[21-Apr-2023 20:10:01 Europe/Minsk] PHP Warning:  file_get_contents(../html/regostrationLogin.html): Failed to open stream: No such file or directory in C:\Website\Labka2\script\registrationLogin.php on line 2
+[21-Apr-2023 20:10:35 Europe/Minsk] PHP Warning:  file_get_contents(../html/regostrationLogin.html): Failed to open stream: No such file or directory in C:\Website\Labka2\script\registrationLogin.php on line 2
+[21-Apr-2023 20:10:38 Europe/Minsk] PHP Warning:  file_get_contents(../html/regostrationLogin.html): Failed to open stream: No such file or directory in C:\Website\Labka2\script\registrationLogin.php on line 2
+[21-Apr-2023 20:12:54 Europe/Minsk] PHP Warning:  file_get_contents(../html/regostrationLogin.html): Failed to open stream: No such file or directory in C:\Website\Labka2\script\registrationLogin.php on line 2
+[22-Apr-2023 00:34:19 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 14
+[22-Apr-2023 00:34:19 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 11
+[22-Apr-2023 00:35:29 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:35:29 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:35:32 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:35:32 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:35:32 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:35:32 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:35:32 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:35:32 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:35:32 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:35:32 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:35:33 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:35:33 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:35:33 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:35:33 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:35:33 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:35:33 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:35:33 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:35:33 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:35:33 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:35:33 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:35:33 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:35:33 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:35:34 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:35:34 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:35:48 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:35:48 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:35:50 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:35:50 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:35:57 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:35:57 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:36:00 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:36:00 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:36:47 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:36:47 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[22-Apr-2023 00:37:42 Europe/Minsk] PHP Warning:  Undefined variable $registrationLogin_template in C:\Website\Labka2\script\registrationLogin.php on line 9
+[22-Apr-2023 00:37:42 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\Website\Labka2\script\registrationLogin.php on line 6
+[04-May-2023 20:06:25 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: could not find driver in C:\Website\Labka2\script\index.php:3
+Stack trace:
+#0 C:\Website\Labka2\script\index.php(3): PDO->__construct('\r\nmysql:dbname=...', 'root', Object(SensitiveParameterValue))
+#1 {main}
+  thrown in C:\Website\Labka2\script\index.php on line 3
+[04-May-2023 20:10:00 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: could not find driver in C:\Website\Labka2\script\index.php:3
+Stack trace:
+#0 C:\Website\Labka2\script\index.php(3): PDO->__construct('\r\nmysql:dbname=...', 'root', Object(SensitiveParameterValue))
+#1 {main}
+  thrown in C:\Website\Labka2\script\index.php on line 3
+[04-May-2023 20:10:00 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: could not find driver in C:\Website\Labka2\script\index.php:3
+Stack trace:
+#0 C:\Website\Labka2\script\index.php(3): PDO->__construct('\r\nmysql:dbname=...', 'root', Object(SensitiveParameterValue))
+#1 {main}
+  thrown in C:\Website\Labka2\script\index.php on line 3
+[04-May-2023 20:10:00 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: could not find driver in C:\Website\Labka2\script\index.php:3
+Stack trace:
+#0 C:\Website\Labka2\script\index.php(3): PDO->__construct('\r\nmysql:dbname=...', 'root', Object(SensitiveParameterValue))
+#1 {main}
+  thrown in C:\Website\Labka2\script\index.php on line 3
+[04-May-2023 20:10:00 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: could not find driver in C:\Website\Labka2\script\index.php:3
+Stack trace:
+#0 C:\Website\Labka2\script\index.php(3): PDO->__construct('\r\nmysql:dbname=...', 'root', Object(SensitiveParameterValue))
+#1 {main}
+  thrown in C:\Website\Labka2\script\index.php on line 3
+[04-May-2023 20:10:00 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: could not find driver in C:\Website\Labka2\script\index.php:3
+Stack trace:
+#0 C:\Website\Labka2\script\index.php(3): PDO->__construct('\r\nmysql:dbname=...', 'root', Object(SensitiveParameterValue))
+#1 {main}
+  thrown in C:\Website\Labka2\script\index.php on line 3
+[04-May-2023 20:10:01 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: could not find driver in C:\Website\Labka2\script\index.php:3
+Stack trace:
+#0 C:\Website\Labka2\script\index.php(3): PDO->__construct('\r\nmysql:dbname=...', 'root', Object(SensitiveParameterValue))
+#1 {main}
+  thrown in C:\Website\Labka2\script\index.php on line 3
+[04-May-2023 20:10:32 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: could not find driver in C:\Website\Labka2\script\index.php:3
+Stack trace:
+#0 C:\Website\Labka2\script\index.php(3): PDO->__construct('\r\nmysql:dbname=...', 'root', Object(SensitiveParameterValue))
+#1 {main}
+  thrown in C:\Website\Labka2\script\index.php on line 3
+[04-May-2023 20:18:15 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''cards' ORDER BY 'name'' at line 1 in C:\Website\Labka2\script\index.php:6
+Stack trace:
+#0 C:\Website\Labka2\script\index.php(6): PDOStatement->execute()
+#1 {main}
+  thrown in C:\Website\Labka2\script\index.php on line 6
+[04-May-2023 20:40:15 Europe/Minsk] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''cards' ORDER BY 'name'' at line 1 in C:\Website\Labka2\script\incs\db.php:6
+Stack trace:
+#0 C:\Website\Labka2\script\incs\db.php(6): PDOStatement->execute()
+#1 C:\Website\Labka2\script\index.php(10): fetchFromDB()
+#2 {main}
+  thrown in C:\Website\Labka2\script\incs\db.php on line 6
+[04-May-2023 21:26:08 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function fetchFromDB() in C:\Website\Labka2\script\index.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\Website\Labka2\script\index.php on line 4
+[04-May-2023 21:26:08 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function fetchFromDB() in C:\Website\Labka2\script\index.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\Website\Labka2\script\index.php on line 4
+[04-May-2023 21:26:08 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function fetchFromDB() in C:\Website\Labka2\script\index.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\Website\Labka2\script\index.php on line 4
+[04-May-2023 21:26:09 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function fetchFromDB() in C:\Website\Labka2\script\index.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\Website\Labka2\script\index.php on line 4
+[04-May-2023 21:26:09 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function fetchFromDB() in C:\Website\Labka2\script\index.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\Website\Labka2\script\index.php on line 4
+[04-May-2023 21:26:09 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function fetchFromDB() in C:\Website\Labka2\script\index.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\Website\Labka2\script\index.php on line 4
+[04-May-2023 21:42:48 Europe/Minsk] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + string in C:\Website\Labka2\script\incs\db.php:11
+Stack trace:
+#0 C:\Website\Labka2\script\index.php(4): fetchFromDB()
+#1 {main}
+  thrown in C:\Website\Labka2\script\incs\db.php on line 11
+[04-May-2023 22:02:37 Europe/Minsk] PHP Warning:  Undefined variable $array in C:\Website\Labka2\script\index.php on line 5
+[04-May-2023 22:02:37 Europe/Minsk] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Website\Labka2\script\incs\db.php on line 14
+[04-May-2023 22:02:37 Europe/Minsk] PHP Warning:  Undefined variable $generatedCode in C:\Website\Labka2\script\incs\db.php on line 23
+[04-May-2023 22:02:37 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in C:\Website\Labka2\script\index.php on line 20
+[04-May-2023 22:03:38 Europe/Minsk] PHP Warning:  Undefined variable $array in C:\Website\Labka2\script\index.php on line 5
+[04-May-2023 22:03:38 Europe/Minsk] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Website\Labka2\script\incs\db.php on line 14
+[04-May-2023 22:03:38 Europe/Minsk] PHP Warning:  Undefined variable $generatedCode in C:\Website\Labka2\script\incs\db.php on line 23
+[04-May-2023 22:03:38 Europe/Minsk] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in C:\Website\Labka2\script\index.php on line 20
+[05-May-2023 20:23:16 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function sendEmail() in C:\Website\Labka2\script\registrationLogin.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\Website\Labka2\script\registrationLogin.php on line 17
+[05-May-2023 20:23:46 Europe/Minsk] PHP Warning:  require_once(C:\Website\Labka2\scriptsend.php): Failed to open stream: No such file or directory in C:\Website\Labka2\script\registrationLogin.php on line 5
+[05-May-2023 20:23:46 Europe/Minsk] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Website\Labka2\scriptsend.php' (include_path='.;C:\php\pear') in C:\Website\Labka2\script\registrationLogin.php:5
+Stack trace:
+#0 {main}
+  thrown in C:\Website\Labka2\script\registrationLogin.php on line 5
+[05-May-2023 20:23:49 Europe/Minsk] PHP Warning:  require_once(C:\Website\Labka2\scriptsend.php): Failed to open stream: No such file or directory in C:\Website\Labka2\script\registrationLogin.php on line 5
+[05-May-2023 20:23:49 Europe/Minsk] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Website\Labka2\scriptsend.php' (include_path='.;C:\php\pear') in C:\Website\Labka2\script\registrationLogin.php:5
+Stack trace:
+#0 {main}
+  thrown in C:\Website\Labka2\script\registrationLogin.php on line 5
+[05-May-2023 20:23:53 Europe/Minsk] PHP Warning:  require_once(C:\Website\Labka2\scriptsend.php): Failed to open stream: No such file or directory in C:\Website\Labka2\script\registrationLogin.php on line 5
+[05-May-2023 20:23:53 Europe/Minsk] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Website\Labka2\scriptsend.php' (include_path='.;C:\php\pear') in C:\Website\Labka2\script\registrationLogin.php:5
+Stack trace:
+#0 {main}
+  thrown in C:\Website\Labka2\script\registrationLogin.php on line 5
+[05-May-2023 20:24:03 Europe/Minsk] PHP Warning:  require_once(C:\Website\Labka2\script./send.php): Failed to open stream: Permission denied in C:\Website\Labka2\script\registrationLogin.php on line 5
+[05-May-2023 20:24:03 Europe/Minsk] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Website\Labka2\script./send.php' (include_path='.;C:\php\pear') in C:\Website\Labka2\script\registrationLogin.php:5
+Stack trace:
+#0 {main}
+  thrown in C:\Website\Labka2\script\registrationLogin.php on line 5
+[05-May-2023 20:24:04 Europe/Minsk] PHP Warning:  require_once(C:\Website\Labka2\script./send.php): Failed to open stream: Permission denied in C:\Website\Labka2\script\registrationLogin.php on line 5
+[05-May-2023 20:24:04 Europe/Minsk] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Website\Labka2\script./send.php' (include_path='.;C:\php\pear') in C:\Website\Labka2\script\registrationLogin.php:5
+Stack trace:
+#0 {main}
+  thrown in C:\Website\Labka2\script\registrationLogin.php on line 5
+[05-May-2023 20:24:04 Europe/Minsk] PHP Warning:  require_once(C:\Website\Labka2\script./send.php): Failed to open stream: Permission denied in C:\Website\Labka2\script\registrationLogin.php on line 5
+[05-May-2023 20:24:04 Europe/Minsk] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Website\Labka2\script./send.php' (include_path='.;C:\php\pear') in C:\Website\Labka2\script\registrationLogin.php:5
+Stack trace:
+#0 {main}
+  thrown in C:\Website\Labka2\script\registrationLogin.php on line 5
+[05-May-2023 20:24:29 Europe/Minsk] PHP Warning:  Undefined variable $data in C:\Website\Labka2\script\registrationLogin.php on line 18
+[05-May-2023 20:28:23 Europe/Minsk] PHP Warning:  Undefined variable $data in C:\Website\Labka2\script\registrationLogin.php on line 18
+[05-May-2023 20:29:39 Europe/Minsk] PHP Warning:  Undefined variable $data in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:29:39 Europe/Minsk] PHP Warning:  Trying to access array offset on value of type null in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:29:39 Europe/Minsk] PHP Warning:  Trying to access array offset on value of type null in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:29:52 Europe/Minsk] PHP Warning:  Undefined variable $data in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:29:52 Europe/Minsk] PHP Warning:  Trying to access array offset on value of type null in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:29:52 Europe/Minsk] PHP Warning:  Trying to access array offset on value of type null in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:30:49 Europe/Minsk] PHP Warning:  require_once(C:\Website\Labka2\scriptsend.php): Failed to open stream: No such file or directory in C:\Website\Labka2\script\registrationLogin.php on line 5
+[05-May-2023 20:30:49 Europe/Minsk] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Website\Labka2\scriptsend.php' (include_path='.;C:\php\pear') in C:\Website\Labka2\script\registrationLogin.php:5
+Stack trace:
+#0 {main}
+  thrown in C:\Website\Labka2\script\registrationLogin.php on line 5
+[05-May-2023 20:30:51 Europe/Minsk] PHP Warning:  require_once(C:\Website\Labka2\scriptsend.php): Failed to open stream: No such file or directory in C:\Website\Labka2\script\registrationLogin.php on line 5
+[05-May-2023 20:30:51 Europe/Minsk] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Website\Labka2\scriptsend.php' (include_path='.;C:\php\pear') in C:\Website\Labka2\script\registrationLogin.php:5
+Stack trace:
+#0 {main}
+  thrown in C:\Website\Labka2\script\registrationLogin.php on line 5
+[05-May-2023 20:36:12 Europe/Minsk] PHP Warning:  Undefined variable $data in C:\Website\Labka2\script\registrationLogin.php on line 18
+[05-May-2023 20:39:48 Europe/Minsk] PHP Warning:  Undefined variable $data in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:39:48 Europe/Minsk] PHP Warning:  Trying to access array offset on value of type null in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:39:48 Europe/Minsk] PHP Warning:  Trying to access array offset on value of type null in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:39:53 Europe/Minsk] PHP Warning:  Undefined variable $data in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:39:53 Europe/Minsk] PHP Warning:  Trying to access array offset on value of type null in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:39:53 Europe/Minsk] PHP Warning:  Trying to access array offset on value of type null in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:40:05 Europe/Minsk] PHP Warning:  Undefined variable $data in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:40:05 Europe/Minsk] PHP Warning:  Trying to access array offset on value of type null in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:40:05 Europe/Minsk] PHP Warning:  Trying to access array offset on value of type null in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:40:32 Europe/Minsk] PHP Warning:  Undefined variable $data in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:40:32 Europe/Minsk] PHP Warning:  Trying to access array offset on value of type null in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:40:32 Europe/Minsk] PHP Warning:  Trying to access array offset on value of type null in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:44:44 Europe/Minsk] PHP Warning:  Undefined array key "email" in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:46:19 Europe/Minsk] PHP Warning:  Undefined array key "email" in C:\Website\Labka2\script\send.php on line 12
+[05-May-2023 20:54:14 Europe/Minsk] PHP Warning:  Undefined array key "email" in C:\Website\Labka2\script\send.php on line 8
+[05-May-2023 21:02:12 Europe/Minsk] PHP Warning:  Undefined variable $data in C:\Website\Labka2\script\registrationLogin.php on line 18
+[05-May-2023 21:02:57 Europe/Minsk] PHP Warning:  Undefined variable $data in C:\Website\Labka2\script\registrationLogin.php on line 18
+[05-May-2023 21:04:18 Europe/Minsk] PHP Warning:  Undefined variable $data in C:\Website\Labka2\script\registrationLogin.php on line 18

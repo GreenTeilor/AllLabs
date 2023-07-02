@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Mind-Breakers Online Shop</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="stylesheet" type="text/css" href="../style/registrationLogin.css">
+    <meta name="viewport" content="width=device-width; initial-scale=1">
+</head>
+
+<body>
+
+    {header}
+
+    <main>
+        <input type="checkbox" id="switch">
+        <div class="registration">
+            <form class="decor" method="post" onsubmit="submitForm(event)" action="registrationLogin.php">
+                <div class="form-left-decoration"></div>
+                <div class="form-right-decoration"></div>
+                <div class="circle"></div>
+                <div class="form-inner">
+                    <h3>Регистрация</h3>
+                    <input type="email" placeholder="Email" id="email" name="email">
+                    <input type="password" placeholder="Пароль" id="password" name="password">
+                    <input type="password" placeholder="Повторите пароль" id="passwordRepeat" name="passwordRepeat">
+                    <input type="submit" value="Зарегистрироваться">
+                    <label for="switch">Уже есть аккаунт? Выполните вход!</label>
+                    {status}
+                </div>
+            </form>
+        </div>
+        <div class="login">
+            <form class="decor" method="post">
+                <div class="form-left-decoration"></div>
+                <div class="form-right-decoration"></div>
+                <div class="circle"></div>
+                <div class="form-inner">
+                    <h3>Вход</h3>
+                    <input type="email" placeholder="Email" id="email" name="email">
+                    <input type="password" placeholder="Пароль" id="password" name="password">
+                    <input type="submit" value="Войти">
+                    <label for="switch">Нет аккаунта? Зарегистрируйтесь!</label>
+                    {status}
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    {footer}
+
+</body>
+
+</html>

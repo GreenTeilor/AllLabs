@@ -1,0 +1,165 @@
+main {
+  margin: 0 auto;
+}
+
+body {
+  width: 100%;
+  background-image: url("../images/background3.jpg");
+}
+
+.container {
+  max-width: 1200px;
+  margin: 200px auto 0;
+  /* добавляем отступ сверху */
+}
+
+.product-video,
+.product-description {
+  display: inline-block;
+}
+
+.product-video {
+  width: 50%;
+  margin-right: 20px;
+  height: 320px;
+}
+
+.product-video iframe {
+  max-width: 100%;
+  
+}
+
+.product-description {
+  width: 40%;
+}
+
+.product-description h1 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.product-description p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+
+@media(max-width: 991px) {
+  .container {
+    margin-top: 300px;
+  }
+}
+
+@media(max-width: 501px) {
+  .container {
+    margin-top: 340px;
+  }
+}
+
+@media(max-width: 377px) {
+  .container {
+    margin-top: 390px;
+  }
+}
+
+@media(max-width: 260px) {
+  .container {
+    margin-top: 365px;
+  }
+}
+
+@media(min-height: 500px) {
+  footer {
+    margin-top: 0 px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: block;
+    justify-content: center;
+  }
+
+  .product-video,
+  .product-description {
+    display: block;
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .product-video {
+    margin-bottom: 2%;
+  }
+}
+
+/* Секция кнопки добавить */
+.btnAdd {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: greenyellow;
+  color: black;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding: 5px;
+  line-height: 28px;
+  transition: .3s ease-in;
+  margin: 31px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.btnadd {
+  color: black;
+}
+
+.btnadd:hover {
+  color: rgb(0, 13, 189);
+}
+
+.btnAdd::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #fbbb43;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.btnadd::before {
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.btnadd:hover::before {
+  height: 180%;
+}
+
+.product-description h1,
+p {
+  color: white;
+  text-shadow: 4px 4px 3px rgba(0, 0, 0, 1);
+}
+
+.product-description h1 .name {
+  font-size: 60px;
+  color: white;
+
+}
+
+footer {
+  margin-top: 238px;
+}
+
+@media(max-width: 991px) {
+  footer {
+    margin-top: 50px;
+  }
+
+  .container {
+    margin-top: 250px;
+  }
+}

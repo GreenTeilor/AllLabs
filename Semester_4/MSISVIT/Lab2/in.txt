@@ -1,0 +1,35 @@
+#include <iostream>
+
+int printInRange(int a, int b) 
+{
+	for (int i = a; i < b; ++i)
+		cout << i;
+}
+
+int main(int argc, char** argv)
+{
+	cout << "Hello!";
+	int x, a;
+	cin >> x;
+	cin >> a;
+	switch(x)
+	{
+	case 0: {
+		cout << "X is zero";
+		}
+	case 1: {
+		cout << "X is one";
+		}
+	case 2:
+		cout << "X is two";
+ 	case 3:
+		cout << "X is three";
+	case -1:
+		x += 1;
+	default:
+		a = 5;	
+	}	
+
+	
+	   
+}

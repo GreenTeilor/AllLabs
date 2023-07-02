@@ -1,0 +1,88 @@
+#include <iostream>
+
+int printInRange(int a, int b) 
+{
+	for (int i = a; i < b; ++i)
+		cout << i;
+}
+
+int main(int argc, char** argv)
+{
+	cout << "Hello!";
+	int x, a;
+	cin >> x;
+	cin >> a;
+	switch(x)
+	{
+	case 0: {
+		cout << "X is zero";
+		}
+	case 1: {
+		cout << "X is one";
+		}
+	case 2:
+		cout << "X is two";
+ 	case 3:
+		cout << "X is three";
+	case -1:
+		x += 1;
+	default:
+		if (a > 1000) {
+			if (a % 2 == 0)
+				cout << "A is big and even";
+			else
+				a = 0;
+		}
+		else if (a > 2000) {
+			cout << "A is very big";
+		}
+		else if (a > 3000) {
+			while (x > 0) {
+				while (x > 0) {
+				cout << x;
+				for (int i = 0; i < 4; i++)
+					for (int j = 0; j < 5; j++)
+						for (int k = 0; k < 6; ++k)
+							for (int t = 0; t < 7; ++t)
+								cout << i << j << k << t;
+				x--;
+				}
+				cout << x;
+				x--;
+			}
+			cout << "A is very-very big";
+		}
+		else if (a > 4000)
+			cout << "A is very-very-very big";
+		else if (a > 5000)
+			cout << "A is very-very-very-very big";
+		else if (a > 6000)
+			a = 1000;
+		else if (a > 7000)
+			a = 2000;
+		else
+			a = 0;
+	}	
+
+	if (a > x) {
+		a *= x;
+		}
+		else if (a < x)
+			a /= x;
+			else if (a == x)
+				a += x;
+				else if (a % 2 == 0)
+					cout << "A is even";
+					else if (x / 2 == 0)
+						cout << "X is less than 2";
+						//else if (x < 0)
+							//cout << "X is negative";
+							else 
+								printInRange(a, x);
+	int romka;
+	cin >> romka;
+	cout << romka;
+	int haf, kuf = 4;
+	cout << kuf;
+	char c;
+}
