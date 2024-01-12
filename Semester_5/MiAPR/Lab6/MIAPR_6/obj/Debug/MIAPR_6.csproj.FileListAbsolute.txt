@@ -1,0 +1,46 @@
+D:\Учеба\3 курс\1 сем\МиАПР\Лабы\6\MIAPR_6\MIAPR_6\bin\Debug\MIAPR_6.exe.config
+D:\Учеба\3 курс\1 сем\МиАПР\Лабы\6\MIAPR_6\MIAPR_6\bin\Debug\MIAPR_6.exe
+D:\Учеба\3 курс\1 сем\МиАПР\Лабы\6\MIAPR_6\MIAPR_6\bin\Debug\MIAPR_6.pdb
+D:\Учеба\3 курс\1 сем\МиАПР\Лабы\6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.csprojResolveAssemblyReference.cache
+D:\Учеба\3 курс\1 сем\МиАПР\Лабы\6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.Form1.resources
+D:\Учеба\3 курс\1 сем\МиАПР\Лабы\6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.Properties.Resources.resources
+D:\Учеба\3 курс\1 сем\МиАПР\Лабы\6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.csproj.GenerateResource.Cache
+D:\Учеба\3 курс\1 сем\МиАПР\Лабы\6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.exe
+D:\Учеба\3 курс\1 сем\МиАПР\Лабы\6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.pdb
+D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\bin\Debug\MIAPR_6.exe.config
+D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.exe
+D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.pdb
+D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\bin\Debug\MIAPR_6.exe
+D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\bin\Debug\MIAPR_6.pdb
+D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.csprojResolveAssemblyReference.cache
+D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.Form1.resources
+D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.Properties.Resources.resources
+D:\Учеба\3 курс\1 сем\REPOSIT\MIAPR_Lab6\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.csproj.GenerateResource.Cache
+C:\Users\CapsLock Shop\Desktop\MIAPR_6\MIAPR_6\bin\Debug\MIAPR_6.exe.config
+C:\Users\CapsLock Shop\Desktop\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.exe
+C:\Users\CapsLock Shop\Desktop\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.pdb
+C:\Users\CapsLock Shop\Desktop\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.csprojResolveAssemblyReference.cache
+C:\Users\CapsLock Shop\Desktop\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.Form1.resources
+C:\Users\CapsLock Shop\Desktop\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.Properties.Resources.resources
+C:\Users\CapsLock Shop\Desktop\MIAPR_6\MIAPR_6\obj\Debug\MIAPR_6.csproj.GenerateResource.Cache
+C:\Users\CapsLock Shop\Desktop\MIAPR_6\MIAPR_6\bin\Debug\MIAPR_6.exe
+C:\Users\CapsLock Shop\Desktop\MIAPR_6\MIAPR_6\bin\Debug\MIAPR_6.pdb
+F:\Лабы\МиАПР\MiAPR_6\MIAPR_6\bin\Debug\MIAPR_6.exe.config
+F:\Лабы\МиАПР\MiAPR_6\MIAPR_6\obj\Debug\MIAPR_6.exe
+F:\Лабы\МиАПР\MiAPR_6\MIAPR_6\obj\Debug\MIAPR_6.pdb
+F:\Лабы\МиАПР\MiAPR_6\MIAPR_6\bin\Debug\MIAPR_6.exe
+F:\Лабы\МиАПР\MiAPR_6\MIAPR_6\bin\Debug\MIAPR_6.pdb
+F:\Лабы\МиАПР\MiAPR_6\MIAPR_6\obj\Debug\MIAPR_6.csprojResolveAssemblyReference.cache
+F:\Лабы\МиАПР\MiAPR_6\MIAPR_6\obj\Debug\MIAPR_6.Form1.resources
+F:\Лабы\МиАПР\MiAPR_6\MIAPR_6\obj\Debug\MIAPR_6.Properties.Resources.resources
+F:\Лабы\МиАПР\MiAPR_6\MIAPR_6\obj\Debug\MIAPR_6.csproj.GenerateResource.Cache
+D:\Labs\semester_5\MiAPR\Lab6\MIAPR_6\bin\Debug\MIAPR_6.exe.config
+D:\Labs\semester_5\MiAPR\Lab6\MIAPR_6\bin\Debug\MIAPR_6.exe
+D:\Labs\semester_5\MiAPR\Lab6\MIAPR_6\bin\Debug\MIAPR_6.pdb
+D:\Labs\semester_5\MiAPR\Lab6\MIAPR_6\obj\Debug\MIAPR_6.csproj.AssemblyReference.cache
+D:\Labs\semester_5\MiAPR\Lab6\MIAPR_6\obj\Debug\MIAPR_6.Form1.resources
+D:\Labs\semester_5\MiAPR\Lab6\MIAPR_6\obj\Debug\MIAPR_6.Properties.Resources.resources
+D:\Labs\semester_5\MiAPR\Lab6\MIAPR_6\obj\Debug\MIAPR_6.csproj.GenerateResource.cache
+D:\Labs\semester_5\MiAPR\Lab6\MIAPR_6\obj\Debug\MIAPR_6.csproj.CoreCompileInputs.cache
+D:\Labs\semester_5\MiAPR\Lab6\MIAPR_6\obj\Debug\MIAPR_6.exe
+D:\Labs\semester_5\MiAPR\Lab6\MIAPR_6\obj\Debug\MIAPR_6.pdb

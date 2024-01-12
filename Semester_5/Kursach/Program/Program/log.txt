@@ -1,0 +1,45 @@
+//Results WITHOUT if and additional images array(10x10)
+The elapsed time is 0.007 seconds //14 tiles opened
+The elapsed time is 0.019 seconds //All field opened
+The elapsed time is 0.021 seconds //New game
+The elapsed time is 0.002 seconds //New game
+The elapsed time is 0.002 seconds //1 tile opened
+The elapsed time is 0.003 seconds //1 tile opened
+The elapsed time is 0.003 seconds //1 tile opened
+The elapsed time is 0.013 seconds //Approximately 40 tiles
+
+//Results WITH if and additional images array(10x10)
+The elapsed time is 0.008 seconds //16 tiles opened
+The elapsed time is 0 seconds //1 tile opened
+The elapsed time is 0.001 seconds //1 tile opened
+The elapsed time is 0 seconds //1 tile opened
+The elapsed time is 0.035 seconds //All field opened
+The elapsed time is 0.037 seconds //New game
+The elapsed time is 0 seconds //New game
+
+//Results WITHOUT if and additional images array(40x40)
+The elapsed time is 0.034 seconds //1 tile opened
+The elapsed time is 0.084 seconds //Approximately 100 tiles
+The elapsed time is 0.264 seconds //All field
+The elapsed time is 0.327 seconds //New game
+The elapsed time is 0.031 seconds //New game
+The elapsed time is 0.034 seconds //Approximately 20 tiles
+The elapsed time is 0.086 seconds //Approximately 120 tiles
+
+//Results WITH if and additional images array(40x40)
+The elapsed time is 0.002 seconds //1 tile opened
+The elapsed time is 0.002 seconds //1 tile opened
+The elapsed time is 0.002 seconds //1 tile opened
+The elapsed time is 0.002 seconds //1 tile opened
+The elapsed time is 0.023 seconds //Approximately 55 tiles
+The elapsed time is 0.002 seconds //1 tile opened
+The elapsed time is 0.009 seconds //15 tiles opened
+The elapsed time is 0.002 seconds //1 tile opened
+The elapsed time is 0.002 seconds //1 tile opened
+The elapsed time is 0.002 seconds //1 tile opened
+The elapsed time is 0.002 seconds //1 tile opened 
+The elapsed time is 0.001 seconds //1 tile opened
+The elapsed time is 0.014 seconds //Approximately 50 tiles
+The elapsed time is 0.026 seconds //Approximately 50 tiles
+The elapsed time is 0.001 seconds //1 tile opened
+The elapsed time is 0.305 seconds //All field

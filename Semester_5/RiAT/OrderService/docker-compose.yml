@@ -1,0 +1,31 @@
+version: "2.21.0-desktop.1"
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: shop_db
+    ports:
+      - "3306:3306"
+    networks:
+      - restwebservice-mysql
+
+  restwebservice:
+    container_name: web-service
+    restart: always
+    depends_on:
+      - mysql
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      SERVER_PORT: 8080
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql/shop_db
+    networks:
+      - restwebservice-mysql
+networks:
+  restwebservice-mysql:

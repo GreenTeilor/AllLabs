@@ -1,0 +1,13 @@
+﻿<Window x:Class="Lab7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="МиАПР 8" Height="509" Width="740" Loaded="Window_Loaded">
+    <Grid x:Name="WindowGrid">
+        <Button x:Name="SynthesisButton" Content="Синтез" Margin="0,10,19,0" VerticalAlignment="Top" Click="SynthesisButton_Click" HorizontalAlignment="Right" Width="91" IsEnabled="False"/>
+        <Button x:Name="RecognitionButton" Content="Распознавание" Margin="0,44,19,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="91" Click="RecognitionButton_Click" IsEnabled="False"/>
+        <Image x:Name="Image" MouseUp="Image_MouseUp" Margin="10,10,125,80" Stretch="None"/>
+        <Button x:Name="ClearButton" Content="Очистить" Margin="0,78,19,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="91" Click="ClearButton_Click" />
+        <Button x:Name="GenerateButton" Content="Генерировать" Margin="0,114,19,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="91" Click="GenerateButton_Click" />
+        <Label  x:Name="GrammarLabel" Content="Грамматика:" HorizontalAlignment="Left" Margin="10,0,0,10" Width="712" Height="64" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>

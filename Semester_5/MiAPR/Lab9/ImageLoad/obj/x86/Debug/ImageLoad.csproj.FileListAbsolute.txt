@@ -1,0 +1,12 @@
+C:\Users\baran\Downloads\Lab9\ImageLoad\bin\x86\Debug\ImageLoad.dll
+C:\Users\baran\Downloads\Lab9\ImageLoad\bin\x86\Debug\ImageLoad.pdb
+C:\Users\baran\Downloads\Lab9\ImageLoad\obj\x86\Debug\ImageLoad.csproj.AssemblyReference.cache
+C:\Users\baran\Downloads\Lab9\ImageLoad\obj\x86\Debug\ImageLoad.csproj.CoreCompileInputs.cache
+C:\Users\baran\Downloads\Lab9\ImageLoad\obj\x86\Debug\ImageLoad.dll
+C:\Users\baran\Downloads\Lab9\ImageLoad\obj\x86\Debug\ImageLoad.pdb
+D:\Labs\semester_5\MiAPR\Lab9\ImageLoad\bin\x86\Debug\ImageLoad.dll
+D:\Labs\semester_5\MiAPR\Lab9\ImageLoad\bin\x86\Debug\ImageLoad.pdb
+D:\Labs\semester_5\MiAPR\Lab9\ImageLoad\obj\x86\Debug\ImageLoad.csproj.AssemblyReference.cache
+D:\Labs\semester_5\MiAPR\Lab9\ImageLoad\obj\x86\Debug\ImageLoad.csproj.CoreCompileInputs.cache
+D:\Labs\semester_5\MiAPR\Lab9\ImageLoad\obj\x86\Debug\ImageLoad.dll
+D:\Labs\semester_5\MiAPR\Lab9\ImageLoad\obj\x86\Debug\ImageLoad.pdb

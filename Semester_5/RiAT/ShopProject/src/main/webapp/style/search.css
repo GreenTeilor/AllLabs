@@ -1,0 +1,147 @@
+.search-form {
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+.search-form input {
+    border-radius: 10px;
+    height: 100%;
+    border: none;
+    outline: none;
+    width: 250px;
+    font-size: 1.2rem;
+}
+
+.search-form button {
+    border-radius: 10px;
+    height: 43px;
+    width: 150px;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-form button:hover {
+    background-color: #039BE5;
+    cursor: pointer;
+}
+
+.filter-and-content {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.filter{
+    width: 98%;
+    height: 100%;
+    background-color: white;
+    padding-left: 20px;
+}
+
+.filter-and-content .main-text {
+    font-size: 1.9rem;
+    color: #20247b;
+    font-weight: 600;
+}
+
+.filter-and-content .items-group {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.filter-and-content .filter .items-group button, .filter_reset a {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+.filter-and-content .filter .items-group button:hover, .filter_reset a:hover {
+    background-color: #039BE5;
+    cursor: pointer;
+}
+
+.filter-and-content .filter .items-group input{
+    border-radius: 10px;
+    outline: none;
+    border-color: #b1b1b1;
+    border-style: solid;
+}
+
+.filter-and-content .filter .items-group select{
+    border-radius: 10px;
+    outline: none;
+    border-color: #b1b1b1;
+    width: 200px;
+}
+
+.content {
+    width: 98%;
+    height: 100%;
+    background-color: white;
+    padding-left: 20px;
+}
+
+.products {
+    text-align: left;
+}
+
+.pagination-management {
+    margin-top: 20px;
+}
+
+.dropdown {
+    margin-left: 20px;
+}
+
+.dropdown button {
+    margin-bottom: 20px;
+}
+
+@media(max-width: 500px) {
+    .search-form {
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 70px;
+    }
+
+    .search-form input {
+        width: 90%;
+        margin-bottom: 5px;
+    }
+
+    .search-form button {
+        width: 90%;
+    }
+
+    .filter-and-content .filter .items-group input{
+        width: 220px;
+    }
+
+    .card {
+        margin-left: 0;
+    }
+
+    .content {
+        padding-left: 0;
+    }
+
+    .content .main-text {
+        padding-left: 20px;
+    }
+
+    .pagination-nav {
+        padding-left: 20px;
+    }
+}
+
+@media(max-width: 1550px) {
+    .products {
+        text-align: center;
+    }
+}

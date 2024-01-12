@@ -1,0 +1,11 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	
+	
+	
+	
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=47FF78EFC86E4A24AD0D733ED9C1AEF1/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=47FF78EFC86E4A24AD0D733ED9C1AEF1/Name/@EntryValue">TestMethod1</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=47FF78EFC86E4A24AD0D733ED9C1AEF1/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;Elements&gt;&lt;UnitTestElement Provider="MSTest" Id="MsTest:UnitTestProject.UnitTest1" type="MsTestTestClassElement" TypeName="UnitTestProject.UnitTest1" Project="59C8FD2D-8A26-413C-BB1E-A954AF1DCDCC" /&gt;&lt;UnitTestElement Provider="MSTest" Id="MsTest:UnitTestProject.UnitTest1.TestMethod1" ParentId="MsTest:UnitTestProject.UnitTest1" type="MsTestTestMethodElement" MethodName="TestMethod1" TypeName="UnitTestProject.UnitTest1" Project="59C8FD2D-8A26-413C-BB1E-A954AF1DCDCC" /&gt;&lt;/Elements&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=E86C6A1178B243CF8D8CFC3FED75B6B3/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=E86C6A1178B243CF8D8CFC3FED75B6B3/Name/@EntryValue">TestMethod1 #2</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=E86C6A1178B243CF8D8CFC3FED75B6B3/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;Elements&gt;&lt;UnitTestElement Provider="MSTest" Id="MsTest:UnitTestProject.UnitTest1" type="MsTestTestClassElement" TypeName="UnitTestProject.UnitTest1" Project="59C8FD2D-8A26-413C-BB1E-A954AF1DCDCC" /&gt;&lt;UnitTestElement Provider="MSTest" Id="MsTest:UnitTestProject.UnitTest1.TestMethod1" ParentId="MsTest:UnitTestProject.UnitTest1" type="MsTestTestMethodElement" MethodName="TestMethod1" TypeName="UnitTestProject.UnitTest1" Project="59C8FD2D-8A26-413C-BB1E-A954AF1DCDCC" /&gt;&lt;/Elements&gt;&lt;/Session&gt;</s:String></wpf:ResourceDictionary>

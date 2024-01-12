@@ -1,0 +1,6 @@
+E:\Универ\5 сем\МиАПР\Работы\Lab9\ImageGenerator\bin\Debug\ImageGenerator.exe.config
+E:\Универ\5 сем\МиАПР\Работы\Lab9\ImageGenerator\bin\Debug\ImageGenerator.exe
+E:\Универ\5 сем\МиАПР\Работы\Lab9\ImageGenerator\bin\Debug\ImageGenerator.pdb
+E:\Универ\5 сем\МиАПР\Работы\Lab9\ImageGenerator\obj\Debug\ImageGenerator.csprojResolveAssemblyReference.cache
+E:\Универ\5 сем\МиАПР\Работы\Lab9\ImageGenerator\obj\Debug\ImageGenerator.exe
+E:\Универ\5 сем\МиАПР\Работы\Lab9\ImageGenerator\obj\Debug\ImageGenerator.pdb

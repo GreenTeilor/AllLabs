@@ -1,0 +1,12 @@
+C:\Users\baran\Downloads\Lab9\NeuralNetwork\bin\x86\Debug\NeuralNetwork.dll
+C:\Users\baran\Downloads\Lab9\NeuralNetwork\bin\x86\Debug\NeuralNetwork.pdb
+C:\Users\baran\Downloads\Lab9\NeuralNetwork\obj\x86\Debug\NeuralNetwork.csproj.AssemblyReference.cache
+C:\Users\baran\Downloads\Lab9\NeuralNetwork\obj\x86\Debug\NeuralNetwork.csproj.CoreCompileInputs.cache
+C:\Users\baran\Downloads\Lab9\NeuralNetwork\obj\x86\Debug\NeuralNetwork.dll
+C:\Users\baran\Downloads\Lab9\NeuralNetwork\obj\x86\Debug\NeuralNetwork.pdb
+D:\Labs\semester_5\MiAPR\Lab9\NeuralNetwork\bin\x86\Debug\NeuralNetwork.dll
+D:\Labs\semester_5\MiAPR\Lab9\NeuralNetwork\bin\x86\Debug\NeuralNetwork.pdb
+D:\Labs\semester_5\MiAPR\Lab9\NeuralNetwork\obj\x86\Debug\NeuralNetwork.csproj.AssemblyReference.cache
+D:\Labs\semester_5\MiAPR\Lab9\NeuralNetwork\obj\x86\Debug\NeuralNetwork.csproj.CoreCompileInputs.cache
+D:\Labs\semester_5\MiAPR\Lab9\NeuralNetwork\obj\x86\Debug\NeuralNetwork.dll
+D:\Labs\semester_5\MiAPR\Lab9\NeuralNetwork\obj\x86\Debug\NeuralNetwork.pdb

@@ -1,0 +1,59 @@
+.categories {
+    margin: 20px 0 30px 0;
+}
+
+.files {
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+.files button {
+    border-radius: 10px;
+    height: 48px;
+    appearance: none;
+    font-size: 1.2rem;
+}
+
+.files button:hover {
+    background-color: #039BE5;
+    cursor: pointer;
+}
+
+.files form {
+    display: inline-block;
+}
+
+.file-import input[type=file] {
+    width: 330px;
+    pointer-events: none;
+}
+
+.file-import .label {
+    border: 2px dashed grey;
+    border-radius: 5px;
+    padding: 0.45rem;
+    transition: border 300ms ease;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.file-import .label i, .file-import .label .title {
+    color: grey;
+    transition: 200ms color;
+    font-size: 1.2rem;
+}
+
+.file-import .label:hover {
+    border: 2px solid #ffffff
+}
+
+.file-import .label:hover i, .file-import .label:hover .title {
+    color: #ffffff
+}
+
+@media(max-width: 380px) {
+    .file-import .label {
+        width: 340px;
+    }
+}

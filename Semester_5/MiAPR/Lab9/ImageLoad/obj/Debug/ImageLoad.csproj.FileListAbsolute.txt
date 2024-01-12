@@ -1,0 +1,11 @@
+E:\Универ\5 сем\МиАПР\Работы\Lab9\ImageLoad\bin\Debug\ImageLoad.dll
+E:\Универ\5 сем\МиАПР\Работы\Lab9\ImageLoad\bin\Debug\ImageLoad.pdb
+E:\Универ\5 сем\МиАПР\Работы\Lab9\ImageLoad\obj\Debug\ImageLoad.csprojResolveAssemblyReference.cache
+E:\Универ\5 сем\МиАПР\Работы\Lab9\ImageLoad\obj\Debug\ImageLoad.dll
+E:\Универ\5 сем\МиАПР\Работы\Lab9\ImageLoad\obj\Debug\ImageLoad.pdb
+C:\Users\Катя\Desktop\5 сем\МиАПР\raboty_0\Lab9\ImageLoad\bin\Debug\ImageLoad.dll
+C:\Users\Катя\Desktop\5 сем\МиАПР\raboty_0\Lab9\ImageLoad\bin\Debug\ImageLoad.pdb
+C:\Users\Катя\Desktop\5 сем\МиАПР\raboty_0\Lab9\ImageLoad\obj\Debug\ImageLoad.csproj.AssemblyReference.cache
+C:\Users\Катя\Desktop\5 сем\МиАПР\raboty_0\Lab9\ImageLoad\obj\Debug\ImageLoad.csproj.CoreCompileInputs.cache
+C:\Users\Катя\Desktop\5 сем\МиАПР\raboty_0\Lab9\ImageLoad\obj\Debug\ImageLoad.dll
+C:\Users\Катя\Desktop\5 сем\МиАПР\raboty_0\Lab9\ImageLoad\obj\Debug\ImageLoad.pdb

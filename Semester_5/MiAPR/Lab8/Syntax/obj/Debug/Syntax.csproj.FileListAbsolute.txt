@@ -1,0 +1,16 @@
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Syntax\bin\Debug\Syntax.dll
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Syntax\bin\Debug\Syntax.pdb
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Syntax\obj\Debug\Syntax.csprojResolveAssemblyReference.cache
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Syntax\obj\Debug\Syntax.dll
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Syntax\obj\Debug\Syntax.pdb
+E:\Универ\5 сем\МиАПР\Работы\Lab8\Syntax\obj\Debug\Syntax.csprojResolveAssemblyReference.cache
+E:\Универ\5 сем\МиАПР\Работы\Lab8\Syntax\obj\Debug\Syntax.dll
+E:\Универ\5 сем\МиАПР\Работы\Lab8\Syntax\bin\Debug\Syntax.dll
+E:\Универ\5 сем\МиАПР\Работы\Lab8\Syntax\bin\Debug\Syntax.pdb
+E:\Универ\5 сем\МиАПР\Работы\Lab8\Syntax\obj\Debug\Syntax.pdb
+C:\Users\baran\Downloads\Lab8\Syntax\bin\Debug\Syntax.dll
+C:\Users\baran\Downloads\Lab8\Syntax\bin\Debug\Syntax.pdb
+C:\Users\baran\Downloads\Lab8\Syntax\obj\Debug\Syntax.csproj.AssemblyReference.cache
+C:\Users\baran\Downloads\Lab8\Syntax\obj\Debug\Syntax.csproj.CoreCompileInputs.cache
+C:\Users\baran\Downloads\Lab8\Syntax\obj\Debug\Syntax.dll
+C:\Users\baran\Downloads\Lab8\Syntax\obj\Debug\Syntax.pdb

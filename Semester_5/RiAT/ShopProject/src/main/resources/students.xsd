@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.baeldung.com/springsoap/gen"
+           targetNamespace="http://www.baeldung.com/springsoap/gen" elementFormDefault="qualified">
+
+    <xs:element name="getStudentRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getStudentResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="student" type="tns:student"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="student">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="course" type="xs:int"/>
+            <xs:element name="averageGrade" type="xs:double"/>
+            <xs:element name="nationality" type="tns:nationality"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="nationality">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Britain"/>
+            <xs:enumeration value="America"/>
+            <xs:enumeration value="India"/>
+            <xs:enumeration value="Belarus"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

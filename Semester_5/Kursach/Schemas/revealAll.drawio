@@ -1,0 +1,73 @@
+<mxfile host="Electron" modified="2023-12-07T15:38:42.929Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="XQZ0-5F2PdX7MyhXg4K8" version="22.0.3" type="device">
+  <diagram id="bekAUBVOrK7hu-xjGTDG" name="Страница — 3">
+    <mxGraphModel dx="1036" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WFR-Vjg9maMEg_Zy6Ejp-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="WFR-Vjg9maMEg_Zy6Ejp-2" target="WFR-Vjg9maMEg_Zy6Ejp-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WFR-Vjg9maMEg_Zy6Ejp-2" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 16px;&quot;&gt;Вход revealAll()&amp;nbsp;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" parent="1" vertex="1">
+          <mxGeometry x="280" y="30" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="WFR-Vjg9maMEg_Zy6Ejp-3" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 16px;&quot;&gt;Выход revealAll()&amp;nbsp;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" parent="1" vertex="1">
+          <mxGeometry x="280" y="740" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="WFR-Vjg9maMEg_Zy6Ejp-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" parent="1" source="WFR-Vjg9maMEg_Zy6Ejp-5" target="WFR-Vjg9maMEg_Zy6Ejp-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WFR-Vjg9maMEg_Zy6Ejp-5" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Пометить, что игра закончилась&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="280" y="150" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="7Vo06xQtiuB3ALdzppe5-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="WFR-Vjg9maMEg_Zy6Ejp-11" target="WFR-Vjg9maMEg_Zy6Ejp-20" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WFR-Vjg9maMEg_Zy6Ejp-11" value="&lt;font style=&quot;font-size: 16px;&quot; face=&quot;Times New Roman&quot;&gt;А1&lt;br&gt;Ячейки поля&lt;br&gt;&lt;/font&gt;" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="280" y="270" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="WFR-Vjg9maMEg_Zy6Ejp-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="WFR-Vjg9maMEg_Zy6Ejp-13" target="WFR-Vjg9maMEg_Zy6Ejp-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WFR-Vjg9maMEg_Zy6Ejp-13" value="&lt;font style=&quot;font-size: 16px;&quot; face=&quot;Times New Roman&quot;&gt;А1&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;flipV=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="630" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="7Vo06xQtiuB3ALdzppe5-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="WFR-Vjg9maMEg_Zy6Ejp-20" target="7Vo06xQtiuB3ALdzppe5-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WFR-Vjg9maMEg_Zy6Ejp-20" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;На ячейке флаг и &lt;br&gt;внутри нет&amp;nbsp; бомбы&lt;/span&gt;&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="390" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="7Vo06xQtiuB3ALdzppe5-2" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Установить тип ячейки как неверный флаг&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="280" y="510" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1eSOd5HOGY_WjNMjaV9z-1" value="&lt;font style=&quot;font-size: 16px;&quot; face=&quot;Times New Roman&quot;&gt;Да&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="330" y="480" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1eSOd5HOGY_WjNMjaV9z-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" parent="1" source="7Vo06xQtiuB3ALdzppe5-2" target="WFR-Vjg9maMEg_Zy6Ejp-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1eSOd5HOGY_WjNMjaV9z-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" parent="1" source="WFR-Vjg9maMEg_Zy6Ejp-20" target="1eSOd5HOGY_WjNMjaV9z-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1eSOd5HOGY_WjNMjaV9z-4" value="&lt;font style=&quot;font-size: 16px;&quot; face=&quot;Times New Roman&quot;&gt;Нет&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="470" y="410" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1eSOd5HOGY_WjNMjaV9z-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=open;endFill=0;" parent="1" source="1eSOd5HOGY_WjNMjaV9z-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="620" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="600" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1eSOd5HOGY_WjNMjaV9z-5" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Открыть ячейку&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="500" y="510" width="200" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

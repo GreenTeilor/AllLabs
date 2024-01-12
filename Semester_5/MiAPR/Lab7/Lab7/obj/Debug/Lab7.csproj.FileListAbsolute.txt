@@ -1,0 +1,67 @@
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Lab7\bin\Debug\Lab7.exe.config
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Lab7\bin\Debug\Lab7.exe
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Lab7\bin\Debug\Lab7.pdb
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Lab7\bin\Debug\Syntax.dll
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Lab7\bin\Debug\Syntax.pdb
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Lab7\obj\Debug\Lab7.csprojResolveAssemblyReference.cache
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Lab7\obj\Debug\MainWindow.baml
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Lab7\obj\Debug\MainWindow.g.cs
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Lab7\obj\Debug\App.g.cs
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Lab7\obj\Debug\Lab7_MarkupCompile.cache
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Lab7\obj\Debug\Lab7.g.resources
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Lab7\obj\Debug\Lab7.Properties.Resources.resources
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Lab7\obj\Debug\Lab7.csproj.GenerateResource.Cache
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Lab7\obj\Debug\Lab7.exe
+E:\Универ\5 сем\МиАПР\Работы\Lab7\Lab7\obj\Debug\Lab7.pdb
+D:\Новая папка\Lab7\Lab7\bin\Debug\Lab7.exe.config
+D:\Новая папка\Lab7\Lab7\bin\Debug\Lab7.exe
+D:\Новая папка\Lab7\Lab7\bin\Debug\Lab7.pdb
+D:\Новая папка\Lab7\Lab7\bin\Debug\Syntax.dll
+D:\Новая папка\Lab7\Lab7\bin\Debug\Syntax.pdb
+D:\Новая папка\Lab7\Lab7\obj\Debug\Lab7.csproj.AssemblyReference.cache
+D:\Новая папка\Lab7\Lab7\obj\Debug\Lab7.csproj.SuggestedBindingRedirects.cache
+D:\Новая папка\Lab7\Lab7\obj\Debug\MainWindow.baml
+D:\Новая папка\Lab7\Lab7\obj\Debug\MainWindow.g.cs
+D:\Новая папка\Lab7\Lab7\obj\Debug\App.g.cs
+D:\Новая папка\Lab7\Lab7\obj\Debug\Lab7_MarkupCompile.cache
+D:\Новая папка\Lab7\Lab7\obj\Debug\Lab7.g.resources
+D:\Новая папка\Lab7\Lab7\obj\Debug\Lab7.Properties.Resources.resources
+D:\Новая папка\Lab7\Lab7\obj\Debug\Lab7.csproj.GenerateResource.cache
+D:\Новая папка\Lab7\Lab7\obj\Debug\Lab7.csproj.CoreCompileInputs.cache
+D:\Новая папка\Lab7\Lab7\obj\Debug\Lab7.csproj.CopyComplete
+D:\Новая папка\Lab7\Lab7\obj\Debug\Lab7.exe
+D:\Новая папка\Lab7\Lab7\obj\Debug\Lab7.pdb
+C:\Users\baran\Downloads\Lab7\Lab7\bin\Debug\Lab7.exe.config
+C:\Users\baran\Downloads\Lab7\Lab7\bin\Debug\Lab7.exe
+C:\Users\baran\Downloads\Lab7\Lab7\bin\Debug\Lab7.pdb
+C:\Users\baran\Downloads\Lab7\Lab7\bin\Debug\Syntax.dll
+C:\Users\baran\Downloads\Lab7\Lab7\bin\Debug\Syntax.pdb
+C:\Users\baran\Downloads\Lab7\Lab7\obj\Debug\Lab7.csproj.AssemblyReference.cache
+C:\Users\baran\Downloads\Lab7\Lab7\obj\Debug\MainWindow.baml
+C:\Users\baran\Downloads\Lab7\Lab7\obj\Debug\MainWindow.g.cs
+C:\Users\baran\Downloads\Lab7\Lab7\obj\Debug\App.g.cs
+C:\Users\baran\Downloads\Lab7\Lab7\obj\Debug\Lab7_MarkupCompile.cache
+C:\Users\baran\Downloads\Lab7\Lab7\obj\Debug\Lab7.g.resources
+C:\Users\baran\Downloads\Lab7\Lab7\obj\Debug\Lab7.Properties.Resources.resources
+C:\Users\baran\Downloads\Lab7\Lab7\obj\Debug\Lab7.csproj.GenerateResource.cache
+C:\Users\baran\Downloads\Lab7\Lab7\obj\Debug\Lab7.csproj.CoreCompileInputs.cache
+C:\Users\baran\Downloads\Lab7\Lab7\obj\Debug\Lab7.csproj.CopyComplete
+C:\Users\baran\Downloads\Lab7\Lab7\obj\Debug\Lab7.exe
+C:\Users\baran\Downloads\Lab7\Lab7\obj\Debug\Lab7.pdb
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\bin\Debug\Lab7.exe.config
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\bin\Debug\Lab7.exe
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\bin\Debug\Lab7.pdb
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\bin\Debug\Syntax.dll
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\bin\Debug\Syntax.pdb
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\obj\Debug\Lab7.csproj.AssemblyReference.cache
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\obj\Debug\MainWindow.baml
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\obj\Debug\MainWindow.g.cs
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\obj\Debug\App.g.cs
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\obj\Debug\Lab7_MarkupCompile.cache
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\obj\Debug\Lab7.g.resources
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\obj\Debug\Lab7.Properties.Resources.resources
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\obj\Debug\Lab7.csproj.GenerateResource.cache
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\obj\Debug\Lab7.csproj.CoreCompileInputs.cache
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\obj\Debug\Lab7.csproj.CopyComplete
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\obj\Debug\Lab7.exe
+D:\Labs\semester_5\MiAPR\Lab7\Lab7\obj\Debug\Lab7.pdb
