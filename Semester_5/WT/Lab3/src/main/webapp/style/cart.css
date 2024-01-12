@@ -1,0 +1,12 @@
+.cart-info {
+    text-align: center;
+}
+
+.cart-info div {
+    display: inline-block;
+}
+
+.cart-info div a {
+    font-size: 1.5rem;
+    margin: 10px;
+}

@@ -1,0 +1,249 @@
+.section {
+    padding: 30px 0;
+    position: relative;
+}
+
+.gray-bg {
+    background-color: #f5f5f5;
+}
+
+img {
+    max-width: 100%;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+/* About Me
+---------------------*/
+.about-text h3 {
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+
+@media (max-width: 767px) {
+    .about-text h3 {
+        font-size: 35px;
+    }
+}
+
+.about-text h6 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+    .about-text h6 {
+        font-size: 18px;
+    }
+}
+
+.about-text p {
+    font-size: 18px;
+    max-width: 450px;
+}
+
+.about-text p mark {
+    font-weight: 600;
+    color: #20247b;
+}
+
+.about-list {
+    padding-top: 10px;
+}
+
+.about-list .media {
+    padding: 5px 0;
+}
+
+.about-list label {
+    color: #20247b;
+    font-weight: 600;
+    margin: 0;
+}
+
+.about-list p {
+    color: black;
+}
+
+.about-list label:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 11px;
+    width: 1px;
+    height: 12px;
+    -moz-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+    margin: auto;
+    opacity: 0.5;
+}
+
+.about-list p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 991px) {
+    .about-avatar {
+        margin-top: 30px;
+    }
+}
+
+.about-section .counter {
+    padding: 22px 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+}
+
+.about-section .counter .count-data {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.about-section .counter .count {
+    font-weight: 700;
+    color: #20247b;
+    margin: 0 0 5px;
+}
+
+.about-section .counter p {
+    font-weight: 600;
+    margin: 0;
+    color: black;
+}
+
+mark {
+    background-image: linear-gradient(rgba(252, 83, 86, 0.6), rgba(252, 83, 86, 0.6));
+    background-size: 100% 3px;
+    background-repeat: no-repeat;
+    background-position: 0 bottom;
+    background-color: transparent;
+    padding: 0;
+    color: currentColor;
+}
+
+.theme-color {
+    color: #fc5356;
+}
+
+.dark-color {
+    color: #20247b;
+}
+
+.info-input {
+    border-radius: 10px;
+    outline: none;
+    border-color: #b1b1b1;
+    border-style: solid;
+}
+
+.input-button {
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.history {
+    padding: 22px 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.history .count-data button {
+    border-radius: 10px;
+    height: 48px;
+    appearance: none;
+    font-size: 1.2rem;
+}
+
+.history .count-data button:hover {
+    background-color: #039BE5;
+    cursor: pointer;
+}
+
+.history .count-data form {
+    display: inline-block;
+}
+
+.file-import input[type=file] {
+    width: 330px;
+    pointer-events: none;
+}
+
+.file-import .label {
+    border: 2px dashed grey;
+    border-radius: 5px;
+    padding: 0.45rem;
+    transition: border 300ms ease;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.file-import .label i, .file-import .label .title {
+    color: grey;
+    transition: 200ms color;
+    font-size: 1.2rem;
+}
+
+.file-import .label:hover {
+    border: 2px solid #000
+}
+
+.file-import .label:hover i, .file-import .label:hover .title {
+    color: #000
+}
+
+@media(max-width: 380px) {
+    .file-import .label {
+        width: 340px;
+    }
+}
+
+.history span {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    /*background-image: url("../assets/wood.jpg");*/
+}
+
+.history .generalData {
+    text-align: left;
+}
+
+.history .generalData div {
+    display: inline-block;
+}
+
+.history .count-data {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.history .count {
+    font-weight: 900;
+    position: center;
+    color: #20247b;
+    margin: 0 0 5px;
+}
+
+.history .counter p {
+    font-weight: 600;
+    margin: 0;
+    color: black;
+}
+
+.errorInput {
+    color: red;
+}
