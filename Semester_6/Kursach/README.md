@@ -8,6 +8,7 @@
  - Оформление заказов;
  - Просмотр профиля и заказов;
  - Аутентификация и авторизация пользователя.
+
 Категории книг:
 ![Категории книг](https://raw.githubusercontent.com/GreenTeilor/AllLabs/116c85083462d7b8aa47a00093c1ce2c1c6888bc/Semester_6/Kursach/Screenshots/categories.png)
 
