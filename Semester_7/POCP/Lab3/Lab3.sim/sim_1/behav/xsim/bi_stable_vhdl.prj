@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl lcdf_vhdl  \
+"../../../../Lab3.srcs/sources_1/new/func_prims.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../Lab3.srcs/sources_1/new/bi_stable.vhd" \
+
+# Do not sort compile order
+nosort

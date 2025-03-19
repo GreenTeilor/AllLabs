@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzles</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<h1 class="text-center mb-4">Puzzles</h1>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col">
+            <h2 class="mb-4">Add puzzle</h2>
+            <form action="/add" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="puzzleName" class="form-label">Puzzle name</label>
+                    <input type="text" name="name" placeholder="Puzzle name" class="form-control mr-2" id="puzzleName"
+                           required>
+                </div>
+                <div class="mb-3">
+                    <label for="puzzleDate" class="form-label">Date</label>
+                    <input type="date" name="date" class="form-control mr-2" id="puzzleAddDate">
+                </div>
+                <div class="mb-3">
+                    <label for="puzzleType" class="form-label">Type</label>
+                    <select name="type" class="form-control mr-2" id="puzzleType">
+                        <% types.forEach(type => { %>
+                            <option value="<%= type.id %>" selected><%= type.name %></option>
+                        <% }) %>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="puzzleImage" class="form-label">Image</label>
+                    <input class="form-control" type="file" name="file" id="puzzleImage">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-success mb-2">Add puzzle</button>
+                </div>
+            </form>
+
+            <h2 class="mb-4">Add type</h2>
+            <form action="/addType" method="POST">
+                <div class="mb-3">
+                    <label for="typeName" class="form-label">Type name</label>
+                    <input type="text" name="name" placeholder="Type name" class="form-control mr-2" id="typeName"
+                           required>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-success mb-2">Add type</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col">
+            <h2 class="mb-4">Info</h2>
+            <div class="mb-4">
+                <% types.forEach(type => { %>
+                    <a href="/?filter=<%= type.id %>" class="btn btn-info"><%= type.name %></a>
+                <% }) %>
+            </div>
+
+            <ul class="list-group mb-5">
+                <% puzzles.forEach(puzzle => { %>
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p class="mb-1">Name: <%= puzzle.name %></p>
+                                <p class="mb-1">Type: <%= puzzle.Type.name %></p>
+                                <p class="mb-1">Date: <%= puzzle.date %></p>
+                                <% if (puzzle.file) { %>
+                                    <img src="/img/<%= puzzle.file %>" class="img-thumbnail" alt="Puzzle"
+                                         width="100"
+                                         height="100">
+                                    <a href="/img/<%= puzzle.file %>" class="btn btn-info">Open
+                                        image</a>
+                                <% } %>
+                            </div>
+
+
+                            <form action="/<%= puzzle.id %>/type" method="POST" class="form-inline">
+                                <select name="type" class="custom-select mr-2">
+                                    <% types.forEach(type => { %>
+                                        <option value=<%= type.id %> <%= type.id === puzzle.typeId ? 'selected' : '' %>>
+                                            <%= type.name %>
+                                        </option>
+                                    <% }) %>
+                                </select>
+                                <button type="submit" class="btn btn-success">Update type</button>
+                            </form>
+                        </div>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

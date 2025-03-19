@@ -1,0 +1,54 @@
+.square {
+    border: 10px solid dimgray;
+    text-align: center;
+    width: 35vw;
+    height: 35vw;
+    margin: 130px auto 40px;
+}
+
+@media (max-width: 600px) {
+    .square {
+       margin: 250px auto 20px auto;
+        width: 90vw;
+        height: 90vw;
+    }
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
+
+.black, .white {
+    height: 12.5%;
+    width: 12.5%;
+    max-height: 100vw;
+    max-width: 100vw;
+    float: left;
+    padding: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black img, .white img {
+    width: 90%;
+    height: 90%;
+}
+
+.circle {
+    width: 5px;
+    height: 5px;
+    border: 0.1px solid red;
+    border-radius: 50%;
+    margin: auto;
+    background-color: red;
+}
+
+.hidden {
+    display: none;
+}

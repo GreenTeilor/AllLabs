@@ -1,0 +1,102 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Oct  1 18:57:02 2024
+# Process ID: 18560
+# Current directory: D:/Labs/semester_7/POCP/Lab2/Mux
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4440 D:\Labs\semester_7\POCP\Lab2\Mux\Mux.xpr
+# Log file: D:/Labs/semester_7/POCP/Lab2/Mux/vivado.log
+# Journal file: D:/Labs/semester_7/POCP/Lab2/Mux\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Labs/semester_7/POCP/Lab2/Mux/Mux.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 896.516 ; gain = 150.727
+update_compile_order -fileset sources_1
+set_property top summator_2_sim [get_filesets sim]
+set_property top_lib xil_defaultlib [get_filesets sim]
+update_compile_order -fileset sim
+launch_simulation -simset sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Labs/semester_7/POCP/Lab2/Mux/Mux.sim/sim/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim'
+INFO: [SIM-utils-54] Inspecting design source files for 'summator_2_sim' in fileset 'sim'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Labs/semester_7/POCP/Lab2/Mux/Mux.sim/sim/behav/xsim'
+"xvhdl --incr --relax -prj summator_2_sim_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Labs/semester_7/POCP/Lab2/Mux/Mux.srcs/sources_1/new/and3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity and3
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Labs/semester_7/POCP/Lab2/Mux/Mux.srcs/sources_1/new/inv.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity inv
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Labs/semester_7/POCP/Lab2/Mux/Mux.srcs/sources_1/new/or2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity or2
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Labs/semester_7/POCP/Lab2/Mux/Mux.srcs/sources_1/new/or4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity or4
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Labs/semester_7/POCP/Lab2/Mux/Mux.srcs/sources_1/new/summator_1_s.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity summator_1_s
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Labs/semester_7/POCP/Lab2/Mux/Mux.srcs/sources_1/new/summator_2_b.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity summator_2_b
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Labs/semester_7/POCP/Lab2/Mux/Mux.srcs/sources_1/new/summator_2_s.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity summator_2_s
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Labs/semester_7/POCP/Lab2/Mux/Mux.srcs/sim/new/summator_2_sim.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity summator_2_sim
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Labs/semester_7/POCP/Lab2/Mux/Mux.sim/sim/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto c41d8e98a8e54d219d7bbbc5b8f91ae3 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot summator_2_sim_behav xil_defaultlib.summator_2_sim -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture a_summator_2_b of entity xil_defaultlib.summator_2_b [summator_2_b_default]
+Compiling architecture inv_a of entity xil_defaultlib.inv [inv_default]
+Compiling architecture a_and3 of entity xil_defaultlib.and3 [and3_default]
+Compiling architecture a_or2 of entity xil_defaultlib.or2 [or2_default]
+Compiling architecture a_or4 of entity xil_defaultlib.or4 [or4_default]
+Compiling architecture a_summator_1_s of entity xil_defaultlib.summator_1_s [summator_1_s_default]
+Compiling architecture a_summator_2_s of entity xil_defaultlib.summator_2_s [summator_2_s_default]
+Compiling architecture behaviour of entity xil_defaultlib.summator_2_sim
+Built simulation snapshot summator_2_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Labs/semester_7/POCP/Lab2/Mux/Mux.sim/sim/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "summator_2_sim_behav -key {Behavioral:sim:Functional:summator_2_sim} -tclbatch {summator_2_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source summator_2_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Failure: End of simulation
+Time: 320 ns  Iteration: 0  Process: /summator_2_sim/sim_proc  File: D:/Labs/semester_7/POCP/Lab2/Mux/Mux.srcs/sim/new/summator_2_sim.vhd
+$finish called at time : 320 ns : File "D:/Labs/semester_7/POCP/Lab2/Mux/Mux.srcs/sim/new/summator_2_sim.vhd" Line 60
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'summator_2_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 940.492 ; gain = 18.727
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  1 19:23:42 2024...

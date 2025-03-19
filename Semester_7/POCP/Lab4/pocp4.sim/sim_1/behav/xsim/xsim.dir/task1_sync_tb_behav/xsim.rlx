@@ -1,0 +1,12 @@
+
+{ 
+    crc :  8254770439903956912  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto f1e537e81420467785f57b8a77503297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot task1_sync_tb_behav xil_defaultlib.task1_sync_tb" , 
+    buildDate : "Jun 14 2018" , 
+    buildTime : "20:41:02" , 
+    linkCmd : "E:\\Xilinx\\Vivado\\2018.2\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/task1_sync_tb_behav/xsimk.exe\"   \"xsim.dir/task1_sync_tb_behav/obj/xsim_0.win64.obj\" \"xsim.dir/task1_sync_tb_behav/obj/xsim_1.win64.obj\" \"E:\\Xilinx\\Vivado\\2018.2\\lib\\win64.o\\\\librdi_simulator_kernel.dll\"  \"E:\\Xilinx\\Vivado\\2018.2\\lib\\win64.o\\\\librdi_simbridge_kernel.dll\"" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

@@ -1,0 +1,58 @@
+<html lang="ru">
+
+<head>
+    <title>Шашки</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width; initial-scale=1">
+</head>
+
+<body>
+
+<%- include('common/header.html') %>
+
+<div class="products">
+
+    <div class="product-item">
+        <img src="../images/pc.png">
+        <div class="product-list">
+            <h3>С компьютером</h3>
+            <form action="/game/pc" method="GET">
+                <label>
+                    <select name="color" class="minimal">
+                        <option value="white" selected>Белый</option>
+                        <option value="black">Черный</option>
+                    </select>
+                </label>
+                <label>
+                    <select name="level" class="minimal">
+                        <option value="1">Легкий</option>
+                        <option value="2" selected>Средний</option>
+                        <option value="3">Сложный</option>
+                    </select>
+                </label>
+                <button id = "aiGameBtn" type="submit" class="button" onclick="handleAiGameBtnClick()">Играть</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="../images/person.jpg">
+        <div class="product-list">
+            <h3>Мультиплеер</h3>
+            <button id="multiplayerGameBtn" type="submit" class="button" onclick="handleMultiplayerBtnClick()">Играть</button>
+            <div id="timer" class="hidden"></div>
+        </div>
+    </div>
+
+</div>
+
+<%- include('common/footer.html') %>
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script src="../script/index.js"></script>
+</body>
+<script>
+
+</script>
+</html>

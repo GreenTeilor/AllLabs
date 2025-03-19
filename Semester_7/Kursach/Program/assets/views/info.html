@@ -1,0 +1,79 @@
+<html lang="ru">
+
+<head>
+  <title>О нас</title>
+  <link rel="stylesheet" type="text/css" href="../style/style.css">
+  <link rel="stylesheet" type="text/css" href="../style/info.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width; initial-scale=1">
+</head>
+
+<body>
+
+  <%- include('common/header.html') %>
+
+  <div class="headText" style="padding-top: 150px"> Общая информация </div>
+  <div class="mainText">
+    Шашки — это настольная игра для двух игроков, целью которой является захват всех фигур противника
+    или блокировка их движения. Игра имеет множество вариаций, наиболее популярные из которых — русские шашки,
+    международные шашки и американские шашки.
+    На нашем сайте вы можете сыграть в русские шашки против компьютера или же против других игроков.
+    Также вы можете понаблюдать в режиме реального времени за игрой других игроков и набраться опыта или же
+    просто насладиться игрой. Ниже вы можете прочитать правила игры в русские шашки.
+  </div>
+  <div class="gallery">
+    <img class="picture" src="../images/checkers1.png">
+    <img class="picture" src="../images/checkers2.jpg">
+    <img class="picture" src="../images/chineseCheckers.png">
+  </div>
+
+  <div class="headText"> Правила русских шашек </div>
+  <div class="additionalText">
+    1. Шашка может ходить по диагонали только на 1 клетку вперед.
+  </div>
+  <div class="additionalText">
+    2. Шашка может сбить шашку противника, если соседствует с ней, и поле за шашкой противника свободно. Можно бить назад.
+    После взятия шашка противника убирается с игрового поля, а шашка игрока перемещается на поле за шашкой противника.
+  </div>
+  <div class="additionalText">
+    3. В случае, если можно сбить шашку противника, игрок ОБЯЗАН сделать это. В случае,
+    если есть несколько вариантов того, как игрок может сбить шашку противника, он может выбрать любой из них.
+  </div>
+  <div class="gallery">
+    <img class="picture" src="../images/simpleMove.png">
+    <img class="picture" src="../images/take.png">
+    <img class="picture" src="../images/takeBack.png">
+  </div>
+
+  <div class="additionalText">
+    1. Необходимо сбивать несколько шашек противника за один ход, если после взятия шашки противника
+    шашка игрока может сбить иные шашки противника.
+  </div>
+  <div class="additionalText">
+    2. Если шашка доходит до противоположной по отношению к игроку линии, то становится дамкой.
+  </div>
+  <div class="additionalText">
+    3. Дамка может ходить в любых направлениях на неограниченное количество клеток.
+  </div>
+  <div class="gallery">
+    <img class="picture" src="../images/complicatedMove.png">
+    <img class="picture" src="../images/king.png">
+    <img class="picture" src="../images/kingMove.png">
+  </div>
+
+  <div class="additionalText">
+    1. Дамка может сбить шашку противника через любое количество полей и "приземлиться" сколь угодно далеко.
+  </div>
+  <div class="additionalText">
+    2. Если в результате взятия шашки противника шашка игрока становится дамкой, то взятие продолжается в соответствии с тем, как ходит дамка.
+  </div>
+  <div class="gallery">
+    <img class="picture" src="../images/kingTake.png">
+    <img class="picture" src="../images/kingComplicated.png">
+  </div>
+
+  <%- include('common/footer.html') %>
+
+</body>
+
+</html>

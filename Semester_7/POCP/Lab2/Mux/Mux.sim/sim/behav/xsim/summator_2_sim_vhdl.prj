@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Mux.srcs/sources_1/new/and3.vhd" \
+"../../../../Mux.srcs/sources_1/new/inv.vhd" \
+"../../../../Mux.srcs/sources_1/new/or2.vhd" \
+"../../../../Mux.srcs/sources_1/new/or4.vhd" \
+"../../../../Mux.srcs/sources_1/new/summator_1_s.vhd" \
+"../../../../Mux.srcs/sources_1/new/summator_2_b.vhd" \
+"../../../../Mux.srcs/sources_1/new/summator_2_s.vhd" \
+"../../../../Mux.srcs/sim/new/summator_2_sim.vhd" \
+
+# Do not sort compile order
+nosort

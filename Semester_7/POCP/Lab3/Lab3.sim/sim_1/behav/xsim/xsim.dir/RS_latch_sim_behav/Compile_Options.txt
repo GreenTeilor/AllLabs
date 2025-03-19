@@ -1,0 +1,1 @@
+-wto "c51ad4030a75428fbe7ba1f4ddd9658d" --incr --debug "typical" --relax --mt "2" -L "lcdf_vhdl" -L "xil_defaultlib" -L "secureip" --snapshot "RS_latch_sim_behav" "xil_defaultlib.RS_latch_sim" -log "elaborate.log" 

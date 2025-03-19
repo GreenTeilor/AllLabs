@@ -1,0 +1,26 @@
+.body, .html {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+}
+
+.body .btn.loginBtn {
+    margin-top: 10px;
+    border-color: #28A745;
+    background-color: #28A745;
+}
+
+.body .btn.toRegistrationBtn, .body .btn.toAppBtn {
+    background-color: #17A2B8;
+    border-color: #17A2B8;
+}
+
+.body .toRegistrationLbl {
+    margin-right: 10px;
+}
+
+.inputError {
+    color: red;
+    display: inline-block;
+    margin-left: 5px;
+}

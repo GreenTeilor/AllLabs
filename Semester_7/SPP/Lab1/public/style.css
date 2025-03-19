@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    color: white
+}
+
+h1, h2 {
+    margin-top: 20px;
+}
+
+ul.list-group li {
+    margin-bottom: 10px;
+}
+
+form .form-group {
+    margin-right: 10px;
+}
+
+.btn-outline-primary, .btn-outline-warning, .btn-outline-success {
+    margin-right: 10px;
+}
+
+.list-group-item {
+    color: black;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+}
+  

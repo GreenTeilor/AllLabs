@@ -1,0 +1,83 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Sep 16 20:42:26 2024
+# Process ID: 21288
+# Current directory: D:/Labs/semester_7/POCP/Lab1/B
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1116 D:\Labs\semester_7\POCP\Lab1\B\B.xpr
+# Log file: D:/Labs/semester_7/POCP/Lab1/B/vivado.log
+# Journal file: D:/Labs/semester_7/POCP/Lab1/B\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Labs/semester_7/POCP/Lab1/B/B.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2018.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Labs/semester_7/POCP/Lab1/B/B.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'simple_function' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Labs/semester_7/POCP/Lab1/B/B.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simple_function_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Labs/semester_7/POCP/Lab1/B/B.srcs/sources_1/new/simple_function.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity simple_function
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Labs/semester_7/POCP/Lab1/B/B.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto feabcc86a4734cae92e94888e33146b3 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simple_function_behav xil_defaultlib.simple_function -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.simple_function
+Built simulation snapshot simple_function_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/Labs/semester_7/POCP/Lab1/B/B.sim/sim_1/behav/xsim/xsim.dir/simple_function_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Sep 16 20:42:58 2024...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 943.898 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Labs/semester_7/POCP/Lab1/B/B.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simple_function_behav -key {Behavioral:sim_1:Functional:simple_function} -tclbatch {simple_function.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source simple_function.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simple_function_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 943.898 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 949.301 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 16 21:27:42 2024...

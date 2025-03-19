@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Lab3.srcs/sources_1/new/D_latch_behavioral.vhd" \
+
+vhdl lcdf_vhdl  \
+"../../../../Lab3.srcs/sources_1/new/func_prims.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../Lab3.srcs/sources_1/new/D_latch_param.vhd" \
+"../../../../Lab3.srcs/sources_1/new/D_latch_structural.vhd" \
+"../../../../Lab3.srcs/sim_1/new/D_latch_sim.vhd" \
+
+# Do not sort compile order
+nosort

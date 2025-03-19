@@ -1,0 +1,20 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+D:/Labs/semester_7/POCP/Lab4/pocp4.srcs/sim_1/new/task1_asyn_tb.vhd,1730029652,vhdl,,,,task1_asyn_tb,,,,,,,,
+D:/Labs/semester_7/POCP/Lab4/pocp4.srcs/sim_1/new/task1_sync_tb.vhd,1729968006,vhdl,,,,task1_sync_tb,,,,,,,,
+D:/Labs/semester_7/POCP/Lab4/pocp4.srcs/sim_1/new/task3_1_tb.vhd,1732542919,vhdl,,,,task3_1_tb,,,,,,,,
+D:/Labs/semester_7/POCP/Lab4/pocp4.srcs/sim_1/new/task3_LFSR_Out_tb.vhd,1731950371,vhdl,,,,task3_lfsr_out_tb,,,,,,,,
+D:/Labs/semester_7/POCP/Lab4/pocp4.srcs/sim_1/new/task3_LFSR_in_tb.vhd,1731953682,vhdl,,,,task3_lfsr_in_tb,,,,,,,,
+D:/Labs/semester_7/POCP/Lab4/pocp4.srcs/sim_1/new/task3_signature_tb.vhd,1730141926,vhdl,,,,task3_signature_tb,,,,,,,,
+D:/Labs/semester_7/POCP/Lab4/pocp4.srcs/sources_1/new/D_trigger.vhd,1729952164,vhdl,,,,d_trigger,,,,,,,,
+D:/Labs/semester_7/POCP/Lab4/pocp4.srcs/sources_1/new/d_latch.vhd,1729953538,vhdl,,,,d_latch,,,,,,,,
+D:/Labs/semester_7/POCP/Lab4/pocp4.srcs/sources_1/new/task1_asyn_beh.vhd,1731945354,vhdl,,,,task1_asyn_beh,,,,,,,,
+D:/Labs/semester_7/POCP/Lab4/pocp4.srcs/sources_1/new/task1_async_struct.vhd,1731945398,vhdl,,,,task1_async_struct,,,,,,,,
+D:/Labs/semester_7/POCP/Lab4/pocp4.srcs/sources_1/new/task1_sin_beh.vhd,1731946247,vhdl,,,,task1_sin_beh,,,,,,,,
+D:/Labs/semester_7/POCP/Lab4/pocp4.srcs/sources_1/new/task1_sin_struct.vhd,1731945633,vhdl,,,,task1_sin_struct,,,,,,,,
+D:/Labs/semester_7/POCP/Lab4/pocp4.srcs/sources_1/new/task3_1.vhd,1732542919,vhdl,,,,task3_1,,,,,,,,
+D:/Labs/semester_7/POCP/Lab4/pocp4.srcs/sources_1/new/task3_LFSR_In.vhd,1731954351,vhdl,,,,task3_lfsr_in,,,,,,,,
+D:/Labs/semester_7/POCP/Lab4/pocp4.srcs/sources_1/new/task3_LFSR_out.vhd,1731950114,vhdl,,,,task3_lfsr_out,,,,,,,,
+D:/Labs/semester_7/POCP/Lab4/pocp4.srcs/sources_1/new/task3_signature.vhd,1732029276,vhdl,,,,task3_signature,,,,,,,,

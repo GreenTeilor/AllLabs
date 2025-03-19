@@ -1,0 +1,176 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Страница — 1" id="Mu4zHEkIsc4VbF2E36-C">
+    <mxGraphModel dx="5245" dy="993" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="tUxLPP9i2HtHr87YtYWw-1" target="tUxLPP9i2HtHr87YtYWw-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-1" value="" style="triangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="260" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-6" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="400" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="tUxLPP9i2HtHr87YtYWw-6">
+          <mxGeometry width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;" vertex="1" parent="tUxLPP9i2HtHr87YtYWw-6">
+          <mxGeometry width="20" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;" vertex="1" parent="tUxLPP9i2HtHr87YtYWw-6">
+          <mxGeometry x="40" width="20" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;" vertex="1" parent="tUxLPP9i2HtHr87YtYWw-6">
+          <mxGeometry x="80" width="20" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-9" value="Очередь самолетов в зоне дозаправки" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Times New Roman;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="390" y="230" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="tUxLPP9i2HtHr87YtYWw-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-28" value="&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 14px;&quot;&gt;Набор самолетов для дозаправки&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-29" value="&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 14px;&quot;&gt;Запасной аэродром&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-30" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="tUxLPP9i2HtHr87YtYWw-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="299.5" as="sourcePoint" />
+            <mxPoint x="570" y="299.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-31" value="А1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="200" y="560" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-32" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 14px;&quot;&gt;Начало моделирования&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-33" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="tUxLPP9i2HtHr87YtYWw-31">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="500" as="sourcePoint" />
+            <mxPoint x="290" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-34" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 14px;&quot;&gt;А1 - генерация самолета&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="570" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="422" y="640" as="sourcePoint" />
+            <mxPoint x="422" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-52" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tUxLPP9i2HtHr87YtYWw-35" target="tUxLPP9i2HtHr87YtYWw-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-35" value="А2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="390" y="560" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-37" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 14px;&quot;&gt;А2 - начало дозаправки самолета&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="610" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-38" value="А3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="390" y="700" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-39" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 14px;&quot;&gt;А4 - отправка самолета на запасной аэродром&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="720" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-44" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="tUxLPP9i2HtHr87YtYWw-31">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="650" as="sourcePoint" />
+            <mxPoint x="200" y="600" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="650" />
+              <mxPoint x="170" y="640" />
+              <mxPoint x="150" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-45" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.013;exitY=0.388;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="tUxLPP9i2HtHr87YtYWw-31" target="tUxLPP9i2HtHr87YtYWw-31">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="192" y="568" as="sourcePoint" />
+            <mxPoint x="180" y="540" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="180" y="590" />
+              <mxPoint x="150" y="580" />
+              <mxPoint x="180" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-46" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="tUxLPP9i2HtHr87YtYWw-35">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="600" as="sourcePoint" />
+            <mxPoint x="280" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-47" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 14px;&quot;&gt;А3 - окончание дозаправки самолета&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="660" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="701" as="sourcePoint" />
+            <mxPoint x="435" y="641" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-50" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.038;exitY=0.688;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="tUxLPP9i2HtHr87YtYWw-38">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="379" y="751" as="sourcePoint" />
+            <mxPoint x="390" y="732" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="358" y="750" />
+              <mxPoint x="350" y="740" />
+              <mxPoint x="358" y="720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-51" value="А4" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="200" y="710" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-53" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.038;exitY=0.688;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="201.5" y="767.5" as="sourcePoint" />
+            <mxPoint x="199" y="740" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="166.5" y="762.5" />
+              <mxPoint x="158.5" y="752.5" />
+              <mxPoint x="166.5" y="732.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-55" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="62" y="800" as="sourcePoint" />
+            <mxPoint x="98" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-56" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 14px;&quot;&gt;Следующая выполняемая активность&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry y="810" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-57" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="25" y="870" as="sourcePoint" />
+            <mxPoint x="135" y="870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-58" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 14px;&quot;&gt;Добавление нового элемента в массив событий&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry y="890" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-59" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="62" y="940" as="sourcePoint" />
+            <mxPoint x="98" y="940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tUxLPP9i2HtHr87YtYWw-60" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 14px;&quot;&gt;Удаление элемента из массива событий&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry y="950" width="160" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

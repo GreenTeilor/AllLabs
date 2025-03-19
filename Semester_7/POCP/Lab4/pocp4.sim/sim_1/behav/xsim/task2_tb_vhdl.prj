@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../pocp4.srcs/sources_1/new/FDCPE.vhd" \
+"../../../../pocp4.srcs/sources_1/new/task2_beh.vhd" \
+"../../../../pocp4.srcs/sources_1/new/task2_struct.vhd" \
+"../../../../pocp4.srcs/sim_1/new/task2_tb.vhd" \
+
+# Do not sort compile order
+nosort
