@@ -7,13 +7,13 @@
  - Просмотр информации о шашках и приложении.
 
 Главная страница:
-![Главная страница](https://raw.githubusercontent.com/GreenTeilor/AllLabs/116c85083462d7b8aa47a00093c1ce2c1c6888bc/Semester_7/Kursach/Screenshots/main.png)
+![Главная страница](https://raw.githubusercontent.com/GreenTeilor/AllLabs/c9b92a0dc0089ec2cb1772cb0766900232a95bd9/Semester_7/Kursach/Screenshots/main.png)
 
 Информационная страница:
-![Информационная страница](https://raw.githubusercontent.com/GreenTeilor/AllLabs/116c85083462d7b8aa47a00093c1ce2c1c6888bc/Semester_7/Kursach/Screenshots/info.png)
+![Информационная страница](https://raw.githubusercontent.com/GreenTeilor/AllLabs/c9b92a0dc0089ec2cb1772cb0766900232a95bd9/Semester_7/Kursach/Screenshots/info.png)
 
 Игровой интерфейс:
-![Игровой интерфейс](https://raw.githubusercontent.com/GreenTeilor/AllLabs/116c85083462d7b8aa47a00093c1ce2c1c6888bc/Semester_7/Kursach/Screenshots/game.png)
+![Игровой интерфейс](https://raw.githubusercontent.com/GreenTeilor/AllLabs/c9b92a0dc0089ec2cb1772cb0766900232a95bd9/Semester_7/Kursach/Screenshots/game.png)
 
 Содержимое:
  - Program: исходники;
